@@ -39,13 +39,26 @@
 - Build TensorRT FP16 and INT8 engines and record accuracy/latency/memory trade-offs.
 - Profile preprocessing, inference, and postprocessing independently.
 
+## Milestone 2.5 - Isaac Sim surface digital twin (v0.5 development)
+
+- Implemented a versioned 1,200-frame Replicator configuration for an aircraft-like surface.
+- Implemented scratch, corrosion, pit, fastener, and seam semantics with camera, light, material,
+  pose, and scale randomization.
+- Implemented aligned RGB, semantic, metric-depth, normal, and camera-parameter output requests.
+- Implemented deterministic split planning, config snapshots, offline previews, output discovery,
+  manifest generation, and incomplete-capture rejection.
+- Added a 50-frame RTX smoke-test wrapper and explicit sensor-alignment acceptance gates.
+- Pending the first real Isaac Sim capture on an RTX machine; no rendered synthetic-data result is
+  claimed yet.
+- Pending curved CAD/USD geometry, raw semantic-ID remapping, and synthetic-to-real ablation.
+
 ## Milestone 4 - ROS2 and simulation
 
 - Build the included ROS2 package with `colcon`.
 - Publish camera masks and diagnostic latency from the ONNX node.
 - Add launch files, rosbag regression tests, lifecycle behavior, and QoS configuration.
-- Generate RGB, depth, masks, and bounding boxes using Isaac Sim Replicator.
-- Randomize lighting, material, texture, camera pose, and defect placement.
+- Execute and visually approve the implemented 50-frame Isaac Sim Replicator smoke capture.
+- Scale the approved capture to the planned 1,200-frame dataset.
 - Measure the synthetic-to-real performance gap.
 - Calibrate normalized image-plane paths into a surface coordinate frame.
 - Add reachability, acceleration, singularity, force, and collision constraints through MoveIt 2.
