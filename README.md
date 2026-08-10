@@ -21,6 +21,28 @@ The MVP is deliberately dependency-light. Its score is a pipeline-validation res
 data and must not be presented as production or aircraft-surface performance. See
 [`MODEL_CARD.md`](MODEL_CARD.md) for limitations.
 
+## Isaac Sim surface digital twin (v0.5 development)
+
+The next portfolio milestone is now implemented as a testable foundation: a versioned NVIDIA
+Isaac Sim Replicator generator for an aircraft-like inspection panel. It requests aligned RGB,
+semantic segmentation, distance-to-image-plane, surface normals, and camera parameters while
+randomizing camera pose/focal length, lighting, metal appearance, and scratch/corrosion/pit
+geometry. Fasteners and seams are labeled as protected regions for the downstream coverage
+planner.
+
+The capture contract plans 1,200 frames with deterministic 840/180/180 train/validation/test
+splits. Config validation, split planning, an offline schematic, Replicator output discovery, and
+incomplete-capture rejection are covered by unit tests. A real Isaac Sim render has **not yet been
+executed on this development machine**, so the image below is deliberately labeled as a planning
+preview rather than sensor evidence.
+
+![Isaac Sim v0.5 pre-capture plan](artifacts/reference/isaac_sim_v05_plan_preview.png)
+
+See [`docs/ISAAC_SIM_V05.md`](docs/ISAAC_SIM_V05.md) for the 50-frame RTX smoke-test command,
+dataset schema, acceptance gates, API references, and limitations. The machine-readable planned
+split is in
+[`artifacts/reference/isaac_sim_v05_capture_plan.json`](artifacts/reference/isaac_sim_v05_capture_plan.json).
+
 ## Reference MVP result
 
 The deterministic reference run completed on 120 synthetic 96 x 96 images:
