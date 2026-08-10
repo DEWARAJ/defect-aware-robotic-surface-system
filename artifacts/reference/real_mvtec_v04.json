@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "project_version": "0.4.0",
+  "dataset": {
+    "name": "MVTec AD",
+    "categories": {
+      "grid": 342,
+      "metal_nut": 335,
+      "screw": 480
+    },
+    "license": "CC BY-NC-SA 4.0; research/non-commercial use only",
+    "raw_data_distributed": false,
+    "protocol": "supervised-development",
+    "official_mvtec_benchmark": false,
+    "warning": "Anomalous MVTec test images were deterministically reallocated across development splits.",
+    "seed": 42,
+    "splits": {
+      "train": {"total": 845, "good": 683, "anomaly": 162},
+      "validation": {"total": 175, "good": 121, "anomaly": 54},
+      "test": {"total": 137, "good": 84, "anomaly": 53}
+    }
+  },
+  "environment": {
+    "device": "cpu",
+    "onnx_provider": "CPUExecutionProvider"
+  },
+  "global_model": {
+    "architecture": "tiny_unet",
+    "parameter_count": 29921,
+    "image_size": 128,
+    "completed_epochs": 15,
+    "selected_threshold": 0.8,
+    "best_validation_iou": 0.2705976524591093,
+    "held_out_test": {
+      "images": 137,
+      "iou": 0.2860369137027065,
+      "dice": 0.44483468655524105,
+      "precision": 0.31404484549114176,
+      "recall": 0.7623150093232941,
+      "pixel_accuracy": 0.9640850429117245
+    },
+    "onnx": {
+      "parity_samples": 10,
+      "maximum_absolute_logit_error": 1.1682510375976562e-05,
+      "minimum_binary_mask_agreement": 1.0,
+      "latency_ms": {"mean": 3.5787060001894133, "p50": 1.491900002292823, "p95": 14.490840004873457},
+      "fps_from_mean_latency": 279.43060982016186
+    }
+  },
+  "grid_specialization": {
+    "architecture": "tiny_unet",
+    "parameter_count": 29921,
+    "image_size": 128,
+    "completed_epochs": 16,
+    "selected_threshold": 0.7000000000000002,
+    "best_validation_iou": 0.2720859926100101,
+    "held_out_test": {
+      "images": 33,
+      "global_model_iou": 0.0,
+      "specialized_model_iou": 0.16468590831918506,
+      "dice": 0.282798833819242,
+      "precision": 0.29956763434218653,
+      "recall": 0.26780784097183874,
+      "pixel_accuracy": 0.9954501065340909
+    },
+    "onnx": {
+      "parity_samples": 10,
+      "maximum_absolute_logit_error": 1.2159347534179688e-05,
+      "minimum_binary_mask_agreement": 1.0,
+      "latency_ms": {"mean": 1.5622559998882934, "p50": 1.1044999992009252, "p95": 3.3555699992575683},
+      "fps_from_mean_latency": 640.099958055212
+    }
+  },
+  "limitations": [
+    "Not the official unsupervised MVTec AD benchmark.",
+    "No aircraft-surface data were used.",
+    "The global model failed to localize selected grid and screw defects.",
+    "Grid specialization did not resolve bent, broken, or glue defects reliably.",
+    "Latency excludes the full camera-to-robot pipeline."
+  ]
+}

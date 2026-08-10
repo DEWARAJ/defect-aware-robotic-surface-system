@@ -1,0 +1,1199 @@
+{
+  "metrics": {
+    "coverage_fraction": 0.934336320690042,
+    "defect_coverage_fraction": 1.0,
+    "estimated_process_seconds": 131.97272727272727,
+    "lane_spacing_pixels": 9,
+    "lanes": 30,
+    "priority_cleanup_segments": 0,
+    "priority_segments": 19,
+    "process_path_pixels": 7479.0,
+    "protected_contact_pixels": 0,
+    "reachable_coverage_fraction": 0.934336320690042,
+    "reachable_defect_coverage_fraction": 1.0,
+    "reachable_sandable_pixels": 80227,
+    "sandable_pixels": 80227,
+    "segments": 53,
+    "tool_radius_pixels": 6,
+    "transfer_path_pixels": 1643.3597987394514,
+    "unreachable_defect_pixels": 0,
+    "unreachable_safety_pixels": 0
+  },
+  "planner": {
+    "priority_behavior": "0.55 feed scale on defect-intersecting lanes",
+    "safety_model": "tool-center erosion against panel boundary and protected regions",
+    "type": "boustrophedon_raster"
+  },
+  "scene": {
+    "seed": 11,
+    "size": 384
+  },
+  "segments": [
+    {
+      "end": [
+        311,
+        61
+      ],
+      "end_normalized": [
+        0.8120104438642297,
+        0.15926892950391644
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 0,
+      "priority": false,
+      "sequence": 0,
+      "start": [
+        280,
+        61
+      ],
+      "start_normalized": [
+        0.7310704960835509,
+        0.15926892950391644
+      ]
+    },
+    {
+      "end": [
+        142,
+        70
+      ],
+      "end_normalized": [
+        0.370757180156658,
+        0.18276762402088773
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 1,
+      "priority": false,
+      "sequence": 1,
+      "start": [
+        335,
+        70
+      ],
+      "start_normalized": [
+        0.8746736292428199,
+        0.18276762402088773
+      ]
+    },
+    {
+      "end": [
+        340,
+        79
+      ],
+      "end_normalized": [
+        0.8877284595300261,
+        0.206266318537859
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 2,
+      "priority": true,
+      "sequence": 2,
+      "start": [
+        52,
+        79
+      ],
+      "start_normalized": [
+        0.13577023498694518,
+        0.206266318537859
+      ]
+    },
+    {
+      "end": [
+        306,
+        88
+      ],
+      "end_normalized": [
+        0.7989556135770235,
+        0.2297650130548303
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 3,
+      "priority": false,
+      "sequence": 3,
+      "start": [
+        342,
+        88
+      ],
+      "start_normalized": [
+        0.8929503916449086,
+        0.2297650130548303
+      ]
+    },
+    {
+      "end": [
+        203,
+        88
+      ],
+      "end_normalized": [
+        0.5300261096605744,
+        0.2297650130548303
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 3,
+      "priority": true,
+      "sequence": 4,
+      "start": [
+        303,
+        88
+      ],
+      "start_normalized": [
+        0.7911227154046997,
+        0.2297650130548303
+      ]
+    },
+    {
+      "end": [
+        35,
+        88
+      ],
+      "end_normalized": [
+        0.09138381201044386,
+        0.2297650130548303
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 3,
+      "priority": true,
+      "sequence": 5,
+      "start": [
+        182,
+        88
+      ],
+      "start_normalized": [
+        0.4751958224543081,
+        0.2297650130548303
+      ]
+    },
+    {
+      "end": [
+        182,
+        97
+      ],
+      "end_normalized": [
+        0.4751958224543081,
+        0.25326370757180156
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 4,
+      "priority": true,
+      "sequence": 6,
+      "start": [
+        30,
+        97
+      ],
+      "start_normalized": [
+        0.0783289817232376,
+        0.25326370757180156
+      ]
+    },
+    {
+      "end": [
+        293,
+        97
+      ],
+      "end_normalized": [
+        0.7650130548302873,
+        0.25326370757180156
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 4,
+      "priority": true,
+      "sequence": 7,
+      "start": [
+        203,
+        97
+      ],
+      "start_normalized": [
+        0.5300261096605744,
+        0.25326370757180156
+      ]
+    },
+    {
+      "end": [
+        344,
+        97
+      ],
+      "end_normalized": [
+        0.8981723237597912,
+        0.25326370757180156
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 4,
+      "priority": false,
+      "sequence": 8,
+      "start": [
+        316,
+        97
+      ],
+      "start_normalized": [
+        0.825065274151436,
+        0.25326370757180156
+      ]
+    },
+    {
+      "end": [
+        314,
+        106
+      ],
+      "end_normalized": [
+        0.8198433420365535,
+        0.27676240208877284
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 5,
+      "priority": true,
+      "sequence": 9,
+      "start": [
+        345,
+        106
+      ],
+      "start_normalized": [
+        0.9007832898172323,
+        0.27676240208877284
+      ]
+    },
+    {
+      "end": [
+        74,
+        106
+      ],
+      "end_normalized": [
+        0.19321148825065274,
+        0.27676240208877284
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 5,
+      "priority": false,
+      "sequence": 10,
+      "start": [
+        295,
+        106
+      ],
+      "start_normalized": [
+        0.7702349869451697,
+        0.27676240208877284
+      ]
+    },
+    {
+      "end": [
+        29,
+        106
+      ],
+      "end_normalized": [
+        0.07571801566579635,
+        0.27676240208877284
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 5,
+      "priority": false,
+      "sequence": 11,
+      "start": [
+        60,
+        106
+      ],
+      "start_normalized": [
+        0.1566579634464752,
+        0.27676240208877284
+      ]
+    },
+    {
+      "end": [
+        55,
+        115
+      ],
+      "end_normalized": [
+        0.14360313315926893,
+        0.3002610966057441
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 6,
+      "priority": false,
+      "sequence": 12,
+      "start": [
+        28,
+        115
+      ],
+      "start_normalized": [
+        0.0731070496083551,
+        0.3002610966057441
+      ]
+    },
+    {
+      "end": [
+        345,
+        115
+      ],
+      "end_normalized": [
+        0.9007832898172323,
+        0.3002610966057441
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 6,
+      "priority": true,
+      "sequence": 13,
+      "start": [
+        79,
+        115
+      ],
+      "start_normalized": [
+        0.206266318537859,
+        0.3002610966057441
+      ]
+    },
+    {
+      "end": [
+        74,
+        124
+      ],
+      "end_normalized": [
+        0.19321148825065274,
+        0.3237597911227154
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 7,
+      "priority": true,
+      "sequence": 14,
+      "start": [
+        346,
+        124
+      ],
+      "start_normalized": [
+        0.9033942558746736,
+        0.3237597911227154
+      ]
+    },
+    {
+      "end": [
+        28,
+        124
+      ],
+      "end_normalized": [
+        0.0731070496083551,
+        0.3237597911227154
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 7,
+      "priority": false,
+      "sequence": 15,
+      "start": [
+        60,
+        124
+      ],
+      "start_normalized": [
+        0.1566579634464752,
+        0.3237597911227154
+      ]
+    },
+    {
+      "end": [
+        347,
+        133
+      ],
+      "end_normalized": [
+        0.9060052219321149,
+        0.3472584856396867
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 8,
+      "priority": false,
+      "sequence": 16,
+      "start": [
+        29,
+        133
+      ],
+      "start_normalized": [
+        0.07571801566579635,
+        0.3472584856396867
+      ]
+    },
+    {
+      "end": [
+        29,
+        142
+      ],
+      "end_normalized": [
+        0.07571801566579635,
+        0.370757180156658
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 9,
+      "priority": false,
+      "sequence": 17,
+      "start": [
+        347,
+        142
+      ],
+      "start_normalized": [
+        0.9060052219321149,
+        0.370757180156658
+      ]
+    },
+    {
+      "end": [
+        348,
+        151
+      ],
+      "end_normalized": [
+        0.9086161879895561,
+        0.39425587467362927
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 10,
+      "priority": false,
+      "sequence": 18,
+      "start": [
+        30,
+        151
+      ],
+      "start_normalized": [
+        0.0783289817232376,
+        0.39425587467362927
+      ]
+    },
+    {
+      "end": [
+        124,
+        160
+      ],
+      "end_normalized": [
+        0.3237597911227154,
+        0.4177545691906005
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 11,
+      "priority": false,
+      "sequence": 19,
+      "start": [
+        348,
+        160
+      ],
+      "start_normalized": [
+        0.9086161879895561,
+        0.4177545691906005
+      ]
+    },
+    {
+      "end": [
+        30,
+        160
+      ],
+      "end_normalized": [
+        0.0783289817232376,
+        0.4177545691906005
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 11,
+      "priority": false,
+      "sequence": 20,
+      "start": [
+        91,
+        160
+      ],
+      "start_normalized": [
+        0.23759791122715404,
+        0.4177545691906005
+      ]
+    },
+    {
+      "end": [
+        78,
+        169
+      ],
+      "end_normalized": [
+        0.20365535248041775,
+        0.4412532637075718
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 12,
+      "priority": false,
+      "sequence": 21,
+      "start": [
+        31,
+        169
+      ],
+      "start_normalized": [
+        0.08093994778067885,
+        0.4412532637075718
+      ]
+    },
+    {
+      "end": [
+        349,
+        169
+      ],
+      "end_normalized": [
+        0.9112271540469974,
+        0.4412532637075718
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 12,
+      "priority": true,
+      "sequence": 22,
+      "start": [
+        136,
+        169
+      ],
+      "start_normalized": [
+        0.35509138381201044,
+        0.4412532637075718
+      ]
+    },
+    {
+      "end": [
+        141,
+        178
+      ],
+      "end_normalized": [
+        0.3681462140992167,
+        0.46475195822454307
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 13,
+      "priority": true,
+      "sequence": 23,
+      "start": [
+        350,
+        178
+      ],
+      "start_normalized": [
+        0.9138381201044387,
+        0.46475195822454307
+      ]
+    },
+    {
+      "end": [
+        32,
+        178
+      ],
+      "end_normalized": [
+        0.0835509138381201,
+        0.46475195822454307
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 13,
+      "priority": false,
+      "sequence": 24,
+      "start": [
+        72,
+        178
+      ],
+      "start_normalized": [
+        0.18798955613577023,
+        0.46475195822454307
+      ]
+    },
+    {
+      "end": [
+        71,
+        187
+      ],
+      "end_normalized": [
+        0.185378590078329,
+        0.48825065274151436
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 14,
+      "priority": false,
+      "sequence": 25,
+      "start": [
+        32,
+        187
+      ],
+      "start_normalized": [
+        0.0835509138381201,
+        0.48825065274151436
+      ]
+    },
+    {
+      "end": [
+        350,
+        187
+      ],
+      "end_normalized": [
+        0.9138381201044387,
+        0.48825065274151436
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 14,
+      "priority": false,
+      "sequence": 26,
+      "start": [
+        141,
+        187
+      ],
+      "start_normalized": [
+        0.3681462140992167,
+        0.48825065274151436
+      ]
+    },
+    {
+      "end": [
+        137,
+        196
+      ],
+      "end_normalized": [
+        0.3577023498694517,
+        0.5117493472584856
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 15,
+      "priority": false,
+      "sequence": 27,
+      "start": [
+        351,
+        196
+      ],
+      "start_normalized": [
+        0.9164490861618799,
+        0.5117493472584856
+      ]
+    },
+    {
+      "end": [
+        33,
+        196
+      ],
+      "end_normalized": [
+        0.08616187989556136,
+        0.5117493472584856
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 15,
+      "priority": false,
+      "sequence": 28,
+      "start": [
+        74,
+        196
+      ],
+      "start_normalized": [
+        0.19321148825065274,
+        0.5117493472584856
+      ]
+    },
+    {
+      "end": [
+        83,
+        205
+      ],
+      "end_normalized": [
+        0.21671018276762402,
+        0.5352480417754569
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 16,
+      "priority": true,
+      "sequence": 29,
+      "start": [
+        33,
+        205
+      ],
+      "start_normalized": [
+        0.08616187989556136,
+        0.5352480417754569
+      ]
+    },
+    {
+      "end": [
+        351,
+        205
+      ],
+      "end_normalized": [
+        0.9164490861618799,
+        0.5352480417754569
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 16,
+      "priority": false,
+      "sequence": 30,
+      "start": [
+        127,
+        205
+      ],
+      "start_normalized": [
+        0.33159268929503916,
+        0.5352480417754569
+      ]
+    },
+    {
+      "end": [
+        34,
+        214
+      ],
+      "end_normalized": [
+        0.08877284595300261,
+        0.5587467362924282
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 17,
+      "priority": true,
+      "sequence": 31,
+      "start": [
+        352,
+        214
+      ],
+      "start_normalized": [
+        0.9190600522193212,
+        0.5587467362924282
+      ]
+    },
+    {
+      "end": [
+        353,
+        223
+      ],
+      "end_normalized": [
+        0.9216710182767625,
+        0.5822454308093995
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 18,
+      "priority": true,
+      "sequence": 32,
+      "start": [
+        35,
+        223
+      ],
+      "start_normalized": [
+        0.09138381201044386,
+        0.5822454308093995
+      ]
+    },
+    {
+      "end": [
+        331,
+        232
+      ],
+      "end_normalized": [
+        0.8642297650130548,
+        0.6057441253263708
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 19,
+      "priority": false,
+      "sequence": 33,
+      "start": [
+        353,
+        232
+      ],
+      "start_normalized": [
+        0.9216710182767625,
+        0.6057441253263708
+      ]
+    },
+    {
+      "end": [
+        35,
+        232
+      ],
+      "end_normalized": [
+        0.09138381201044386,
+        0.6057441253263708
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 19,
+      "priority": false,
+      "sequence": 34,
+      "start": [
+        278,
+        232
+      ],
+      "start_normalized": [
+        0.7258485639686684,
+        0.6057441253263708
+      ]
+    },
+    {
+      "end": [
+        144,
+        241
+      ],
+      "end_normalized": [
+        0.37597911227154046,
+        0.6292428198433421
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 20,
+      "priority": false,
+      "sequence": 35,
+      "start": [
+        36,
+        241
+      ],
+      "start_normalized": [
+        0.09399477806788512,
+        0.6292428198433421
+      ]
+    },
+    {
+      "end": [
+        354,
+        241
+      ],
+      "end_normalized": [
+        0.9242819843342036,
+        0.6292428198433421
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 20,
+      "priority": false,
+      "sequence": 36,
+      "start": [
+        332,
+        241
+      ],
+      "start_normalized": [
+        0.8668407310704961,
+        0.6292428198433421
+      ]
+    },
+    {
+      "end": [
+        293,
+        250
+      ],
+      "end_normalized": [
+        0.7650130548302873,
+        0.6527415143603134
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 21,
+      "priority": false,
+      "sequence": 37,
+      "start": [
+        354,
+        250
+      ],
+      "start_normalized": [
+        0.9242819843342036,
+        0.6527415143603134
+      ]
+    },
+    {
+      "end": [
+        36,
+        250
+      ],
+      "end_normalized": [
+        0.09399477806788512,
+        0.6527415143603134
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 21,
+      "priority": false,
+      "sequence": 38,
+      "start": [
+        59,
+        250
+      ],
+      "start_normalized": [
+        0.15404699738903394,
+        0.6527415143603134
+      ]
+    },
+    {
+      "end": [
+        59,
+        259
+      ],
+      "end_normalized": [
+        0.15404699738903394,
+        0.6762402088772846
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 22,
+      "priority": false,
+      "sequence": 39,
+      "start": [
+        37,
+        259
+      ],
+      "start_normalized": [
+        0.09660574412532637,
+        0.6762402088772846
+      ]
+    },
+    {
+      "end": [
+        355,
+        259
+      ],
+      "end_normalized": [
+        0.9268929503916449,
+        0.6762402088772846
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 22,
+      "priority": false,
+      "sequence": 40,
+      "start": [
+        159,
+        259
+      ],
+      "start_normalized": [
+        0.4151436031331593,
+        0.6762402088772846
+      ]
+    },
+    {
+      "end": [
+        327,
+        268
+      ],
+      "end_normalized": [
+        0.8537859007832899,
+        0.6997389033942559
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 23,
+      "priority": false,
+      "sequence": 41,
+      "start": [
+        355,
+        268
+      ],
+      "start_normalized": [
+        0.9268929503916449,
+        0.6997389033942559
+      ]
+    },
+    {
+      "end": [
+        38,
+        268
+      ],
+      "end_normalized": [
+        0.09921671018276762,
+        0.6997389033942559
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 23,
+      "priority": true,
+      "sequence": 42,
+      "start": [
+        305,
+        268
+      ],
+      "start_normalized": [
+        0.7963446475195822,
+        0.6997389033942559
+      ]
+    },
+    {
+      "end": [
+        75,
+        277
+      ],
+      "end_normalized": [
+        0.195822454308094,
+        0.7232375979112271
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 24,
+      "priority": true,
+      "sequence": 43,
+      "start": [
+        38,
+        277
+      ],
+      "start_normalized": [
+        0.09921671018276762,
+        0.7232375979112271
+      ]
+    },
+    {
+      "end": [
+        306,
+        277
+      ],
+      "end_normalized": [
+        0.7989556135770235,
+        0.7232375979112271
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 24,
+      "priority": false,
+      "sequence": 44,
+      "start": [
+        82,
+        277
+      ],
+      "start_normalized": [
+        0.21409921671018275,
+        0.7232375979112271
+      ]
+    },
+    {
+      "end": [
+        354,
+        277
+      ],
+      "end_normalized": [
+        0.9242819843342036,
+        0.7232375979112271
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 24,
+      "priority": false,
+      "sequence": 45,
+      "start": [
+        327,
+        277
+      ],
+      "start_normalized": [
+        0.8537859007832899,
+        0.7232375979112271
+      ]
+    },
+    {
+      "end": [
+        90,
+        286
+      ],
+      "end_normalized": [
+        0.2349869451697128,
+        0.7467362924281984
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 25,
+      "priority": true,
+      "sequence": 46,
+      "start": [
+        353,
+        286
+      ],
+      "start_normalized": [
+        0.9216710182767625,
+        0.7467362924281984
+      ]
+    },
+    {
+      "end": [
+        39,
+        286
+      ],
+      "end_normalized": [
+        0.10182767624020887,
+        0.7467362924281984
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 25,
+      "priority": false,
+      "sequence": 47,
+      "start": [
+        67,
+        286
+      ],
+      "start_normalized": [
+        0.17493472584856398,
+        0.7467362924281984
+      ]
+    },
+    {
+      "end": [
+        70,
+        295
+      ],
+      "end_normalized": [
+        0.18276762402088773,
+        0.7702349869451697
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 26,
+      "priority": false,
+      "sequence": 48,
+      "start": [
+        41,
+        295
+      ],
+      "start_normalized": [
+        0.10704960835509138,
+        0.7702349869451697
+      ]
+    },
+    {
+      "end": [
+        348,
+        295
+      ],
+      "end_normalized": [
+        0.9086161879895561,
+        0.7702349869451697
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 26,
+      "priority": true,
+      "sequence": 49,
+      "start": [
+        87,
+        295
+      ],
+      "start_normalized": [
+        0.22715404699738903,
+        0.7702349869451697
+      ]
+    },
+    {
+      "end": [
+        43,
+        304
+      ],
+      "end_normalized": [
+        0.1122715404699739,
+        0.793733681462141
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 27,
+      "priority": true,
+      "sequence": 50,
+      "start": [
+        331,
+        304
+      ],
+      "start_normalized": [
+        0.8642297650130548,
+        0.793733681462141
+      ]
+    },
+    {
+      "end": [
+        241,
+        313
+      ],
+      "end_normalized": [
+        0.6292428198433421,
+        0.8172323759791122
+      ],
+      "feed_scale": 0.55,
+      "lane_index": 28,
+      "priority": true,
+      "sequence": 51,
+      "start": [
+        48,
+        313
+      ],
+      "start_normalized": [
+        0.12532637075718014,
+        0.8172323759791122
+      ]
+    },
+    {
+      "end": [
+        72,
+        322
+      ],
+      "end_normalized": [
+        0.18798955613577023,
+        0.8407310704960835
+      ],
+      "feed_scale": 1.0,
+      "lane_index": 29,
+      "priority": false,
+      "sequence": 52,
+      "start": [
+        103,
+        322
+      ],
+      "start_normalized": [
+        0.2689295039164491,
+        0.8407310704960835
+      ]
+    }
+  ]
+}

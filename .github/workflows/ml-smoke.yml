@@ -1,0 +1,36 @@
+name: optional-ml-smoke
+
+on:
+  workflow_dispatch:
+
+jobs:
+  pytorch-onnx-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install numpy Pillow torch onnx onnxruntime
+      - run: python scripts/create_ml_smoke_fixture.py --output runs/smoke_mvtec --size 64
+      - run: >-
+          python -m surface_perception.cli build-manifest
+          --mvtec-root runs/smoke_mvtec --categories metal_panel
+          --output runs/real_smoke/manifest.json
+      - run: >-
+          python -m surface_perception.train_real
+          --manifest runs/real_smoke/manifest.json --output runs/real_smoke/model
+          --image-size 64 --base-channels 4 --epochs 2 --batch-size 4
+      - run: >-
+          python -m surface_perception.evaluate_real
+          --manifest runs/real_smoke/manifest.json
+          --checkpoint runs/real_smoke/model/best.pt --output runs/real_smoke/evaluation
+      - run: >-
+          python -m surface_perception.export_onnx
+          --checkpoint runs/real_smoke/model/best.pt
+          --output runs/real_smoke/model/model.onnx --image-size 64
+      - run: >-
+          python -m surface_perception.onnx_parity
+          --checkpoint runs/real_smoke/model/best.pt
+          --onnx runs/real_smoke/model/model.onnx
+          --manifest runs/real_smoke/manifest.json --samples 5 --image-size 64

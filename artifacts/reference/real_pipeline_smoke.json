@@ -1,0 +1,31 @@
+{
+  "purpose": "software execution evidence only; not a real-data accuracy claim",
+  "fixture": {
+    "images": 42,
+    "image_size": 64,
+    "model_base_channels": 4,
+    "training_epochs": 4
+  },
+  "executed_stages": [
+    "manifest validation and deterministic splitting",
+    "paired augmentation",
+    "PyTorch U-Net training",
+    "held-out evaluation and failure gallery",
+    "ONNX export",
+    "PyTorch/ONNX numerical parity",
+    "ONNX Runtime CPU benchmark"
+  ],
+  "onnx_parity": {
+    "samples": 5,
+    "maximum_absolute_logit_error": 2.384185791015625e-7,
+    "minimum_binary_mask_agreement": 1.0,
+    "pass": true
+  },
+  "onnx_runtime_cpu_smoke": {
+    "image_size": 64,
+    "iterations": 30,
+    "mean_latency_ms": 0.6442866664049992,
+    "p95_latency_ms": 0.7670150000194553,
+    "note": "tiny smoke configuration; not representative of the planned 256px production candidate"
+  }
+}
