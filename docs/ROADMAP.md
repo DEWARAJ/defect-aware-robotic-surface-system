@@ -39,7 +39,9 @@
 - Implemented validation-calibrated static S8S8 QDQ quantization with held-out quality checks.
 - Measured a 52.6% file-size reduction but a 2.18x CPU latency regression; retained FP32 as the
   current CPU latency choice and documented the negative result.
-- Build TensorRT FP16 and INT8 engines and record accuracy/latency/memory trade-offs.
+- Implemented a fail-closed TensorRT FP32/FP16/explicit-QDQ-INT8 benchmark harness with
+  accuracy, latency, FPS, GPU utilization, memory, power, and temperature contracts (v0.9).
+- Execute the harness on the intended RTX/Jetson target; no GPU result is claimed yet.
 - Profile preprocessing, inference, and postprocessing independently.
 
 ## Milestone 2.5 - Isaac Sim surface digital twin (v0.5 development)
@@ -65,6 +67,8 @@
 - Added ROS2 Humble CI for the dependency-light C++ core and pinned native ONNX Runtime node.
 - Added a deterministic two-frame rosbag regression contract for exact masks, fractions,
   timestamps, and healthy diagnostics.
+- Connected each timestamped perception mask to the C++ coverage planner and added path, feed,
+  and protected-contact verification (v0.9).
 - Add lifecycle behavior and expanded QoS/failure-mode testing.
 - Execute and visually approve the implemented 50-frame Isaac Sim Replicator smoke capture.
 - Scale the approved capture to the planned 1,200-frame dataset.

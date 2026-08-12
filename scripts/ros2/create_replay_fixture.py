@@ -56,19 +56,52 @@ def image_message(size: int, value: int, timestamp_seconds: int) -> Image:
     return message
 
 
+def mask_message(size: int, protected: bool) -> Image:
+    message = Image()
+    message.header.frame_id = "replay_camera"
+    message.height = size
+    message.width = size
+    message.encoding = "mono8"
+    message.is_bigendian = False
+    message.step = size
+    values = np.full((size, size), 255, dtype=np.uint8)
+    if protected:
+        values.fill(0)
+        first = size // 2 - max(1, size // 8)
+        last = size // 2 + max(1, size // 8)
+        values[first:last, first:last] = 255
+    message.data = values.reshape(-1).tolist()
+    return message
+
+
 def build_bag(output_path: Path, size: int) -> None:
     writer = rosbag2_py.SequentialWriter()
     writer.open(
         rosbag2_py.StorageOptions(uri=str(output_path), storage_id="sqlite3"),
         rosbag2_py.ConverterOptions("cdr", "cdr"),
     )
-    writer.create_topic(
-        rosbag2_py.TopicMetadata(
-            name="/camera/image_raw",
-            type="sensor_msgs/msg/Image",
-            serialization_format="cdr",
-            offered_qos_profiles="",
+    for topic in (
+        "/camera/image_raw",
+        "/surface_perception/sanding_mask",
+        "/surface_perception/protected_mask",
+    ):
+        writer.create_topic(
+            rosbag2_py.TopicMetadata(
+                name=topic,
+                type="sensor_msgs/msg/Image",
+                serialization_format="cdr",
+                offered_qos_profiles="",
+            )
         )
+    writer.write(
+        "/surface_perception/sanding_mask",
+        serialize_message(mask_message(size, protected=False)),
+        100_000_000,
+    )
+    writer.write(
+        "/surface_perception/protected_mask",
+        serialize_message(mask_message(size, protected=True)),
+        200_000_000,
     )
     for timestamp_seconds, value in ((1, 0), (2, 255)):
         message = image_message(size, value, timestamp_seconds)
@@ -83,7 +116,7 @@ def build_bag(output_path: Path, size: int) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Create deterministic ROS2 replay fixtures")
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--size", type=int, default=8)
+    parser.add_argument("--size", type=int, default=32)
     args = parser.parse_args()
     if args.size <= 0:
         raise ValueError("size must be positive")

@@ -13,8 +13,10 @@ dist/
 runs/
 *.onnx
 *.engine
+*.plan
 *.pt
 *.pth
 *.ckpt
 data/mvtec_ad/
 data/custom_surface/
+work/

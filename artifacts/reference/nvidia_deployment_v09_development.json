@@ -1,0 +1,39 @@
+{
+  "schema_version": "nvidia-deployment-development-evidence-1.0",
+  "version": "0.9.0.dev0",
+  "status": "benchmark-harness-and-perception-planner-contract-implemented-hardware-run-pending",
+  "implemented": {
+    "tensorrt_fp32_fp16_int8_command_generation": true,
+    "explicit_qdq_int8_contract": true,
+    "trtexec_metric_parser": true,
+    "gpu_utilization_memory_power_temperature_capture": true,
+    "engine_and_model_hashing": true,
+    "fail_closed_acceptance_gates": true,
+    "perception_mask_triggers_cpp_planner": true,
+    "timestamp_traceability": true,
+    "protected_contact_gate": true
+  },
+  "local_validation": {
+    "python_tests_discovered": 33,
+    "python_tests_passed": 30,
+    "python_tests_skipped_optional_dependencies": 3,
+    "python_tests_failed": 0,
+    "tensorrt_plan_dry_run_pass": true,
+    "nvidia_gpu_available": false,
+    "trtexec_available": false
+  },
+  "acceptance_gates": {
+    "minimum_fps": 30.0,
+    "maximum_p95_latency_ms": 33.3,
+    "maximum_int8_iou_drop": 0.02,
+    "minimum_int8_mask_agreement": 0.97,
+    "maximum_protected_contact_pixels": 0
+  },
+  "claims_not_made": [
+    "TensorRT engine built",
+    "FP32, FP16, or INT8 performance measured on NVIDIA hardware",
+    "physical camera tested",
+    "robot-space trajectory generated",
+    "production real-time deadline guaranteed"
+  ]
+}

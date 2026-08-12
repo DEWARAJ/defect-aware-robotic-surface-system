@@ -10,6 +10,7 @@ data/mvtec_ad
 data/custom_surface
 *.onnx
 *.engine
+*.plan
 *.pt
 *.pth
 *.ckpt

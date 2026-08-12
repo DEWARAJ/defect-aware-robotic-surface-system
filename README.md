@@ -98,6 +98,20 @@ timestamps, and healthy diagnostics. See
 [`docs/ROS2_REALTIME_V08.md`](docs/ROS2_REALTIME_V08.md) for supported image/model contracts,
 build commands, topics, parameters, verified evidence, and remaining hardware gates.
 
+## NVIDIA deployment and perception-to-planner contract (v0.9 development)
+
+The project now includes a target-hardware TensorRT benchmark harness for batch-1 FP32, FP16, and
+explicit-QDQ INT8 engines. It records engine/model hashes, p50/p95/p99 host latency, throughput,
+GPU-compute time, GPU utilization, peak memory, power, temperature, and per-layer exports, then
+enforces quality and real-time acceptance gates. This machine has no NVIDIA GPU or TensorRT, so the
+harness is validated but no GPU performance result is claimed.
+
+The deterministic ROS2 replay now drives the native ONNX perception mask directly into the C++
+coverage planner. It validates two complete perception-to-plan cycles, timestamp traceability,
+normalized paths, defect-aware feed reduction, and zero protected-region contact. See
+[`docs/NVIDIA_DEPLOYMENT_V09.md`](docs/NVIDIA_DEPLOYMENT_V09.md) for target-machine commands,
+measurement boundaries, acceptance gates, and remaining robot-space work.
+
 ## Reference MVP result
 
 The deterministic reference run completed on 120 synthetic 96 x 96 images:
@@ -302,7 +316,7 @@ ros2 run surface_perception_cpp coverage_planner_node
 
 - Segmentation, model training, validation, and failure analysis.
 - Explicit accuracy, latency, and reproducibility evidence.
-- ONNX/TensorRT-ready deployment boundary.
+- Reproducible TensorRT FP32/FP16/INT8 target-hardware benchmark contract.
 - ROS2 camera integration and runtime diagnostics.
 - Safe coverage planning with protected-area exclusion and defect-aware feed scaling.
 - A modern C++17 ROS2 planning core with unit-test foundations.

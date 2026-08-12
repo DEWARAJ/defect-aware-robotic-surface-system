@@ -4,10 +4,12 @@ on:
   push:
     paths:
       - "ros2_ws/**"
+      - "scripts/ros2/**"
       - ".github/workflows/ros2-realtime-v08.yml"
   pull_request:
     paths:
       - "ros2_ws/**"
+      - "scripts/ros2/**"
       - ".github/workflows/ros2-realtime-v08.yml"
   workflow_dispatch:
 
@@ -120,5 +122,6 @@ jobs:
           path: |
             ${{ runner.temp }}/ros2-replay/replay_result.json
             ${{ runner.temp }}/ros2-replay/node.log
+            ${{ runner.temp }}/ros2-replay/planner.log
             ${{ runner.temp }}/ros2-replay/verifier.log
           if-no-files-found: error
