@@ -1,0 +1,86 @@
+{
+  "schema_version": "ros2-realtime-development-evidence-1.0",
+  "version": "0.8.0.dev0",
+  "status": "native-onnx-rosbag-validation-complete-target-hardware-benchmark-pending",
+  "implemented": {
+    "cpp17_inference_core": true,
+    "preprocess_and_postprocess_contracts": true,
+    "rolling_stage_telemetry": true,
+    "google_tests_authored": 6,
+    "optional_native_onnx_ros2_node": true,
+    "sensor_data_qos": true,
+    "mask_fraction_and_diagnostics_topics": true,
+    "ros2_humble_ci_contract": true,
+    "deterministic_rosbag_replay_contract": true
+  },
+  "native_onnx_build_contract": {
+    "version": "1.29.0",
+    "asset": "onnxruntime-linux-x64-1.29.0.tgz",
+    "sha256": "c3fddc4f139a045b0c4902c57410f0694f1c2fdf9b6939fbe38b1aeae7cd14ba",
+    "github_ci_validation_pass": true,
+    "source_commit": "0bf160f7bca291efb65ac19bc71b6fbbb870be18",
+    "run_id": 31645893134,
+    "native_executable_verified": true,
+    "cpp_tests_pass": true
+  },
+  "rosbag_replay_contract": {
+    "input_frames": 2,
+    "expected_mask_sha256_count": 2,
+    "expected_defect_fractions": [0.0, 1.0],
+    "requires_preserved_timestamps": true,
+    "requires_healthy_diagnostics": true,
+    "github_ci_validation_pass": true,
+    "source_commit": "0bf160f7bca291efb65ac19bc71b6fbbb870be18",
+    "run_id": 31645893134,
+    "observed_mask_sha256": [
+      "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b",
+      "8667e718294e9e0df1d30600ba3eeb201f764aad2dad72748643e4a285e1d1f7"
+    ],
+    "observed_mask_timestamps_seconds": [1, 2],
+    "observed_defect_fractions": [0.0, 1.0],
+    "observed_diagnostic_levels": [0, 0]
+  },
+  "local_validation": {
+    "python_regression_tests_discovered": 27,
+    "python_regression_tests_passed": 24,
+    "python_regression_tests_skipped_optional_dependencies": 3,
+    "python_regression_tests_failed": 0,
+    "launch_python_compile_pass": true,
+    "workflow_and_config_yaml_parse_pass": true,
+    "package_xml_parse_pass": true,
+    "credential_pattern_scan_pass": true,
+    "git_diff_check_pass": true,
+    "cpp_compiler_available": false,
+    "cmake_available": false,
+    "colcon_available": false,
+    "native_onnx_runtime_sdk_available": false
+  },
+  "github_validation": {
+    "source_commit": "0bf160f7bca291efb65ac19bc71b6fbbb870be18",
+    "standard_ci": {
+      "pass": true,
+      "run_id": 31645846668
+    },
+    "production_pipeline_contract": {
+      "pass": true,
+      "run_id": 31645846651
+    },
+    "ros2_humble_cpp_core": {
+      "pass": true,
+      "run_id": 31645893134,
+      "package_builds": 1,
+      "ctest_executables_passed": 2,
+      "google_test_cases_passed": 7,
+      "colcon_reported_checks": 9,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0
+    }
+  },
+  "claims_not_made": [
+    "C++ source compiled locally on Windows",
+    "physical camera integration completed",
+    "camera or GPU hardware benchmark completed",
+    "real-time deadline guaranteed"
+  ]
+}

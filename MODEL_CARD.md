@@ -54,6 +54,35 @@ postprocessing, ROS transport, and robot control.
 The machine-readable evidence is `artifacts/reference/real_mvtec_v04.json`; detailed limitations
 and failure-driven iteration are in `docs/MVTEC_V04_RESULTS.md`.
 
+## INT8 optimization status
+
+Version 0.6 applies validation-calibrated static S8S8 QDQ quantization to the global ONNX model.
+Calibration uses 64 validation images, while quality is measured on all 137 held-out test images.
+At the unchanged threshold, INT8 produced 0.293 IoU versus 0.286 for FP32 and 99.76% mean
+binary-mask agreement. The model file decreased from 127,709 to 60,539 bytes.
+
+INT8 did not improve latency on the measured CPU. Across five interleaved trials, mean inference
+increased from 1.163 ms for FP32 to 2.534 ms for INT8 QDQ. These paired v0.6 timings use a newer
+ONNX Runtime environment than the historical v0.4 benchmark and should not be compared across
+versions as though the runtime and system state were identical. They exclude preprocessing,
+postprocessing, I/O, ROS transport, and robot control.
+
+The CPU INT8 model is therefore not selected as the latency deployment artifact. TensorRT FP16 and
+INT8 remain target-hardware validation gates. See `docs/INT8_OPTIMIZATION_V06.md` and
+`artifacts/reference/onnx_int8_v06.json`.
+
+## Production pipeline status
+
+Version 0.7 adds data and experiment provenance, container definitions, and safe cloud-transfer
+planning. These features improve repeatability and traceability; they do not improve model
+accuracy by themselves. A dataset fingerprint proves that the referenced bytes match the recorded
+inventory, not that labels are correct, representative, unbiased, licensed for a particular use,
+or suitable for aircraft inspection.
+
+No real S3 upload, cloud GPU training, container runtime result, Isaac Sim capture, or TensorRT
+benchmark is represented by the local v0.7 implementation. GitHub-hosted container jobs and an
+authorized private-bucket test are separate evidence gates. See `docs/PRODUCTION_PIPELINE_V07.md`.
+
 ## Next validation gates
 
 1. Add aircraft-like surface coupons with documented permissions and untouched external tests.

@@ -21,6 +21,83 @@ The MVP is deliberately dependency-light. Its score is a pipeline-validation res
 data and must not be presented as production or aircraft-surface performance. See
 [`MODEL_CARD.md`](MODEL_CARD.md) for limitations.
 
+## Isaac Sim surface digital twin (v0.5 development)
+
+The next portfolio milestone is now implemented as a testable foundation: a versioned NVIDIA
+Isaac Sim Replicator generator for an aircraft-like inspection panel. It requests aligned RGB,
+semantic segmentation, distance-to-image-plane, surface normals, and camera parameters while
+randomizing camera pose/focal length, lighting, metal appearance, and scratch/corrosion/pit
+geometry. Fasteners and seams are labeled as protected regions for the downstream coverage
+planner.
+
+The capture contract plans 1,200 frames with deterministic 840/180/180 train/validation/test
+splits. Config validation, split planning, an offline schematic, Replicator output discovery, and
+incomplete-capture rejection are covered by unit tests. A real Isaac Sim render has **not yet been
+executed on this development machine**, so the image below is deliberately labeled as a planning
+preview rather than sensor evidence.
+
+![Isaac Sim v0.5 pre-capture plan](artifacts/reference/isaac_sim_v05_plan_preview.png)
+
+See [`docs/ISAAC_SIM_V05.md`](docs/ISAAC_SIM_V05.md) for the 50-frame RTX smoke-test command,
+dataset schema, acceptance gates, API references, and limitations. The machine-readable planned
+split is in
+[`artifacts/reference/isaac_sim_v05_capture_plan.json`](artifacts/reference/isaac_sim_v05_capture_plan.json).
+
+## Measured ONNX INT8 optimization (v0.6)
+
+The v0.4 global Tiny U-Net was calibrated with 64 validation images and evaluated on all 137
+held-out test images using static S8S8 QDQ quantization. Five interleaved CPU benchmark trials were
+run with 20 warmups and 200 timed inferences per trial.
+
+| Measure | FP32 ONNX | INT8 QDQ |
+|---|---:|---:|
+| Held-out IoU | 0.2860 | 0.2929 |
+| Held-out F1 | 0.4448 | 0.4531 |
+| Mean latency | 1.163 ms | 2.534 ms |
+| Throughput from mean latency | 859.7 FPS | 394.6 FPS |
+| Model size | 127,709 bytes | 60,539 bytes |
+| Mean binary-mask agreement | - | 99.76% vs. FP32 |
+
+INT8 reduced file size by 52.6% and preserved quality, but was 2.18x slower on this CPU because
+QDQ conversion overhead dominated the tiny CNN. FP32 remains the CPU latency choice; TensorRT
+FP16/INT8 must be measured on the eventual RTX/Jetson target. See
+[`docs/INT8_OPTIMIZATION_V06.md`](docs/INT8_OPTIMIZATION_V06.md) and the machine-readable
+[`artifacts/reference/onnx_int8_v06.json`](artifacts/reference/onnx_int8_v06.json).
+
+## Production ML workflow (v0.7)
+
+The project now includes a cloud- and container-ready reproducibility layer. It creates a
+byte-verified inventory for every dataset asset, captures experiment configuration plus Git and
+runtime provenance, and derives a single reproducibility fingerprint. A safe S3-compatible sync
+planner uses content-addressed keys, verifies local bytes before upload, skips matching objects,
+supports encryption requests, defaults to dry-run, and has no delete operation.
+
+The multi-stage Docker image separates dependency-light runtime, optional ML, and CI targets. All
+targets use a non-root user; Compose exercises read-only root filesystems and explicit input/output
+mounts. GitHub Actions verifies the provenance contract and builds/runs the containers on Linux.
+No real cloud upload or cloud GPU-training result is claimed yet.
+
+See [`docs/PRODUCTION_PIPELINE_V07.md`](docs/PRODUCTION_PIPELINE_V07.md) for the workflow,
+security boundaries, commands, CI evidence, and remaining deployment gates. The local native-smoke
+evidence is recorded in
+[`artifacts/reference/production_pipeline_v07.json`](artifacts/reference/production_pipeline_v07.json).
+
+## Real-time C++ ROS2 deployment (v0.8 development)
+
+The ROS2 workspace now contains a dependency-light C++17 inference core for RGB/BGR image
+normalization, bilinear resize, sigmoid thresholding, nearest-neighbor mask restoration, and
+rolling p50/p95 latency/FPS telemetry. An optional native ONNX Runtime node wraps that core using
+sensor-data QoS and publishes a `mono8` defect mask, scalar defect fraction, detailed stage timing,
+deadline warnings, and failure diagnostics.
+
+The native ONNX executable is disabled by default because ONNX Runtime does not ship as a standard
+ROS dependency. The core and its deterministic GoogleTests build without ONNX Runtime; enabling the
+node requires an explicit `ONNXRUNTIME_ROOT`. A ROS2 Humble GitHub contract now verifies the native
+executable and replays a deterministic two-frame camera bag, checking exact masks, fractions,
+timestamps, and healthy diagnostics. See
+[`docs/ROS2_REALTIME_V08.md`](docs/ROS2_REALTIME_V08.md) for supported image/model contracts,
+build commands, topics, parameters, verified evidence, and remaining hardware gates.
+
 ## Reference MVP result
 
 The deterministic reference run completed on 120 synthetic 96 x 96 images:
