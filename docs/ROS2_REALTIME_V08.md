@@ -3,9 +3,10 @@
 ## Objective
 
 Version 0.8 moves the segmentation path from a Python prototype toward a testable C++17 ROS2
-deployment. This development slice implements the deterministic transformation and telemetry
-contracts plus an optional ONNX Runtime node. It does not yet claim a successful native build,
-camera run, rosbag replay, or target-hardware deadline result.
+deployment. This development slice implements deterministic transformation and telemetry
+contracts plus a native ONNX Runtime node. GitHub CI now verifies the native Linux build and a
+two-frame rosbag execution contract. It does not claim a physical-camera run or target-hardware
+deadline result.
 
 ## Runtime flow
 
@@ -62,14 +63,14 @@ colcon test --packages-select surface_perception_cpp --event-handlers console_di
 colcon test-result --verbose
 ```
 
-The [`ros2-realtime-v08` GitHub workflow](https://github.com/DEWARAJ/defect-aware-robotic-surface-system/actions/runs/31644290894)
-passed this contract in a ROS2 Humble container at source commit `6826a0c`. It built the package in
+The [`ros2-realtime-v08` GitHub workflow](https://github.com/DEWARAJ/defect-aware-robotic-surface-system/actions/runs/31645893134)
+passed this contract in a ROS2 Humble container at source commit `0bf160f`. It built the package in
 Release mode, passed both CTest executables, passed seven GoogleTest cases, and reported nine total
-checks with zero errors, failures, or skips. It does not build the optional ONNX node.
+checks with zero errors, failures, or skips.
 
 ## Build the native ONNX node
 
-The [native CI contract](https://github.com/DEWARAJ/defect-aware-robotic-surface-system/actions/runs/31644763535)
+The [native CI contract](https://github.com/DEWARAJ/defect-aware-robotic-surface-system/actions/runs/31645893134)
 passed against the official ONNX Runtime `1.29.0` Linux x64 CPU SDK after verifying its published
 SHA-256 digest. It compiled and linked `realtime_inference_node`, verified the executable, and
 passed all C++ tests. For a local build, point `ONNXRUNTIME_ROOT` at an equivalent extracted root
@@ -87,6 +88,19 @@ ros2 launch surface_perception_cpp realtime_inference.launch.py \
 ONNX Runtime's C++ API is a thin wrapper over its C API and supports session input/output name
 allocation and synchronous `Run`. The node uses those lifetime-managed C++ wrappers.
 
+## Verified rosbag execution contract
+
+The same CI run creates a deterministic float32 ONNX segmentation model and a two-frame ROS2 bag,
+starts the native node, and replays black and white `rgb8` frames. The verifier confirmed:
+
+- two `mono8` masks with the expected SHA-256 hashes;
+- defect fractions `[0.0, 1.0]`;
+- preserved frame timestamps `[1, 2]`;
+- two healthy diagnostic messages containing provider, latency, FPS, fraction, and failure fields.
+
+This proves message-level wiring and native ONNX execution in the ROS2 Humble CI environment. It
+is intentionally a small deterministic contract, not a camera-quality or performance benchmark.
+
 ## Parameters
 
 | Parameter | Default | Safety rule |
@@ -102,13 +116,12 @@ allocation and synchronous `Run`. The node uses those lifetime-managed C++ wrapp
 
 ## Evidence gates before calling v0.8 complete
 
-1. Replay a versioned rosbag with expected mask hashes and message counts.
-2. Record preprocessing, inference, postprocessing, end-to-end p50/p95/p99, FPS, CPU, and memory.
-3. Repeat on the intended NVIDIA/edge target and compare FP32, FP16, and INT8 artifacts.
-4. Test malformed images, dropped frames, slow inference, model mismatch, and node restart behavior.
-5. Connect the mask topic to the protected-region-aware C++ coverage planner.
+1. Record preprocessing, inference, postprocessing, end-to-end p50/p95/p99, FPS, CPU, and memory.
+2. Repeat on the intended NVIDIA/edge target and compare FP32, FP16, and INT8 artifacts.
+3. Test malformed images, dropped frames, slow inference, model mismatch, and node restart behavior.
+4. Connect the mask topic to the protected-region-aware C++ coverage planner.
 
 The current Windows development machine has no ROS2 compiler toolchain, `colcon`, native ONNX
 Runtime SDK, camera, or target GPU. Linux ROS2 compilation and dependency-light C++ tests are now
-verified by GitHub Actions; native ONNX execution, rosbag replay, and hardware performance remain
-unclaimed evidence gates.
+verified by GitHub Actions together with native ONNX execution and deterministic rosbag replay.
+Physical-camera integration and hardware performance remain unclaimed evidence gates.

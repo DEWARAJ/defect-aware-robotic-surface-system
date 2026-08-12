@@ -92,9 +92,11 @@ deadline warnings, and failure diagnostics.
 
 The native ONNX executable is disabled by default because ONNX Runtime does not ship as a standard
 ROS dependency. The core and its deterministic GoogleTests build without ONNX Runtime; enabling the
-node requires an explicit `ONNXRUNTIME_ROOT`. See
+node requires an explicit `ONNXRUNTIME_ROOT`. A ROS2 Humble GitHub contract now verifies the native
+executable and replays a deterministic two-frame camera bag, checking exact masks, fractions,
+timestamps, and healthy diagnostics. See
 [`docs/ROS2_REALTIME_V08.md`](docs/ROS2_REALTIME_V08.md) for supported image/model contracts,
-build commands, topics, parameters, and the evidence still required before deployment claims.
+build commands, topics, parameters, verified evidence, and remaining hardware gates.
 
 ## Reference MVP result
 
