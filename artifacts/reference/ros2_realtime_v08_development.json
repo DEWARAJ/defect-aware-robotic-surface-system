@@ -16,6 +16,18 @@
     "version": "1.29.0",
     "asset": "onnxruntime-linux-x64-1.29.0.tgz",
     "sha256": "c3fddc4f139a045b0c4902c57410f0694f1c2fdf9b6939fbe38b1aeae7cd14ba",
+    "github_ci_validation_pass": true,
+    "source_commit": "d9e9042ec1354aaa802138184126e0d83fa2374e",
+    "run_id": 31644763535,
+    "native_executable_verified": true,
+    "cpp_tests_pass": true
+  },
+  "rosbag_replay_contract": {
+    "input_frames": 2,
+    "expected_mask_sha256_count": 2,
+    "expected_defect_fractions": [0.0, 1.0],
+    "requires_preserved_timestamps": true,
+    "requires_healthy_diagnostics": true,
     "github_ci_validation_pending": true
   },
   "local_validation": {

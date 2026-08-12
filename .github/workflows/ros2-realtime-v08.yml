@@ -65,11 +65,16 @@ jobs:
           apt-get update &&
           apt-get install --yes --no-install-recommends
           ca-certificates curl
+          python3-pip
           python3-colcon-common-extensions
           ros-humble-ament-cmake-gtest
           ros-humble-diagnostic-msgs
+          ros-humble-rosbag2
+          ros-humble-rosbag2-storage-default-plugins
           ros-humble-sensor-msgs &&
           rm -rf /var/lib/apt/lists/*
+      - name: Install pinned replay-fixture dependencies
+        run: python3 -m pip install --no-cache-dir numpy==1.26.4 onnx==1.19.1
       - name: Install pinned ONNX Runtime C++ SDK
         shell: bash
         run: |
@@ -102,3 +107,18 @@ jobs:
             --packages-select surface_perception_cpp \
             --event-handlers console_direct+
           colcon test-result --verbose
+      - name: Replay deterministic camera rosbag
+        shell: bash
+        run: |
+          source /opt/ros/humble/setup.bash
+          source ros2_ws/install/setup.bash
+          bash scripts/ros2/run_replay_contract.sh \
+            "${RUNNER_TEMP}/ros2-replay" "${ONNXRUNTIME_ROOT}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ros2-replay-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/ros2-replay/replay_result.json
+            ${{ runner.temp }}/ros2-replay/node.log
+            ${{ runner.temp }}/ros2-replay/verifier.log
+          if-no-files-found: error

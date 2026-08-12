@@ -69,9 +69,11 @@ checks with zero errors, failures, or skips. It does not build the optional ONNX
 
 ## Build the native ONNX node
 
-The native CI contract pins the official ONNX Runtime `1.29.0` Linux x64 CPU SDK and verifies its
-published SHA-256 digest before extraction. For a local build, point `ONNXRUNTIME_ROOT` at an
-equivalent extracted root containing headers and the runtime library:
+The [native CI contract](https://github.com/DEWARAJ/defect-aware-robotic-surface-system/actions/runs/31644763535)
+passed against the official ONNX Runtime `1.29.0` Linux x64 CPU SDK after verifying its published
+SHA-256 digest. It compiled and linked `realtime_inference_node`, verified the executable, and
+passed all C++ tests. For a local build, point `ONNXRUNTIME_ROOT` at an equivalent extracted root
+containing headers and the runtime library:
 
 ```bash
 export ONNXRUNTIME_ROOT=/opt/onnxruntime
@@ -100,12 +102,11 @@ allocation and synchronous `Run`. The node uses those lifetime-managed C++ wrapp
 
 ## Evidence gates before calling v0.8 complete
 
-1. Pass native-node compilation against pinned ONNX Runtime `1.29.0` in Linux CI.
-2. Replay a versioned rosbag with expected mask hashes and message counts.
-3. Record preprocessing, inference, postprocessing, end-to-end p50/p95/p99, FPS, CPU, and memory.
-4. Repeat on the intended NVIDIA/edge target and compare FP32, FP16, and INT8 artifacts.
-5. Test malformed images, dropped frames, slow inference, model mismatch, and node restart behavior.
-6. Connect the mask topic to the protected-region-aware C++ coverage planner.
+1. Replay a versioned rosbag with expected mask hashes and message counts.
+2. Record preprocessing, inference, postprocessing, end-to-end p50/p95/p99, FPS, CPU, and memory.
+3. Repeat on the intended NVIDIA/edge target and compare FP32, FP16, and INT8 artifacts.
+4. Test malformed images, dropped frames, slow inference, model mismatch, and node restart behavior.
+5. Connect the mask topic to the protected-region-aware C++ coverage planner.
 
 The current Windows development machine has no ROS2 compiler toolchain, `colcon`, native ONNX
 Runtime SDK, camera, or target GPU. Linux ROS2 compilation and dependency-light C++ tests are now
