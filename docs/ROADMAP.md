@@ -66,6 +66,17 @@
 - Calibrate normalized image-plane paths into a surface coordinate frame.
 - Add reachability, acceleration, singularity, force, and collision constraints through MoveIt 2.
 
+## Milestone 3.5 - Production ML workflow (v0.7)
+
+- Implemented byte-level dataset inventories with portable canonical fingerprints.
+- Implemented experiment contracts linking config, dataset, Git state, runtime, and dependencies.
+- Implemented dry-run-first, content-addressed S3-compatible upload planning with no delete path.
+- Added pre-upload re-hashing, idempotent matching-object skips, and encryption options.
+- Added non-root multi-stage Docker targets and read-only Compose execution profiles.
+- Added GitHub Actions provenance and container smoke jobs with immutable workflow artifacts.
+- Pending an actual private-bucket upload and idempotency verification with least-privilege access.
+- Pending cloud GPU training with measured cost, utilization, duration, and result provenance.
+
 ## Milestone 5 - Recruiter-ready evidence
 
 - Record a 90-second demo with ROS2 diagnostics and live segmentation.

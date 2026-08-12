@@ -1,0 +1,54 @@
+{
+  "schema_version": "production-pipeline-evidence-1.0",
+  "version": "0.7.0",
+  "status": "implemented-local-validation-complete",
+  "native_smoke": {
+    "fixture": {
+      "purpose": "pipeline validation only",
+      "real_aircraft_data": false,
+      "samples": 42,
+      "assets": 66,
+      "total_bytes": 286959,
+      "splits": {
+        "test": 10,
+        "train": 26,
+        "validation": 6
+      }
+    },
+    "dataset_inventory": {
+      "fingerprint": "9e37a48cdddf72fa96a4a21fb064706270b752e40196fae4cd0253c99260995c",
+      "verification_pass": true,
+      "path_relocation_supported_with_hash_verification": true
+    },
+    "cloud_plan": {
+      "mode": "dry-run",
+      "objects_planned": 66,
+      "objects_uploaded": 0,
+      "objects_deleted": 0,
+      "content_addressed_keys": true,
+      "inventory_verified": true
+    },
+    "automated_tests": {
+      "discovered": 27,
+      "passed": 24,
+      "skipped_optional_dependencies": 3,
+      "failed": 0
+    }
+  },
+  "container_evidence": {
+    "dockerfile_and_compose_implemented": true,
+    "local_runtime_available": false,
+    "local_container_run_claimed": false,
+    "github_actions_validation_required_after_push": true
+  },
+  "cloud_evidence": {
+    "real_upload_executed": false,
+    "cloud_gpu_training_executed": false,
+    "credentials_stored_in_repository": false
+  },
+  "limitations": [
+    "The deterministic fixture validates software contracts, not model accuracy.",
+    "A content fingerprint proves byte identity, not label quality or production suitability.",
+    "Private-bucket upload, Docker runtime, cloud GPU cost, and utilization are pending evidence gates."
+  ]
+}

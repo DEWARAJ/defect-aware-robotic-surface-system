@@ -1,0 +1,74 @@
+name: production-pipeline-contract
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproducibility-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: python -m pip install .
+      - run: python scripts/create_ml_smoke_fixture.py --output runs/production-fixture --size 64
+      - run: >-
+          python -m surface_perception.cli build-manifest
+          --mvtec-root runs/production-fixture --categories metal_panel
+          --output runs/production-contract/manifest.json
+      - run: >-
+          python -m surface_perception.cli inventory
+          --manifest runs/production-contract/manifest.json
+          --output runs/production-contract/dataset_inventory.json
+      - run: >-
+          python -m surface_perception.cli verify-inventory
+          --manifest runs/production-contract/manifest.json
+          --inventory runs/production-contract/dataset_inventory.json
+      - run: >-
+          python -m surface_perception.cli experiment-contract
+          --config configs/production_experiment_v07.json
+          --inventory runs/production-contract/dataset_inventory.json
+          --output runs/production-contract/experiment_contract.json
+      - run: >-
+          python -m surface_perception.cloud_sync
+          --manifest runs/production-contract/manifest.json
+          --inventory runs/production-contract/dataset_inventory.json
+          --bucket ci-dry-run-only --prefix surface-perception/ci
+          --plan-output runs/production-contract/s3_upload_plan.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: production-contract-${{ github.sha }}
+          path: |
+            runs/production-contract/dataset_inventory.json
+            runs/production-contract/experiment_contract.json
+            runs/production-contract/s3_upload_plan.json
+          if-no-files-found: error
+
+  container-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: >-
+          docker build
+          --target ci
+          --build-arg SOURCE_COMMIT=${{ github.sha }}
+          --build-arg SOURCE_BRANCH=${{ github.ref_name }}
+          --tag surface-perception:ci .
+      - run: docker run --rm --read-only --tmpfs /tmp surface-perception:ci
+      - run: >-
+          docker build
+          --target runtime
+          --build-arg SOURCE_COMMIT=${{ github.sha }}
+          --build-arg SOURCE_BRANCH=${{ github.ref_name }}
+          --tag surface-perception:runtime .
+      - run: >-
+          docker run --rm --read-only --tmpfs /tmp
+          --mount type=volume,src=surface-ci-runs,dst=/workspace/runs
+          surface-perception:runtime

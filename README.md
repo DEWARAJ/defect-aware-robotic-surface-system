@@ -64,6 +64,24 @@ FP16/INT8 must be measured on the eventual RTX/Jetson target. See
 [`docs/INT8_OPTIMIZATION_V06.md`](docs/INT8_OPTIMIZATION_V06.md) and the machine-readable
 [`artifacts/reference/onnx_int8_v06.json`](artifacts/reference/onnx_int8_v06.json).
 
+## Production ML workflow (v0.7)
+
+The project now includes a cloud- and container-ready reproducibility layer. It creates a
+byte-verified inventory for every dataset asset, captures experiment configuration plus Git and
+runtime provenance, and derives a single reproducibility fingerprint. A safe S3-compatible sync
+planner uses content-addressed keys, verifies local bytes before upload, skips matching objects,
+supports encryption requests, defaults to dry-run, and has no delete operation.
+
+The multi-stage Docker image separates dependency-light runtime, optional ML, and CI targets. All
+targets use a non-root user; Compose exercises read-only root filesystems and explicit input/output
+mounts. GitHub Actions verifies the provenance contract and builds/runs the containers on Linux.
+No real cloud upload or cloud GPU-training result is claimed yet.
+
+See [`docs/PRODUCTION_PIPELINE_V07.md`](docs/PRODUCTION_PIPELINE_V07.md) for the workflow,
+security boundaries, commands, CI evidence, and remaining deployment gates. The local native-smoke
+evidence is recorded in
+[`artifacts/reference/production_pipeline_v07.json`](artifacts/reference/production_pipeline_v07.json).
+
 ## Reference MVP result
 
 The deterministic reference run completed on 120 synthetic 96 x 96 images:

@@ -1,0 +1,51 @@
+services:
+  mvp:
+    build:
+      context: .
+      target: runtime
+      args:
+        SOURCE_COMMIT: ${SOURCE_COMMIT:-unknown}
+        SOURCE_BRANCH: ${SOURCE_BRANCH:-unknown}
+    image: surface-perception:v0.7-runtime
+    read_only: true
+    tmpfs:
+      - /tmp
+    volumes:
+      - ./runs:/workspace/runs
+    command:
+      - surface-perception
+      - run-all
+      - --workspace
+      - /workspace/runs/container-mvp
+      - --config
+      - configs/mvp.json
+
+  tests:
+    build:
+      context: .
+      target: ci
+      args:
+        SOURCE_COMMIT: ${SOURCE_COMMIT:-unknown}
+        SOURCE_BRANCH: ${SOURCE_BRANCH:-unknown}
+    image: surface-perception:v0.7-ci
+    read_only: true
+    tmpfs:
+      - /tmp
+    command: ["python", "-m", "unittest", "discover", "-s", "tests", "-v"]
+
+  ml:
+    profiles: ["ml"]
+    build:
+      context: .
+      target: ml
+      args:
+        SOURCE_COMMIT: ${SOURCE_COMMIT:-unknown}
+        SOURCE_BRANCH: ${SOURCE_BRANCH:-unknown}
+    image: surface-perception:v0.7-ml
+    read_only: true
+    tmpfs:
+      - /tmp
+    volumes:
+      - ./data:/workspace/inputs:ro
+      - ./runs:/workspace/runs
+    command: ["python", "-m", "surface_perception.train_real", "--help"]

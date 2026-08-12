@@ -71,6 +71,18 @@ The CPU INT8 model is therefore not selected as the latency deployment artifact.
 INT8 remain target-hardware validation gates. See `docs/INT8_OPTIMIZATION_V06.md` and
 `artifacts/reference/onnx_int8_v06.json`.
 
+## Production pipeline status
+
+Version 0.7 adds data and experiment provenance, container definitions, and safe cloud-transfer
+planning. These features improve repeatability and traceability; they do not improve model
+accuracy by themselves. A dataset fingerprint proves that the referenced bytes match the recorded
+inventory, not that labels are correct, representative, unbiased, licensed for a particular use,
+or suitable for aircraft inspection.
+
+No real S3 upload, cloud GPU training, container runtime result, Isaac Sim capture, or TensorRT
+benchmark is represented by the local v0.7 implementation. GitHub-hosted container jobs and an
+authorized private-bucket test are separate evidence gates. See `docs/PRODUCTION_PIPELINE_V07.md`.
+
 ## Next validation gates
 
 1. Add aircraft-like surface coupons with documented permissions and untouched external tests.
