@@ -18,37 +18,44 @@ jobs:
           python-version: "3.11"
           cache: pip
       - run: python -m pip install .
-      - run: python scripts/create_ml_smoke_fixture.py --output runs/production-fixture --size 64
+      - run: >-
+          python scripts/create_ml_smoke_fixture.py
+          --output "${{ runner.temp }}/production-fixture" --size 64
       - run: >-
           python -m surface_perception.cli build-manifest
-          --mvtec-root runs/production-fixture --categories metal_panel
-          --output runs/production-contract/manifest.json
+          --mvtec-root "${{ runner.temp }}/production-fixture" --categories metal_panel
+          --output "${{ runner.temp }}/production-contract/manifest.json"
       - run: >-
           python -m surface_perception.cli inventory
-          --manifest runs/production-contract/manifest.json
-          --output runs/production-contract/dataset_inventory.json
+          --manifest "${{ runner.temp }}/production-contract/manifest.json"
+          --output "${{ runner.temp }}/production-contract/dataset_inventory.json"
       - run: >-
           python -m surface_perception.cli verify-inventory
-          --manifest runs/production-contract/manifest.json
-          --inventory runs/production-contract/dataset_inventory.json
+          --manifest "${{ runner.temp }}/production-contract/manifest.json"
+          --inventory "${{ runner.temp }}/production-contract/dataset_inventory.json"
+      - name: Require clean source tree before provenance capture
+        shell: bash
+        run: |
+          git status --short
+          test -z "$(git status --porcelain)"
       - run: >-
           python -m surface_perception.cli experiment-contract
           --config configs/production_experiment_v07.json
-          --inventory runs/production-contract/dataset_inventory.json
-          --output runs/production-contract/experiment_contract.json
+          --inventory "${{ runner.temp }}/production-contract/dataset_inventory.json"
+          --output "${{ runner.temp }}/production-contract/experiment_contract.json"
       - run: >-
           python -m surface_perception.cloud_sync
-          --manifest runs/production-contract/manifest.json
-          --inventory runs/production-contract/dataset_inventory.json
+          --manifest "${{ runner.temp }}/production-contract/manifest.json"
+          --inventory "${{ runner.temp }}/production-contract/dataset_inventory.json"
           --bucket ci-dry-run-only --prefix surface-perception/ci
-          --plan-output runs/production-contract/s3_upload_plan.json
+          --plan-output "${{ runner.temp }}/production-contract/s3_upload_plan.json"
       - uses: actions/upload-artifact@v4
         with:
           name: production-contract-${{ github.sha }}
           path: |
-            runs/production-contract/dataset_inventory.json
-            runs/production-contract/experiment_contract.json
-            runs/production-contract/s3_upload_plan.json
+            ${{ runner.temp }}/production-contract/dataset_inventory.json
+            ${{ runner.temp }}/production-contract/experiment_contract.json
+            ${{ runner.temp }}/production-contract/s3_upload_plan.json
           if-no-files-found: error
 
   container-contract:
