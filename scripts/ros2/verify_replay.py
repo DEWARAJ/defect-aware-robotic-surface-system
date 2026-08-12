@@ -19,6 +19,15 @@ EXPECTED_MASK_HASHES = [
 ]
 
 
+def uint8_to_int(value: int | bytes | bytearray) -> int:
+    """Normalize ROS uint8 fields across rosidl Python representations."""
+    if isinstance(value, (bytes, bytearray)):
+        if len(value) != 1:
+            raise AssertionError(f"expected one diagnostic level byte, got {len(value)}")
+        return value[0]
+    return int(value)
+
+
 class ReplayVerifier(Node):
     def __init__(self) -> None:
         super().__init__("surface_perception_replay_verifier")
@@ -50,7 +59,7 @@ class ReplayVerifier(Node):
             raise AssertionError("expected exactly one inference diagnostic status")
         status = message.status[0]
         self.diagnostic_stamps.append(message.header.stamp.sec)
-        self.diagnostic_levels.append(status.level)
+        self.diagnostic_levels.append(uint8_to_int(status.level))
         self.diagnostic_keys.append(sorted(value.key for value in status.values))
 
     def complete(self) -> bool:
@@ -90,7 +99,8 @@ def main() -> None:
         raise AssertionError("output timestamps did not preserve the rosbag frame timestamps")
     if node.fractions != [0.0, 1.0]:
         raise AssertionError(f"unexpected defect fractions: {node.fractions}")
-    if node.diagnostic_levels != [DiagnosticStatus.OK, DiagnosticStatus.OK]:
+    expected_ok = uint8_to_int(DiagnosticStatus.OK)
+    if node.diagnostic_levels != [expected_ok, expected_ok]:
         raise AssertionError(f"unhealthy diagnostics: {node.diagnostic_levels}")
     if len(node.diagnostic_keys) != 2 or any(
         not required_keys.issubset(keys) for keys in map(set, node.diagnostic_keys)
