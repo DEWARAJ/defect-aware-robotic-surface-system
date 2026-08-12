@@ -12,6 +12,12 @@
     "mask_fraction_and_diagnostics_topics": true,
     "ros2_humble_ci_contract": true
   },
+  "native_onnx_build_contract": {
+    "version": "1.29.0",
+    "asset": "onnxruntime-linux-x64-1.29.0.tgz",
+    "sha256": "c3fddc4f139a045b0c4902c57410f0694f1c2fdf9b6939fbe38b1aeae7cd14ba",
+    "github_ci_validation_pending": true
+  },
   "local_validation": {
     "python_regression_tests_discovered": 27,
     "python_regression_tests_passed": 24,

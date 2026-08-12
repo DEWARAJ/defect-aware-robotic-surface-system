@@ -69,8 +69,9 @@ checks with zero errors, failures, or skips. It does not build the optional ONNX
 
 ## Build the native ONNX node
 
-Install a compatible ONNX Runtime C++ distribution and point `ONNXRUNTIME_ROOT` at the extracted
-root containing headers and the runtime library:
+The native CI contract pins the official ONNX Runtime `1.29.0` Linux x64 CPU SDK and verifies its
+published SHA-256 digest before extraction. For a local build, point `ONNXRUNTIME_ROOT` at an
+equivalent extracted root containing headers and the runtime library:
 
 ```bash
 export ONNXRUNTIME_ROOT=/opt/onnxruntime
@@ -99,7 +100,7 @@ allocation and synchronous `Run`. The node uses those lifetime-managed C++ wrapp
 
 ## Evidence gates before calling v0.8 complete
 
-1. Build the native node against a pinned ONNX Runtime C++ release.
+1. Pass native-node compilation against pinned ONNX Runtime `1.29.0` in Linux CI.
 2. Replay a versioned rosbag with expected mask hashes and message counts.
 3. Record preprocessing, inference, postprocessing, end-to-end p50/p95/p99, FPS, CPU, and memory.
 4. Repeat on the intended NVIDIA/edge target and compare FP32, FP16, and INT8 artifacts.

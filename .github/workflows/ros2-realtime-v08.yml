@@ -49,3 +49,56 @@ jobs:
             --packages-select surface_perception_cpp \
             --event-handlers console_direct+
           colcon test-result --verbose
+
+  native-onnx-node-contract:
+    runs-on: ubuntu-latest
+    container:
+      image: ros:humble-ros-base-jammy
+    env:
+      ONNXRUNTIME_VERSION: "1.29.0"
+      ONNXRUNTIME_SHA256: c3fddc4f139a045b0c4902c57410f0694f1c2fdf9b6939fbe38b1aeae7cd14ba
+      ONNXRUNTIME_ROOT: /opt/onnxruntime
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install build dependencies
+        run: >-
+          apt-get update &&
+          apt-get install --yes --no-install-recommends
+          ca-certificates curl
+          python3-colcon-common-extensions
+          ros-humble-ament-cmake-gtest
+          ros-humble-diagnostic-msgs
+          ros-humble-sensor-msgs &&
+          rm -rf /var/lib/apt/lists/*
+      - name: Install pinned ONNX Runtime C++ SDK
+        shell: bash
+        run: |
+          set -euo pipefail
+          archive="${RUNNER_TEMP}/onnxruntime.tgz"
+          curl --fail --location --silent --show-error \
+            "https://github.com/microsoft/onnxruntime/releases/download/v${ONNXRUNTIME_VERSION}/onnxruntime-linux-x64-${ONNXRUNTIME_VERSION}.tgz" \
+            --output "${archive}"
+          echo "${ONNXRUNTIME_SHA256}  ${archive}" | sha256sum --check --strict
+          mkdir -p "${ONNXRUNTIME_ROOT}"
+          tar --extract --gzip --file "${archive}" \
+            --strip-components=1 --directory "${ONNXRUNTIME_ROOT}"
+      - name: Build native ONNX Runtime ROS2 node
+        shell: bash
+        run: |
+          source /opt/ros/humble/setup.bash
+          cd ros2_ws
+          colcon build \
+            --packages-select surface_perception_cpp \
+            --cmake-args \
+              -DSURFACE_PERCEPTION_ENABLE_ONNX=ON \
+              -DCMAKE_BUILD_TYPE=Release
+      - name: Verify native executable and run C++ tests
+        shell: bash
+        run: |
+          source /opt/ros/humble/setup.bash
+          cd ros2_ws
+          test -x install/surface_perception_cpp/lib/surface_perception_cpp/realtime_inference_node
+          colcon test \
+            --packages-select surface_perception_cpp \
+            --event-handlers console_direct+
+          colcon test-result --verbose
