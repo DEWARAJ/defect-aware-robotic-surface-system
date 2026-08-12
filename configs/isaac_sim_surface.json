@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "seed": 42,
+  "frames": 1200,
+  "resolution": [640, 480],
+  "renderer": "RayTracedLighting",
+  "panel": {
+    "size_m": [2.4, 1.4, 0.06],
+    "roughness": [0.18, 0.72],
+    "metallic": [0.65, 1.0],
+    "diffuse_min": [0.28, 0.31, 0.35],
+    "diffuse_max": [0.74, 0.78, 0.82]
+  },
+  "camera": {
+    "x_m": [-0.65, 0.65],
+    "y_m": [-0.42, 0.42],
+    "z_m": [2.0, 3.1],
+    "focal_length_mm": [28.0, 58.0]
+  },
+  "lighting": {
+    "count": 3,
+    "intensity": [1200.0, 6000.0],
+    "color_temperature_k": [3200.0, 7200.0]
+  },
+  "defects": {
+    "scratch": {
+      "count": 5,
+      "length_m": [0.08, 0.55],
+      "width_m": [0.003, 0.018]
+    },
+    "corrosion": {
+      "count": 3,
+      "length_m": [0.04, 0.24],
+      "width_m": [0.03, 0.20]
+    },
+    "pit": {
+      "count": 7,
+      "length_m": [0.006, 0.045],
+      "width_m": [0.006, 0.045]
+    }
+  },
+  "protected_objects": {
+    "fastener_count": 10,
+    "seam_count": 2
+  },
+  "outputs": {
+    "rgb": true,
+    "semantic_segmentation": true,
+    "distance_to_image_plane": true,
+    "normals": true,
+    "camera_params": true
+  },
+  "semantic_classes": {
+    "panel": 1,
+    "defect_scratch": 10,
+    "defect_corrosion": 11,
+    "defect_pit": 12,
+    "protected_fastener": 20,
+    "protected_seam": 21
+  },
+  "splits": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  }
+}

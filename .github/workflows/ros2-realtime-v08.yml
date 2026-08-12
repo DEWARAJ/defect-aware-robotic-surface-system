@@ -1,0 +1,127 @@
+name: ros2-realtime-v08
+
+on:
+  push:
+    paths:
+      - "ros2_ws/**"
+      - "scripts/ros2/**"
+      - ".github/workflows/ros2-realtime-v08.yml"
+  pull_request:
+    paths:
+      - "ros2_ws/**"
+      - "scripts/ros2/**"
+      - ".github/workflows/ros2-realtime-v08.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cpp-core-contract:
+    runs-on: ubuntu-latest
+    container:
+      image: ros:humble-ros-base-jammy
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install build dependencies
+        run: >-
+          apt-get update &&
+          apt-get install --yes --no-install-recommends
+          python3-colcon-common-extensions
+          ros-humble-ament-cmake-gtest
+          ros-humble-diagnostic-msgs
+          ros-humble-sensor-msgs &&
+          rm -rf /var/lib/apt/lists/*
+      - name: Build C++17 core and ROS2 planner
+        shell: bash
+        run: |
+          source /opt/ros/humble/setup.bash
+          cd ros2_ws
+          colcon build \
+            --packages-select surface_perception_cpp \
+            --cmake-args \
+              -DSURFACE_PERCEPTION_ENABLE_ONNX=OFF \
+              -DCMAKE_BUILD_TYPE=Release
+      - name: Run C++ unit tests
+        shell: bash
+        run: |
+          source /opt/ros/humble/setup.bash
+          cd ros2_ws
+          colcon test \
+            --packages-select surface_perception_cpp \
+            --event-handlers console_direct+
+          colcon test-result --verbose
+
+  native-onnx-node-contract:
+    runs-on: ubuntu-latest
+    container:
+      image: ros:humble-ros-base-jammy
+    env:
+      ONNXRUNTIME_VERSION: "1.29.0"
+      ONNXRUNTIME_SHA256: c3fddc4f139a045b0c4902c57410f0694f1c2fdf9b6939fbe38b1aeae7cd14ba
+      ONNXRUNTIME_ROOT: /opt/onnxruntime
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install build dependencies
+        run: >-
+          apt-get update &&
+          apt-get install --yes --no-install-recommends
+          ca-certificates curl
+          python3-pip
+          python3-colcon-common-extensions
+          ros-humble-ament-cmake-gtest
+          ros-humble-diagnostic-msgs
+          ros-humble-rosbag2
+          ros-humble-rosbag2-storage-default-plugins
+          ros-humble-sensor-msgs &&
+          rm -rf /var/lib/apt/lists/*
+      - name: Install pinned replay-fixture dependencies
+        run: python3 -m pip install --no-cache-dir numpy==1.26.4 onnx==1.19.1
+      - name: Install pinned ONNX Runtime C++ SDK
+        shell: bash
+        run: |
+          set -euo pipefail
+          archive="${RUNNER_TEMP}/onnxruntime.tgz"
+          curl --fail --location --silent --show-error \
+            "https://github.com/microsoft/onnxruntime/releases/download/v${ONNXRUNTIME_VERSION}/onnxruntime-linux-x64-${ONNXRUNTIME_VERSION}.tgz" \
+            --output "${archive}"
+          echo "${ONNXRUNTIME_SHA256}  ${archive}" | sha256sum --check --strict
+          mkdir -p "${ONNXRUNTIME_ROOT}"
+          tar --extract --gzip --file "${archive}" \
+            --strip-components=1 --directory "${ONNXRUNTIME_ROOT}"
+      - name: Build native ONNX Runtime ROS2 node
+        shell: bash
+        run: |
+          source /opt/ros/humble/setup.bash
+          cd ros2_ws
+          colcon build \
+            --packages-select surface_perception_cpp \
+            --cmake-args \
+              -DSURFACE_PERCEPTION_ENABLE_ONNX=ON \
+              -DCMAKE_BUILD_TYPE=Release
+      - name: Verify native executable and run C++ tests
+        shell: bash
+        run: |
+          source /opt/ros/humble/setup.bash
+          cd ros2_ws
+          test -x install/surface_perception_cpp/lib/surface_perception_cpp/realtime_inference_node
+          colcon test \
+            --packages-select surface_perception_cpp \
+            --event-handlers console_direct+
+          colcon test-result --verbose
+      - name: Replay deterministic camera rosbag
+        shell: bash
+        run: |
+          source /opt/ros/humble/setup.bash
+          source ros2_ws/install/setup.bash
+          bash scripts/ros2/run_replay_contract.sh \
+            "${RUNNER_TEMP}/ros2-replay" "${ONNXRUNTIME_ROOT}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ros2-replay-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/ros2-replay/replay_result.json
+            ${{ runner.temp }}/ros2-replay/node.log
+            ${{ runner.temp }}/ros2-replay/planner.log
+            ${{ runner.temp }}/ros2-replay/verifier.log
+          if-no-files-found: error
