@@ -7,6 +7,11 @@ It records which data, configuration, source revision, dependency versions, and 
 an experiment. It also defines a safe, content-addressed S3-compatible upload path without
 deleting remote data.
 
+Patch 0.7.1 moves generated CI evidence into the GitHub runner's temporary directory and ignores
+standard Python build metadata. A dedicated clean-tree assertion now runs immediately before
+provenance capture, preserving the production requirement instead of bypassing it with a dirty
+development contract.
+
 This milestone targets Temple Allen requirements around maintainable software, large-dataset
 organization, containerized ML workflows, cloud-connected storage, automation, testing, and
 documentation. It does not claim that a real cloud upload or cloud GPU training job has been run.

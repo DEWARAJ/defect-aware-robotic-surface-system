@@ -1,7 +1,7 @@
 {
   "schema_version": "production-pipeline-evidence-1.0",
-  "version": "0.7.0",
-  "status": "implemented-local-validation-complete",
+  "version": "0.7.1",
+  "status": "implemented-local-validation-and-container-contract-complete",
   "native_smoke": {
     "fixture": {
       "purpose": "pipeline validation only",
@@ -39,7 +39,9 @@
     "dockerfile_and_compose_implemented": true,
     "local_runtime_available": false,
     "local_container_run_claimed": false,
-    "github_actions_validation_required_after_push": true
+    "github_actions_container_contract_pass": true,
+    "github_actions_container_contract_run": 31634159261,
+    "github_actions_provenance_workflow_fix_pending_validation": true
   },
   "cloud_evidence": {
     "real_upload_executed": false,
