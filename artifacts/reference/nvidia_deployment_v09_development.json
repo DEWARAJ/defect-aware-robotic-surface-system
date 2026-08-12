@@ -1,7 +1,7 @@
 {
   "schema_version": "nvidia-deployment-development-evidence-1.0",
   "version": "0.9.0.dev0",
-  "status": "benchmark-harness-and-perception-planner-contract-implemented-hardware-run-pending",
+  "status": "benchmark-harness-and-perception-planner-ci-validated-hardware-run-pending",
   "implemented": {
     "tensorrt_fp32_fp16_int8_command_generation": true,
     "explicit_qdq_int8_contract": true,
@@ -21,6 +21,31 @@
     "tensorrt_plan_dry_run_pass": true,
     "nvidia_gpu_available": false,
     "trtexec_available": false
+  },
+  "github_validation": {
+    "source_commit": "0d31d6eeffdc1d02145e5ebdb109c976c16c0cf9",
+    "standard_ci": {
+      "pass": true,
+      "run_id": 31648467171
+    },
+    "production_pipeline_contract": {
+      "pass": true,
+      "run_id": 31648467089
+    },
+    "nvidia_benchmark_contract": {
+      "pass": true,
+      "run_id": 31648467107,
+      "scope": "command generation, parser, telemetry aggregation, acceptance gates, and dry-run plan"
+    },
+    "ros2_perception_to_planner_contract": {
+      "pass": true,
+      "run_id": 31648467111,
+      "coverage_paths": 2,
+      "segments_per_path": [14, 14],
+      "planner_timestamps_seconds": [1, 2],
+      "feed_scales": [[1.0], [0.550000011920929]],
+      "protected_contact_pixels": [0, 0]
+    }
   },
   "acceptance_gates": {
     "minimum_fps": 30.0,

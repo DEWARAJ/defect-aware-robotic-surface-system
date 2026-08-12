@@ -82,6 +82,13 @@ planner. CI verifies two complete perception-to-plan cycles:
 This proves the image-plane message and safety contract. It does not prove calibrated robot-space
 motion, collision avoidance, reachability, force control, or aircraft-process qualification.
 
+The [GitHub ROS2 contract](https://github.com/DEWARAJ/defect-aware-robotic-surface-system/actions/runs/31648467111)
+passed at source commit `0d31d6e`. It produced two coverage paths with 14 segments each, preserved
+timestamps `[1, 2]`, used feed scales `[1.0]` and `[0.55]`, and reported protected contact `[0, 0]`.
+The [NVIDIA deployment contract](https://github.com/DEWARAJ/defect-aware-robotic-surface-system/actions/runs/31648467107)
+also passed its command-generation, parser, telemetry-aggregation, acceptance-gate, and dry-run
+tests. That CI runner is not an NVIDIA benchmark target and contributes no GPU performance claim.
+
 ## Remaining evidence
 
 1. Run the precision matrix on the intended RTX or Jetson target.
