@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>surface_perception_cpp</name>
-  <version>0.1.0</version>
-  <description>Modern C++17 ROS 2 defect-aware surface coverage planner.</description>
+  <version>0.8.0</version>
+  <description>Modern C++17 ROS 2 surface segmentation and defect-aware coverage.</description>
   <maintainer email="dewarajraparthi@gmail.com">Dewaraj Raparthi</maintainer>
   <license>MIT</license>
   <buildtool_depend>ament_cmake</buildtool_depend>
@@ -10,6 +10,9 @@
   <depend>sensor_msgs</depend>
   <depend>std_msgs</depend>
   <depend>diagnostic_msgs</depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
   <test_depend>ament_cmake_gtest</test_depend>
   <export><build_type>ament_cmake</build_type></export>
 </package>

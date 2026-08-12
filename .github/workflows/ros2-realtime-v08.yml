@@ -1,0 +1,51 @@
+name: ros2-realtime-v08
+
+on:
+  push:
+    paths:
+      - "ros2_ws/**"
+      - ".github/workflows/ros2-realtime-v08.yml"
+  pull_request:
+    paths:
+      - "ros2_ws/**"
+      - ".github/workflows/ros2-realtime-v08.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cpp-core-contract:
+    runs-on: ubuntu-latest
+    container:
+      image: ros:humble-ros-base-jammy
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install build dependencies
+        run: >-
+          apt-get update &&
+          apt-get install --yes --no-install-recommends
+          python3-colcon-common-extensions
+          ros-humble-ament-cmake-gtest
+          ros-humble-diagnostic-msgs
+          ros-humble-sensor-msgs &&
+          rm -rf /var/lib/apt/lists/*
+      - name: Build C++17 core and ROS2 planner
+        shell: bash
+        run: |
+          source /opt/ros/humble/setup.bash
+          cd ros2_ws
+          colcon build \
+            --packages-select surface_perception_cpp \
+            --cmake-args \
+              -DSURFACE_PERCEPTION_ENABLE_ONNX=OFF \
+              -DCMAKE_BUILD_TYPE=Release
+      - name: Run C++ unit tests
+        shell: bash
+        run: |
+          source /opt/ros/humble/setup.bash
+          cd ros2_ws
+          colcon test \
+            --packages-select surface_perception_cpp \
+            --event-handlers console_direct+
+          colcon test-result --verbose

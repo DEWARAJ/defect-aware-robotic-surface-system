@@ -82,6 +82,20 @@ security boundaries, commands, CI evidence, and remaining deployment gates. The 
 evidence is recorded in
 [`artifacts/reference/production_pipeline_v07.json`](artifacts/reference/production_pipeline_v07.json).
 
+## Real-time C++ ROS2 deployment (v0.8 development)
+
+The ROS2 workspace now contains a dependency-light C++17 inference core for RGB/BGR image
+normalization, bilinear resize, sigmoid thresholding, nearest-neighbor mask restoration, and
+rolling p50/p95 latency/FPS telemetry. An optional native ONNX Runtime node wraps that core using
+sensor-data QoS and publishes a `mono8` defect mask, scalar defect fraction, detailed stage timing,
+deadline warnings, and failure diagnostics.
+
+The native ONNX executable is disabled by default because ONNX Runtime does not ship as a standard
+ROS dependency. The core and its deterministic GoogleTests build without ONNX Runtime; enabling the
+node requires an explicit `ONNXRUNTIME_ROOT`. See
+[`docs/ROS2_REALTIME_V08.md`](docs/ROS2_REALTIME_V08.md) for supported image/model contracts,
+build commands, topics, parameters, and the evidence still required before deployment claims.
+
 ## Reference MVP result
 
 The deterministic reference run completed on 120 synthetic 96 x 96 images:

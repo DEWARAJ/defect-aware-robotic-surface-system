@@ -1,0 +1,11 @@
+surface_perception_realtime:
+  ros__parameters:
+    model_path: model.onnx
+    input_topic: /camera/image_raw
+    mask_topic: /surface_perception/mask
+    input_width: 256
+    input_height: 256
+    threshold: 0.5
+    telemetry_window: 120
+    maximum_p95_ms: 50.0
+    intra_op_threads: 1

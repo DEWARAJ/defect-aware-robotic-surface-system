@@ -58,7 +58,12 @@
 ## Milestone 4 - ROS2 and simulation
 
 - Build the included ROS2 package with `colcon`.
-- Publish camera masks and diagnostic latency from the ONNX node.
+- Implemented a dependency-light C++17 image normalization, mask postprocessing, and rolling
+  telemetry core with deterministic GoogleTests (v0.8 development).
+- Implemented an optional native ONNX Runtime ROS2 node with sensor QoS, camera masks, defect
+  fraction, p50/p95 latency, FPS, deadline warnings, and failure diagnostics (v0.8 development).
+- Added ROS2 Humble CI for the dependency-light C++ core; native ONNX compilation and rosbag
+  execution remain pending evidence gates.
 - Add launch files, rosbag regression tests, lifecycle behavior, and QoS configuration.
 - Execute and visually approve the implemented 50-frame Isaac Sim Replicator smoke capture.
 - Scale the approved capture to the planned 1,200-frame dataset.

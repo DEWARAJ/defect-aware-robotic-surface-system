@@ -1,0 +1,38 @@
+{
+  "schema_version": "ros2-realtime-development-evidence-1.0",
+  "version": "0.8.0.dev0",
+  "status": "implementation-started-static-validation-only",
+  "implemented": {
+    "cpp17_inference_core": true,
+    "preprocess_and_postprocess_contracts": true,
+    "rolling_stage_telemetry": true,
+    "google_tests_authored": 6,
+    "optional_native_onnx_ros2_node": true,
+    "sensor_data_qos": true,
+    "mask_fraction_and_diagnostics_topics": true,
+    "ros2_humble_ci_contract": true
+  },
+  "local_validation": {
+    "python_regression_tests_discovered": 27,
+    "python_regression_tests_passed": 24,
+    "python_regression_tests_skipped_optional_dependencies": 3,
+    "python_regression_tests_failed": 0,
+    "launch_python_compile_pass": true,
+    "workflow_and_config_yaml_parse_pass": true,
+    "package_xml_parse_pass": true,
+    "credential_pattern_scan_pass": true,
+    "git_diff_check_pass": true,
+    "cpp_compiler_available": false,
+    "cmake_available": false,
+    "colcon_available": false,
+    "native_onnx_runtime_sdk_available": false
+  },
+  "claims_not_made": [
+    "C++ source compiled locally",
+    "ROS2 node executed",
+    "ONNX Runtime native session executed",
+    "rosbag replay passed",
+    "camera or GPU hardware benchmark completed",
+    "real-time deadline guaranteed"
+  ]
+}
