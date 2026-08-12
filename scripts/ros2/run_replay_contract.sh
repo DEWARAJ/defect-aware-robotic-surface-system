@@ -33,12 +33,19 @@ ros2 run surface_perception_cpp realtime_inference_node --ros-args \
   >"${node_log}" 2>&1 &
 node_pid=$!
 
+sleep 1
+if ! kill -0 "${node_pid}" 2>/dev/null; then
+  wait "${node_pid}" || true
+  cat "${node_log}"
+  exit 1
+fi
+
 timeout 25s python3 scripts/ros2/verify_replay.py \
   --output "${result_json}" --timeout-seconds 20 \
   >"${verifier_log}" 2>&1 &
 verifier_pid=$!
 
-sleep 3
+sleep 2
 ros2 bag play "${fixture_dir}/camera_bag" --rate 1.0
 if ! wait "${verifier_pid}"; then
   cat "${node_log}"

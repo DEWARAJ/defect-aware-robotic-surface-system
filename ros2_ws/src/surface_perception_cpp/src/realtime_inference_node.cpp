@@ -120,7 +120,8 @@ class RealtimeInferenceNode final : public rclcpp::Node {
     input_name_ = input_name.get();
     output_name_ = output_name.get();
 
-    const auto input_info = session_->GetInputTypeInfo(0).GetTensorTypeAndShapeInfo();
+    const auto input_type = session_->GetInputTypeInfo(0);
+    const auto input_info = input_type.GetTensorTypeAndShapeInfo();
     if (input_info.GetElementType() != ONNX_TENSOR_ELEMENT_DATA_TYPE_FLOAT) {
       throw std::runtime_error("model input must be float32");
     }
