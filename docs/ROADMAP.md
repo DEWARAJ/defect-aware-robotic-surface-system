@@ -36,6 +36,9 @@
 - Export to ONNX with dynamic batch and image dimensions.
 - Verify PyTorch/ONNX numerical parity.
 - Benchmark ONNX Runtime CPU and CUDA providers.
+- Implemented validation-calibrated static S8S8 QDQ quantization with held-out quality checks.
+- Measured a 52.6% file-size reduction but a 2.18x CPU latency regression; retained FP32 as the
+  current CPU latency choice and documented the negative result.
 - Build TensorRT FP16 and INT8 engines and record accuracy/latency/memory trade-offs.
 - Profile preprocessing, inference, and postprocessing independently.
 

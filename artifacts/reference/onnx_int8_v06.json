@@ -1,0 +1,102 @@
+{
+  "conclusion": "INT8 preserved held-out quality and reduced file size, but QDQ overhead made this small CNN slower on the measured CPU. Test TensorRT FP16/INT8 on target RTX/Jetson hardware before selecting a deployment format.",
+  "data_protocol": {
+    "calibration_samples": 64,
+    "calibration_split": "validation",
+    "evaluation_samples": 137,
+    "evaluation_split": "test",
+    "test_split_used_for_calibration": false,
+    "threshold": 0.8
+  },
+  "evidence_limit": "Measured with ONNX Runtime CPUExecutionProvider; this is not a TensorRT, CUDA, GPU, edge-device, or production benchmark.",
+  "experiment": "onnx_static_int8_post_training_quantization",
+  "model": {
+    "architecture": "tiny_unet",
+    "image_size": 128,
+    "parameters": 29921
+  },
+  "model_size": {
+    "fp32_bytes": 127709,
+    "int8_bytes": 60539,
+    "size_ratio_fp32_over_int8": 2.10953269793026,
+    "size_reduction_fraction": 0.5259613652914047
+  },
+  "performance": {
+    "fp32": {
+      "fps_from_mean_latency": 859.7357464676361,
+      "iterations_per_trial": 200,
+      "mean_latency_ms": 1.1631480999931227,
+      "mean_p95_latency_ms": 1.7303520023415324,
+      "median_trial_mean_latency_ms": 1.1147040001378627,
+      "providers": [
+        "CPUExecutionProvider"
+      ],
+      "standard_deviation_trial_mean_ms": 0.06386803450105775,
+      "trials": 5
+    },
+    "fps_multiplier": 0.45898652809179147,
+    "int8": {
+      "fps_from_mean_latency": 394.60712534758494,
+      "iterations_per_trial": 200,
+      "mean_latency_ms": 2.5341661003185436,
+      "mean_p95_latency_ms": 3.49516000249423,
+      "median_trial_mean_latency_ms": 2.4951665005937684,
+      "providers": [
+        "CPUExecutionProvider"
+      ],
+      "standard_deviation_trial_mean_ms": 0.09352044212853744,
+      "trials": 5
+    },
+    "mean_latency_reduction_fraction": -1.1787131839303413
+  },
+  "platform": {
+    "logical_cpu_count": 22,
+    "machine": "AMD64",
+    "onnx": "1.22.0",
+    "onnxruntime": "1.28.0",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "python": "3.12.13",
+    "release": "11",
+    "system": "Windows"
+  },
+  "quality": {
+    "delta_int8_minus_fp32": {
+      "dice": 0.008283431065071845,
+      "f1": 0.008283431065071678,
+      "iou": 0.006886626731580914,
+      "pixel_accuracy": 0.001620327469206151,
+      "precision": 0.010070165028113032,
+      "recall": -0.009606533386834148
+    },
+    "fp32": {
+      "dice": 0.44483468655524105,
+      "f1": 0.44483468655524117,
+      "iou": 0.2860369137027065,
+      "pixel_accuracy": 0.9640850429117245,
+      "precision": 0.31404484549114176,
+      "recall": 0.7623150093232941
+    },
+    "int8": {
+      "dice": 0.4531181176203129,
+      "f1": 0.45311811762031284,
+      "iou": 0.2929235404342874,
+      "pixel_accuracy": 0.9657053703809306,
+      "precision": 0.3241150105192548,
+      "recall": 0.75270847593646
+    },
+    "parity": {
+      "maximum_absolute_logit_error": 1.3743807077407837,
+      "mean_absolute_logit_error": 0.08921250148955052,
+      "mean_binary_mask_agreement": 0.997635667341469,
+      "minimum_binary_mask_agreement": 0.97412109375
+    }
+  },
+  "quantization": {
+    "activation_type": "QInt8",
+    "calibration_method": "MinMax",
+    "format": "QDQ",
+    "per_channel": true,
+    "weight_type": "QInt8"
+  },
+  "status": "measured"
+}

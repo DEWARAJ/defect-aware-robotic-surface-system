@@ -43,6 +43,27 @@ dataset schema, acceptance gates, API references, and limitations. The machine-r
 split is in
 [`artifacts/reference/isaac_sim_v05_capture_plan.json`](artifacts/reference/isaac_sim_v05_capture_plan.json).
 
+## Measured ONNX INT8 optimization (v0.6)
+
+The v0.4 global Tiny U-Net was calibrated with 64 validation images and evaluated on all 137
+held-out test images using static S8S8 QDQ quantization. Five interleaved CPU benchmark trials were
+run with 20 warmups and 200 timed inferences per trial.
+
+| Measure | FP32 ONNX | INT8 QDQ |
+|---|---:|---:|
+| Held-out IoU | 0.2860 | 0.2929 |
+| Held-out F1 | 0.4448 | 0.4531 |
+| Mean latency | 1.163 ms | 2.534 ms |
+| Throughput from mean latency | 859.7 FPS | 394.6 FPS |
+| Model size | 127,709 bytes | 60,539 bytes |
+| Mean binary-mask agreement | - | 99.76% vs. FP32 |
+
+INT8 reduced file size by 52.6% and preserved quality, but was 2.18x slower on this CPU because
+QDQ conversion overhead dominated the tiny CNN. FP32 remains the CPU latency choice; TensorRT
+FP16/INT8 must be measured on the eventual RTX/Jetson target. See
+[`docs/INT8_OPTIMIZATION_V06.md`](docs/INT8_OPTIMIZATION_V06.md) and the machine-readable
+[`artifacts/reference/onnx_int8_v06.json`](artifacts/reference/onnx_int8_v06.json).
+
 ## Reference MVP result
 
 The deterministic reference run completed on 120 synthetic 96 x 96 images:
