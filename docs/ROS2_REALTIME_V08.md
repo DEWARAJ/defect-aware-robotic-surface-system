@@ -62,8 +62,10 @@ colcon test --packages-select surface_perception_cpp --event-handlers console_di
 colcon test-result --verbose
 ```
 
-The `ros2-realtime-v08` GitHub workflow performs this contract on Linux. It does not build the
-optional ONNX node.
+The [`ros2-realtime-v08` GitHub workflow](https://github.com/DEWARAJ/defect-aware-robotic-surface-system/actions/runs/31644290894)
+passed this contract in a ROS2 Humble container at source commit `6826a0c`. It built the package in
+Release mode, passed both CTest executables, passed seven GoogleTest cases, and reported nine total
+checks with zero errors, failures, or skips. It does not build the optional ONNX node.
 
 ## Build the native ONNX node
 
@@ -97,14 +99,14 @@ allocation and synchronous `Run`. The node uses those lifetime-managed C++ wrapp
 
 ## Evidence gates before calling v0.8 complete
 
-1. Pass Linux ROS2 CI for all C++ unit tests.
-2. Build the native node against a pinned ONNX Runtime C++ release.
-3. Replay a versioned rosbag with expected mask hashes and message counts.
-4. Record preprocessing, inference, postprocessing, end-to-end p50/p95/p99, FPS, CPU, and memory.
-5. Repeat on the intended NVIDIA/edge target and compare FP32, FP16, and INT8 artifacts.
-6. Test malformed images, dropped frames, slow inference, model mismatch, and node restart behavior.
-7. Connect the mask topic to the protected-region-aware C++ coverage planner.
+1. Build the native node against a pinned ONNX Runtime C++ release.
+2. Replay a versioned rosbag with expected mask hashes and message counts.
+3. Record preprocessing, inference, postprocessing, end-to-end p50/p95/p99, FPS, CPU, and memory.
+4. Repeat on the intended NVIDIA/edge target and compare FP32, FP16, and INT8 artifacts.
+5. Test malformed images, dropped frames, slow inference, model mismatch, and node restart behavior.
+6. Connect the mask topic to the protected-region-aware C++ coverage planner.
 
 The current Windows development machine has no ROS2 compiler toolchain, `colcon`, native ONNX
-Runtime SDK, camera, or target GPU. Consequently, only source/static and Python-regression checks
-can be performed locally; the repository does not claim evidence that was not produced.
+Runtime SDK, camera, or target GPU. Linux ROS2 compilation and dependency-light C++ tests are now
+verified by GitHub Actions; native ONNX execution, rosbag replay, and hardware performance remain
+unclaimed evidence gates.
