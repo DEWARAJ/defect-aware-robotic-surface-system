@@ -30,6 +30,7 @@ USER surface
 CMD ["python", "-m", "surface_perception.train_real", "--help"]
 
 FROM base AS ci
+COPY artifacts/reference ./artifacts/reference
 COPY tests ./tests
 COPY scripts ./scripts
 RUN chown -R surface:surface /workspace
