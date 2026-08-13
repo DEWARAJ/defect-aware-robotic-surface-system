@@ -51,6 +51,22 @@
 - Pending compact-model measurement on TensorRT/Jetson and structural graph compaction for the
   pruned candidate; dense filter zeros are not claimed as a hardware speedup.
 
+## Milestone 2.75 - Risk-aware human review (implemented v0.11 development)
+
+- Implemented validation-fitted pixel temperature scaling with exact preservation of the deployed
+  logit decision boundary.
+- Implemented label-free per-image entropy, observable summaries, and handcrafted input-shift
+  scoring.
+- Implemented validation-label-trained kNN failure-risk prediction and leave-one-out acquisition
+  policy selection.
+- Implemented a label-free review queue, diversity-aware ranking, retrospective comparisons, and
+  controlled noise/brightness/blur probes.
+- Measured 8/35 worst failures found at a 20/137 review budget (1.57x random expected hits) in the
+  retrospective development pool.
+- Pending confirmation on a new untouched external surface dataset; v0.11 pool results were
+  inspected during development and are not represented as a final holdout.
+- Pending retraining-versus-annotation-budget learning curves and ensemble uncertainty.
+
 ## Milestone 2.5 - Isaac Sim surface digital twin (v0.5 development)
 
 - Implemented a versioned 1,200-frame Replicator configuration for an aircraft-like surface.

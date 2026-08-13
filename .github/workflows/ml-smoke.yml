@@ -42,7 +42,18 @@ jobs:
           --output runs/compression_smoke
           --image-size 64 --student-base-channels 2 --student-epochs 1
           --batch-size 4 --onnx-iterations 3 --onnx-trials 1 --parity-samples 3
+      - run: >-
+          python -m surface_perception.active_learning
+          --config configs/active_learning_v11.json
+          --manifest runs/real_smoke/manifest.json
+          --checkpoint runs/compression_smoke/student_distilled/best.pt
+          --output runs/active_learning_smoke
+          --portable-evidence runs/active_learning_smoke/portable_evidence.json
+          --image-size 64 --batch-size 4 --queue-budget 4 --calibration-pixels 10000
       - uses: actions/upload-artifact@v4
         with:
-          name: model-compression-smoke-evidence
-          path: runs/compression_smoke/compression_study.json
+          name: model-compression-and-review-smoke-evidence
+          path: |
+            runs/compression_smoke/compression_study.json
+            runs/active_learning_smoke/active_learning_study.json
+            runs/active_learning_smoke/review_queue.json
