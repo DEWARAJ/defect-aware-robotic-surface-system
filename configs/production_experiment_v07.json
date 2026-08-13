@@ -1,0 +1,47 @@
+{
+  "schema_version": "production-experiment-1.0",
+  "experiment_id": "surface-segmentation-production-v07",
+  "task": "binary_surface_defect_segmentation",
+  "seed": 42,
+  "provenance": {
+    "require_clean_git": true,
+    "require_code_commit": true,
+    "record_dependency_versions": true,
+    "record_dataset_fingerprint": true
+  },
+  "data": {
+    "train_split": "train",
+    "validation_split": "validation",
+    "test_split": "test",
+    "image_size": 128,
+    "require_content_inventory": true,
+    "test_data_role": "evaluation_only"
+  },
+  "model": {
+    "architecture": "tiny_unet",
+    "base_channels": 8,
+    "deployment_formats": [
+      "onnx_fp32",
+      "onnx_int8_qdq"
+    ]
+  },
+  "benchmark": {
+    "batch_size": 1,
+    "warmup_iterations": 20,
+    "timed_iterations": 200,
+    "trials": 5,
+    "report_mean_p50_p95_fps": true
+  },
+  "acceptance_gates": {
+    "minimum_held_out_iou": 0.25,
+    "minimum_fp32_onnx_mask_agreement": 0.999,
+    "maximum_protected_region_contacts": 0,
+    "require_dataset_fingerprint": true
+  },
+  "cloud": {
+    "storage_protocol": "s3-compatible",
+    "content_addressed_keys": true,
+    "default_mode": "dry-run",
+    "allow_remote_delete": false
+  }
+}

@@ -13,12 +13,9 @@ def _torch_modules():
     return torch, nn
 
 
-def build_tiny_unet(base_channels: int = 16):
-    """Build the Phase 2 CNN while keeping PyTorch optional for the runnable MVP."""
-    torch, nn = _torch_modules()
-
+def _conv_block(nn, input_channels: int, output_channels: int):
     class ConvBlock(nn.Module):
-        def __init__(self, input_channels: int, output_channels: int) -> None:
+        def __init__(self) -> None:
             super().__init__()
             self.layers = nn.Sequential(
                 nn.Conv2d(input_channels, output_channels, 3, padding=1, bias=False),
@@ -32,14 +29,21 @@ def build_tiny_unet(base_channels: int = 16):
         def forward(self, inputs):
             return self.layers(inputs)
 
+    return ConvBlock()
+
+
+def build_tiny_unet(base_channels: int = 16):
+    """Build the two-level teacher CNN while keeping PyTorch optional."""
+    torch, nn = _torch_modules()
+
     class TinyUNet(nn.Module):
         def __init__(self) -> None:
             super().__init__()
-            self.encoder_1 = ConvBlock(3, base_channels)
-            self.encoder_2 = ConvBlock(base_channels, base_channels * 2)
-            self.bottleneck = ConvBlock(base_channels * 2, base_channels * 4)
-            self.decoder_2 = ConvBlock(base_channels * 6, base_channels * 2)
-            self.decoder_1 = ConvBlock(base_channels * 3, base_channels)
+            self.encoder_1 = _conv_block(nn, 3, base_channels)
+            self.encoder_2 = _conv_block(nn, base_channels, base_channels * 2)
+            self.bottleneck = _conv_block(nn, base_channels * 2, base_channels * 4)
+            self.decoder_2 = _conv_block(nn, base_channels * 6, base_channels * 2)
+            self.decoder_1 = _conv_block(nn, base_channels * 3, base_channels)
             self.output = nn.Conv2d(base_channels, 1, 1)
             self.pool = nn.MaxPool2d(2)
 
@@ -60,21 +64,68 @@ def build_tiny_unet(base_channels: int = 16):
     return TinyUNet()
 
 
-def load_tiny_unet_checkpoint(checkpoint_path, device="cpu"):
-    """Load both the v0.2 raw state dictionary and v0.3 metadata checkpoints."""
+def build_compact_unet(base_channels: int = 8):
+    """Build a one-level student U-Net with four fewer spatial convolutions."""
+    torch, nn = _torch_modules()
+
+    class CompactUNet(nn.Module):
+        def __init__(self) -> None:
+            super().__init__()
+            self.encoder = _conv_block(nn, 3, base_channels)
+            self.bottleneck = _conv_block(nn, base_channels, base_channels * 2)
+            self.decoder = _conv_block(nn, base_channels * 3, base_channels)
+            self.output = nn.Conv2d(base_channels, 1, 1)
+            self.pool = nn.MaxPool2d(2)
+
+        def forward(self, inputs):
+            feature = self.encoder(inputs)
+            bottleneck = self.bottleneck(self.pool(feature))
+            upsampled = torch.nn.functional.interpolate(
+                bottleneck, size=feature.shape[-2:], mode="bilinear", align_corners=False
+            )
+            decoded = self.decoder(torch.cat([upsampled, feature], dim=1))
+            return self.output(decoded)
+
+    return CompactUNet()
+
+
+def build_segmentation_model(architecture: str = "tiny_unet", base_channels: int = 16):
+    builders = {
+        "tiny_unet": build_tiny_unet,
+        "compact_unet": build_compact_unet,
+    }
+    if architecture not in builders:
+        raise ValueError(
+            f"unsupported segmentation architecture '{architecture}'; "
+            f"choose one of {sorted(builders)}"
+        )
+    if int(base_channels) < 2:
+        raise ValueError("base_channels must be at least 2")
+    return builders[architecture](base_channels=int(base_channels))
+
+
+def load_segmentation_checkpoint(checkpoint_path, device="cpu"):
+    """Load legacy Tiny U-Net and architecture-aware metadata checkpoints."""
     torch, _ = _torch_modules()
     payload = torch.load(checkpoint_path, map_location=device, weights_only=True)
     if isinstance(payload, dict) and "state_dict" in payload:
         state_dict = payload["state_dict"]
         model_config = payload.get("model_config", {})
         base_channels = int(model_config.get("base_channels", 16))
+        architecture = str(model_config.get("architecture", "tiny_unet"))
         metadata = payload
     else:
         state_dict = payload
         base_channels = 16
+        architecture = "tiny_unet"
         metadata = {"threshold": 0.5, "model_config": {"base_channels": base_channels}}
-    model = build_tiny_unet(base_channels=base_channels)
+    model = build_segmentation_model(architecture, base_channels)
     model.load_state_dict(state_dict)
     model.to(device)
     model.eval()
     return model, metadata
+
+
+def load_tiny_unet_checkpoint(checkpoint_path, device="cpu"):
+    """Backward-compatible alias for callers written before architecture-aware checkpoints."""
+    return load_segmentation_checkpoint(checkpoint_path, device=device)

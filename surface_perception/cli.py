@@ -7,6 +7,17 @@ from pathlib import Path
 from .coverage_demo import run_coverage_demo
 from .pipeline import evaluate_model, train_baseline
 from .real_data import build_segmentation_manifest
+from .reproducibility import (
+    build_dataset_inventory,
+    build_experiment_contract,
+    verify_dataset_inventory,
+)
+from .sim_data import (
+    load_sim_config,
+    render_sim_plan_preview,
+    save_sim_run_plan,
+    validate_replicator_dataset,
+)
 from .synthetic import generate_dataset
 
 
@@ -72,6 +83,49 @@ def build_parser() -> argparse.ArgumentParser:
     manifest.add_argument("--custom-root", type=Path)
     manifest.add_argument("--categories", nargs="*")
     manifest.add_argument("--seed", type=int, default=42)
+
+    sim_plan = subparsers.add_parser(
+        "sim-plan", help="validate an Isaac Sim config and create its deterministic capture plan"
+    )
+    sim_plan.add_argument(
+        "--config", type=Path, default=Path("configs/isaac_sim_surface.json")
+    )
+    sim_plan.add_argument("--output", type=Path, required=True)
+    sim_plan.add_argument("--preview", type=Path)
+
+    validate_sim = subparsers.add_parser(
+        "validate-sim", help="validate Isaac Sim Replicator outputs and write a manifest"
+    )
+    validate_sim.add_argument(
+        "--config", type=Path, default=Path("configs/isaac_sim_surface.json")
+    )
+    validate_sim.add_argument("--dataset", type=Path, required=True)
+    validate_sim.add_argument("--output", type=Path, required=True)
+
+    inventory = subparsers.add_parser(
+        "inventory", help="hash every manifest asset and write a versioned dataset inventory"
+    )
+    inventory.add_argument("--manifest", type=Path, required=True)
+    inventory.add_argument("--output", type=Path, required=True)
+
+    verify_inventory = subparsers.add_parser(
+        "verify-inventory", help="verify current dataset bytes against a saved inventory"
+    )
+    verify_inventory.add_argument("--manifest", type=Path, required=True)
+    verify_inventory.add_argument("--inventory", type=Path, required=True)
+
+    contract = subparsers.add_parser(
+        "experiment-contract", help="capture config, dataset, code, and runtime provenance"
+    )
+    contract.add_argument("--config", type=Path, required=True)
+    contract.add_argument("--inventory", type=Path, required=True)
+    contract.add_argument("--output", type=Path, required=True)
+    contract.add_argument("--repository-root", type=Path, default=Path("."))
+    contract.add_argument(
+        "--allow-dirty",
+        action="store_true",
+        help="allow a development contract from uncommitted code; dirty state is recorded",
+    )
     return parser
 
 
@@ -95,7 +149,9 @@ def main() -> None:
         return
 
     if args.command == "evaluate":
-        report = evaluate_model(args.dataset, args.model, args.output, args.split, args.preview_count)
+        report = evaluate_model(
+            args.dataset, args.model, args.output, args.split, args.preview_count
+        )
         _print_summary(report)
         return
 
@@ -130,6 +186,54 @@ def main() -> None:
         )
         print(json.dumps(payload["report"], indent=2, sort_keys=True))
         print(f"manifest: {args.output.resolve()}")
+        return
+
+    if args.command == "sim-plan":
+        sim_config = load_sim_config(args.config)
+        plan = save_sim_run_plan(sim_config, args.output)
+        if args.preview is not None:
+            render_sim_plan_preview(sim_config, args.preview)
+            print(f"preview: {args.preview.resolve()}")
+        print(
+            json.dumps(
+                {"plan": str(args.output.resolve()), "split_counts": plan["split_counts"]},
+                indent=2,
+            )
+        )
+        return
+
+    if args.command == "validate-sim":
+        sim_config = load_sim_config(args.config)
+        payload = validate_replicator_dataset(args.dataset, sim_config, args.output)
+        print(json.dumps(payload["report"], indent=2, sort_keys=True))
+        print(f"manifest: {args.output.resolve()}")
+        return
+
+    if args.command == "inventory":
+        payload = build_dataset_inventory(args.manifest, args.output)
+        print(json.dumps(payload["report"], indent=2, sort_keys=True))
+        print(f"fingerprint: {payload['dataset_fingerprint']}")
+        print(f"inventory: {args.output.resolve()}")
+        return
+
+    if args.command == "verify-inventory":
+        report = verify_dataset_inventory(args.inventory, args.manifest)
+        print(json.dumps(report, indent=2, sort_keys=True))
+        if not report["pass"]:
+            raise SystemExit("dataset inventory verification failed")
+        return
+
+    if args.command == "experiment-contract":
+        payload = build_experiment_contract(
+            args.config,
+            args.inventory,
+            args.output,
+            repository_root=args.repository_root,
+            allow_dirty=args.allow_dirty,
+        )
+        print(f"experiment: {payload['experiment_id']}")
+        print(f"fingerprint: {payload['reproducibility_fingerprint']}")
+        print(f"contract: {args.output.resolve()}")
         return
 
     config = _load_config(args.config)

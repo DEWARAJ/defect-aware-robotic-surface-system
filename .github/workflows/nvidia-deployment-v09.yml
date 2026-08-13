@@ -1,0 +1,45 @@
+name: nvidia-deployment-v09
+
+on:
+  push:
+    paths:
+      - "surface_perception/tensorrt_deployment.py"
+      - "configs/tensorrt_deployment_v09.json"
+      - "tests/test_tensorrt_deployment.py"
+      - "scripts/run_tensorrt_v09.sh"
+      - ".github/workflows/nvidia-deployment-v09.yml"
+  pull_request:
+    paths:
+      - "surface_perception/tensorrt_deployment.py"
+      - "configs/tensorrt_deployment_v09.json"
+      - "tests/test_tensorrt_deployment.py"
+      - "scripts/run_tensorrt_v09.sh"
+      - ".github/workflows/nvidia-deployment-v09.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  benchmark-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependency-light package
+        run: python -m pip install -e .
+      - name: Run TensorRT deployment contract tests
+        run: python -m unittest tests.test_tensorrt_deployment -v
+      - name: Render hardware execution plan
+        run: >-
+          python -m surface_perception.tensorrt_deployment
+          --config configs/tensorrt_deployment_v09.json
+          --output "${RUNNER_TEMP}/tensorrt-v09"
+          --dry-run
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tensorrt-v09-plan-${{ github.sha }}
+          path: ${{ runner.temp }}/tensorrt-v09/benchmark_plan.json
+          if-no-files-found: error

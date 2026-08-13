@@ -1,0 +1,6041 @@
+{
+  "defect_classes": [
+    "defect_scratch",
+    "defect_corrosion",
+    "defect_pit"
+  ],
+  "frames": [
+    {
+      "frame_index": 0,
+      "sample_id": "isaac_surface_000000",
+      "split": "train"
+    },
+    {
+      "frame_index": 1,
+      "sample_id": "isaac_surface_000001",
+      "split": "train"
+    },
+    {
+      "frame_index": 2,
+      "sample_id": "isaac_surface_000002",
+      "split": "train"
+    },
+    {
+      "frame_index": 3,
+      "sample_id": "isaac_surface_000003",
+      "split": "train"
+    },
+    {
+      "frame_index": 4,
+      "sample_id": "isaac_surface_000004",
+      "split": "train"
+    },
+    {
+      "frame_index": 5,
+      "sample_id": "isaac_surface_000005",
+      "split": "test"
+    },
+    {
+      "frame_index": 6,
+      "sample_id": "isaac_surface_000006",
+      "split": "train"
+    },
+    {
+      "frame_index": 7,
+      "sample_id": "isaac_surface_000007",
+      "split": "train"
+    },
+    {
+      "frame_index": 8,
+      "sample_id": "isaac_surface_000008",
+      "split": "test"
+    },
+    {
+      "frame_index": 9,
+      "sample_id": "isaac_surface_000009",
+      "split": "test"
+    },
+    {
+      "frame_index": 10,
+      "sample_id": "isaac_surface_000010",
+      "split": "train"
+    },
+    {
+      "frame_index": 11,
+      "sample_id": "isaac_surface_000011",
+      "split": "train"
+    },
+    {
+      "frame_index": 12,
+      "sample_id": "isaac_surface_000012",
+      "split": "train"
+    },
+    {
+      "frame_index": 13,
+      "sample_id": "isaac_surface_000013",
+      "split": "test"
+    },
+    {
+      "frame_index": 14,
+      "sample_id": "isaac_surface_000014",
+      "split": "test"
+    },
+    {
+      "frame_index": 15,
+      "sample_id": "isaac_surface_000015",
+      "split": "test"
+    },
+    {
+      "frame_index": 16,
+      "sample_id": "isaac_surface_000016",
+      "split": "validation"
+    },
+    {
+      "frame_index": 17,
+      "sample_id": "isaac_surface_000017",
+      "split": "train"
+    },
+    {
+      "frame_index": 18,
+      "sample_id": "isaac_surface_000018",
+      "split": "test"
+    },
+    {
+      "frame_index": 19,
+      "sample_id": "isaac_surface_000019",
+      "split": "test"
+    },
+    {
+      "frame_index": 20,
+      "sample_id": "isaac_surface_000020",
+      "split": "train"
+    },
+    {
+      "frame_index": 21,
+      "sample_id": "isaac_surface_000021",
+      "split": "train"
+    },
+    {
+      "frame_index": 22,
+      "sample_id": "isaac_surface_000022",
+      "split": "test"
+    },
+    {
+      "frame_index": 23,
+      "sample_id": "isaac_surface_000023",
+      "split": "train"
+    },
+    {
+      "frame_index": 24,
+      "sample_id": "isaac_surface_000024",
+      "split": "validation"
+    },
+    {
+      "frame_index": 25,
+      "sample_id": "isaac_surface_000025",
+      "split": "train"
+    },
+    {
+      "frame_index": 26,
+      "sample_id": "isaac_surface_000026",
+      "split": "train"
+    },
+    {
+      "frame_index": 27,
+      "sample_id": "isaac_surface_000027",
+      "split": "train"
+    },
+    {
+      "frame_index": 28,
+      "sample_id": "isaac_surface_000028",
+      "split": "train"
+    },
+    {
+      "frame_index": 29,
+      "sample_id": "isaac_surface_000029",
+      "split": "train"
+    },
+    {
+      "frame_index": 30,
+      "sample_id": "isaac_surface_000030",
+      "split": "train"
+    },
+    {
+      "frame_index": 31,
+      "sample_id": "isaac_surface_000031",
+      "split": "train"
+    },
+    {
+      "frame_index": 32,
+      "sample_id": "isaac_surface_000032",
+      "split": "train"
+    },
+    {
+      "frame_index": 33,
+      "sample_id": "isaac_surface_000033",
+      "split": "train"
+    },
+    {
+      "frame_index": 34,
+      "sample_id": "isaac_surface_000034",
+      "split": "test"
+    },
+    {
+      "frame_index": 35,
+      "sample_id": "isaac_surface_000035",
+      "split": "train"
+    },
+    {
+      "frame_index": 36,
+      "sample_id": "isaac_surface_000036",
+      "split": "train"
+    },
+    {
+      "frame_index": 37,
+      "sample_id": "isaac_surface_000037",
+      "split": "train"
+    },
+    {
+      "frame_index": 38,
+      "sample_id": "isaac_surface_000038",
+      "split": "train"
+    },
+    {
+      "frame_index": 39,
+      "sample_id": "isaac_surface_000039",
+      "split": "train"
+    },
+    {
+      "frame_index": 40,
+      "sample_id": "isaac_surface_000040",
+      "split": "test"
+    },
+    {
+      "frame_index": 41,
+      "sample_id": "isaac_surface_000041",
+      "split": "validation"
+    },
+    {
+      "frame_index": 42,
+      "sample_id": "isaac_surface_000042",
+      "split": "train"
+    },
+    {
+      "frame_index": 43,
+      "sample_id": "isaac_surface_000043",
+      "split": "train"
+    },
+    {
+      "frame_index": 44,
+      "sample_id": "isaac_surface_000044",
+      "split": "test"
+    },
+    {
+      "frame_index": 45,
+      "sample_id": "isaac_surface_000045",
+      "split": "train"
+    },
+    {
+      "frame_index": 46,
+      "sample_id": "isaac_surface_000046",
+      "split": "train"
+    },
+    {
+      "frame_index": 47,
+      "sample_id": "isaac_surface_000047",
+      "split": "train"
+    },
+    {
+      "frame_index": 48,
+      "sample_id": "isaac_surface_000048",
+      "split": "train"
+    },
+    {
+      "frame_index": 49,
+      "sample_id": "isaac_surface_000049",
+      "split": "validation"
+    },
+    {
+      "frame_index": 50,
+      "sample_id": "isaac_surface_000050",
+      "split": "train"
+    },
+    {
+      "frame_index": 51,
+      "sample_id": "isaac_surface_000051",
+      "split": "train"
+    },
+    {
+      "frame_index": 52,
+      "sample_id": "isaac_surface_000052",
+      "split": "train"
+    },
+    {
+      "frame_index": 53,
+      "sample_id": "isaac_surface_000053",
+      "split": "train"
+    },
+    {
+      "frame_index": 54,
+      "sample_id": "isaac_surface_000054",
+      "split": "train"
+    },
+    {
+      "frame_index": 55,
+      "sample_id": "isaac_surface_000055",
+      "split": "train"
+    },
+    {
+      "frame_index": 56,
+      "sample_id": "isaac_surface_000056",
+      "split": "train"
+    },
+    {
+      "frame_index": 57,
+      "sample_id": "isaac_surface_000057",
+      "split": "train"
+    },
+    {
+      "frame_index": 58,
+      "sample_id": "isaac_surface_000058",
+      "split": "train"
+    },
+    {
+      "frame_index": 59,
+      "sample_id": "isaac_surface_000059",
+      "split": "train"
+    },
+    {
+      "frame_index": 60,
+      "sample_id": "isaac_surface_000060",
+      "split": "validation"
+    },
+    {
+      "frame_index": 61,
+      "sample_id": "isaac_surface_000061",
+      "split": "train"
+    },
+    {
+      "frame_index": 62,
+      "sample_id": "isaac_surface_000062",
+      "split": "test"
+    },
+    {
+      "frame_index": 63,
+      "sample_id": "isaac_surface_000063",
+      "split": "validation"
+    },
+    {
+      "frame_index": 64,
+      "sample_id": "isaac_surface_000064",
+      "split": "validation"
+    },
+    {
+      "frame_index": 65,
+      "sample_id": "isaac_surface_000065",
+      "split": "train"
+    },
+    {
+      "frame_index": 66,
+      "sample_id": "isaac_surface_000066",
+      "split": "test"
+    },
+    {
+      "frame_index": 67,
+      "sample_id": "isaac_surface_000067",
+      "split": "test"
+    },
+    {
+      "frame_index": 68,
+      "sample_id": "isaac_surface_000068",
+      "split": "train"
+    },
+    {
+      "frame_index": 69,
+      "sample_id": "isaac_surface_000069",
+      "split": "validation"
+    },
+    {
+      "frame_index": 70,
+      "sample_id": "isaac_surface_000070",
+      "split": "train"
+    },
+    {
+      "frame_index": 71,
+      "sample_id": "isaac_surface_000071",
+      "split": "train"
+    },
+    {
+      "frame_index": 72,
+      "sample_id": "isaac_surface_000072",
+      "split": "train"
+    },
+    {
+      "frame_index": 73,
+      "sample_id": "isaac_surface_000073",
+      "split": "validation"
+    },
+    {
+      "frame_index": 74,
+      "sample_id": "isaac_surface_000074",
+      "split": "train"
+    },
+    {
+      "frame_index": 75,
+      "sample_id": "isaac_surface_000075",
+      "split": "train"
+    },
+    {
+      "frame_index": 76,
+      "sample_id": "isaac_surface_000076",
+      "split": "train"
+    },
+    {
+      "frame_index": 77,
+      "sample_id": "isaac_surface_000077",
+      "split": "train"
+    },
+    {
+      "frame_index": 78,
+      "sample_id": "isaac_surface_000078",
+      "split": "test"
+    },
+    {
+      "frame_index": 79,
+      "sample_id": "isaac_surface_000079",
+      "split": "train"
+    },
+    {
+      "frame_index": 80,
+      "sample_id": "isaac_surface_000080",
+      "split": "train"
+    },
+    {
+      "frame_index": 81,
+      "sample_id": "isaac_surface_000081",
+      "split": "test"
+    },
+    {
+      "frame_index": 82,
+      "sample_id": "isaac_surface_000082",
+      "split": "validation"
+    },
+    {
+      "frame_index": 83,
+      "sample_id": "isaac_surface_000083",
+      "split": "train"
+    },
+    {
+      "frame_index": 84,
+      "sample_id": "isaac_surface_000084",
+      "split": "train"
+    },
+    {
+      "frame_index": 85,
+      "sample_id": "isaac_surface_000085",
+      "split": "test"
+    },
+    {
+      "frame_index": 86,
+      "sample_id": "isaac_surface_000086",
+      "split": "validation"
+    },
+    {
+      "frame_index": 87,
+      "sample_id": "isaac_surface_000087",
+      "split": "train"
+    },
+    {
+      "frame_index": 88,
+      "sample_id": "isaac_surface_000088",
+      "split": "train"
+    },
+    {
+      "frame_index": 89,
+      "sample_id": "isaac_surface_000089",
+      "split": "train"
+    },
+    {
+      "frame_index": 90,
+      "sample_id": "isaac_surface_000090",
+      "split": "train"
+    },
+    {
+      "frame_index": 91,
+      "sample_id": "isaac_surface_000091",
+      "split": "test"
+    },
+    {
+      "frame_index": 92,
+      "sample_id": "isaac_surface_000092",
+      "split": "train"
+    },
+    {
+      "frame_index": 93,
+      "sample_id": "isaac_surface_000093",
+      "split": "validation"
+    },
+    {
+      "frame_index": 94,
+      "sample_id": "isaac_surface_000094",
+      "split": "train"
+    },
+    {
+      "frame_index": 95,
+      "sample_id": "isaac_surface_000095",
+      "split": "validation"
+    },
+    {
+      "frame_index": 96,
+      "sample_id": "isaac_surface_000096",
+      "split": "train"
+    },
+    {
+      "frame_index": 97,
+      "sample_id": "isaac_surface_000097",
+      "split": "test"
+    },
+    {
+      "frame_index": 98,
+      "sample_id": "isaac_surface_000098",
+      "split": "train"
+    },
+    {
+      "frame_index": 99,
+      "sample_id": "isaac_surface_000099",
+      "split": "train"
+    },
+    {
+      "frame_index": 100,
+      "sample_id": "isaac_surface_000100",
+      "split": "train"
+    },
+    {
+      "frame_index": 101,
+      "sample_id": "isaac_surface_000101",
+      "split": "validation"
+    },
+    {
+      "frame_index": 102,
+      "sample_id": "isaac_surface_000102",
+      "split": "validation"
+    },
+    {
+      "frame_index": 103,
+      "sample_id": "isaac_surface_000103",
+      "split": "train"
+    },
+    {
+      "frame_index": 104,
+      "sample_id": "isaac_surface_000104",
+      "split": "train"
+    },
+    {
+      "frame_index": 105,
+      "sample_id": "isaac_surface_000105",
+      "split": "train"
+    },
+    {
+      "frame_index": 106,
+      "sample_id": "isaac_surface_000106",
+      "split": "train"
+    },
+    {
+      "frame_index": 107,
+      "sample_id": "isaac_surface_000107",
+      "split": "train"
+    },
+    {
+      "frame_index": 108,
+      "sample_id": "isaac_surface_000108",
+      "split": "train"
+    },
+    {
+      "frame_index": 109,
+      "sample_id": "isaac_surface_000109",
+      "split": "train"
+    },
+    {
+      "frame_index": 110,
+      "sample_id": "isaac_surface_000110",
+      "split": "train"
+    },
+    {
+      "frame_index": 111,
+      "sample_id": "isaac_surface_000111",
+      "split": "train"
+    },
+    {
+      "frame_index": 112,
+      "sample_id": "isaac_surface_000112",
+      "split": "validation"
+    },
+    {
+      "frame_index": 113,
+      "sample_id": "isaac_surface_000113",
+      "split": "train"
+    },
+    {
+      "frame_index": 114,
+      "sample_id": "isaac_surface_000114",
+      "split": "train"
+    },
+    {
+      "frame_index": 115,
+      "sample_id": "isaac_surface_000115",
+      "split": "test"
+    },
+    {
+      "frame_index": 116,
+      "sample_id": "isaac_surface_000116",
+      "split": "test"
+    },
+    {
+      "frame_index": 117,
+      "sample_id": "isaac_surface_000117",
+      "split": "train"
+    },
+    {
+      "frame_index": 118,
+      "sample_id": "isaac_surface_000118",
+      "split": "test"
+    },
+    {
+      "frame_index": 119,
+      "sample_id": "isaac_surface_000119",
+      "split": "train"
+    },
+    {
+      "frame_index": 120,
+      "sample_id": "isaac_surface_000120",
+      "split": "train"
+    },
+    {
+      "frame_index": 121,
+      "sample_id": "isaac_surface_000121",
+      "split": "train"
+    },
+    {
+      "frame_index": 122,
+      "sample_id": "isaac_surface_000122",
+      "split": "train"
+    },
+    {
+      "frame_index": 123,
+      "sample_id": "isaac_surface_000123",
+      "split": "train"
+    },
+    {
+      "frame_index": 124,
+      "sample_id": "isaac_surface_000124",
+      "split": "train"
+    },
+    {
+      "frame_index": 125,
+      "sample_id": "isaac_surface_000125",
+      "split": "train"
+    },
+    {
+      "frame_index": 126,
+      "sample_id": "isaac_surface_000126",
+      "split": "train"
+    },
+    {
+      "frame_index": 127,
+      "sample_id": "isaac_surface_000127",
+      "split": "train"
+    },
+    {
+      "frame_index": 128,
+      "sample_id": "isaac_surface_000128",
+      "split": "validation"
+    },
+    {
+      "frame_index": 129,
+      "sample_id": "isaac_surface_000129",
+      "split": "train"
+    },
+    {
+      "frame_index": 130,
+      "sample_id": "isaac_surface_000130",
+      "split": "train"
+    },
+    {
+      "frame_index": 131,
+      "sample_id": "isaac_surface_000131",
+      "split": "train"
+    },
+    {
+      "frame_index": 132,
+      "sample_id": "isaac_surface_000132",
+      "split": "train"
+    },
+    {
+      "frame_index": 133,
+      "sample_id": "isaac_surface_000133",
+      "split": "test"
+    },
+    {
+      "frame_index": 134,
+      "sample_id": "isaac_surface_000134",
+      "split": "train"
+    },
+    {
+      "frame_index": 135,
+      "sample_id": "isaac_surface_000135",
+      "split": "validation"
+    },
+    {
+      "frame_index": 136,
+      "sample_id": "isaac_surface_000136",
+      "split": "validation"
+    },
+    {
+      "frame_index": 137,
+      "sample_id": "isaac_surface_000137",
+      "split": "train"
+    },
+    {
+      "frame_index": 138,
+      "sample_id": "isaac_surface_000138",
+      "split": "train"
+    },
+    {
+      "frame_index": 139,
+      "sample_id": "isaac_surface_000139",
+      "split": "train"
+    },
+    {
+      "frame_index": 140,
+      "sample_id": "isaac_surface_000140",
+      "split": "validation"
+    },
+    {
+      "frame_index": 141,
+      "sample_id": "isaac_surface_000141",
+      "split": "test"
+    },
+    {
+      "frame_index": 142,
+      "sample_id": "isaac_surface_000142",
+      "split": "validation"
+    },
+    {
+      "frame_index": 143,
+      "sample_id": "isaac_surface_000143",
+      "split": "train"
+    },
+    {
+      "frame_index": 144,
+      "sample_id": "isaac_surface_000144",
+      "split": "train"
+    },
+    {
+      "frame_index": 145,
+      "sample_id": "isaac_surface_000145",
+      "split": "test"
+    },
+    {
+      "frame_index": 146,
+      "sample_id": "isaac_surface_000146",
+      "split": "train"
+    },
+    {
+      "frame_index": 147,
+      "sample_id": "isaac_surface_000147",
+      "split": "validation"
+    },
+    {
+      "frame_index": 148,
+      "sample_id": "isaac_surface_000148",
+      "split": "train"
+    },
+    {
+      "frame_index": 149,
+      "sample_id": "isaac_surface_000149",
+      "split": "train"
+    },
+    {
+      "frame_index": 150,
+      "sample_id": "isaac_surface_000150",
+      "split": "test"
+    },
+    {
+      "frame_index": 151,
+      "sample_id": "isaac_surface_000151",
+      "split": "train"
+    },
+    {
+      "frame_index": 152,
+      "sample_id": "isaac_surface_000152",
+      "split": "train"
+    },
+    {
+      "frame_index": 153,
+      "sample_id": "isaac_surface_000153",
+      "split": "train"
+    },
+    {
+      "frame_index": 154,
+      "sample_id": "isaac_surface_000154",
+      "split": "train"
+    },
+    {
+      "frame_index": 155,
+      "sample_id": "isaac_surface_000155",
+      "split": "train"
+    },
+    {
+      "frame_index": 156,
+      "sample_id": "isaac_surface_000156",
+      "split": "train"
+    },
+    {
+      "frame_index": 157,
+      "sample_id": "isaac_surface_000157",
+      "split": "train"
+    },
+    {
+      "frame_index": 158,
+      "sample_id": "isaac_surface_000158",
+      "split": "train"
+    },
+    {
+      "frame_index": 159,
+      "sample_id": "isaac_surface_000159",
+      "split": "train"
+    },
+    {
+      "frame_index": 160,
+      "sample_id": "isaac_surface_000160",
+      "split": "test"
+    },
+    {
+      "frame_index": 161,
+      "sample_id": "isaac_surface_000161",
+      "split": "train"
+    },
+    {
+      "frame_index": 162,
+      "sample_id": "isaac_surface_000162",
+      "split": "validation"
+    },
+    {
+      "frame_index": 163,
+      "sample_id": "isaac_surface_000163",
+      "split": "train"
+    },
+    {
+      "frame_index": 164,
+      "sample_id": "isaac_surface_000164",
+      "split": "train"
+    },
+    {
+      "frame_index": 165,
+      "sample_id": "isaac_surface_000165",
+      "split": "train"
+    },
+    {
+      "frame_index": 166,
+      "sample_id": "isaac_surface_000166",
+      "split": "train"
+    },
+    {
+      "frame_index": 167,
+      "sample_id": "isaac_surface_000167",
+      "split": "train"
+    },
+    {
+      "frame_index": 168,
+      "sample_id": "isaac_surface_000168",
+      "split": "train"
+    },
+    {
+      "frame_index": 169,
+      "sample_id": "isaac_surface_000169",
+      "split": "train"
+    },
+    {
+      "frame_index": 170,
+      "sample_id": "isaac_surface_000170",
+      "split": "train"
+    },
+    {
+      "frame_index": 171,
+      "sample_id": "isaac_surface_000171",
+      "split": "train"
+    },
+    {
+      "frame_index": 172,
+      "sample_id": "isaac_surface_000172",
+      "split": "test"
+    },
+    {
+      "frame_index": 173,
+      "sample_id": "isaac_surface_000173",
+      "split": "test"
+    },
+    {
+      "frame_index": 174,
+      "sample_id": "isaac_surface_000174",
+      "split": "test"
+    },
+    {
+      "frame_index": 175,
+      "sample_id": "isaac_surface_000175",
+      "split": "train"
+    },
+    {
+      "frame_index": 176,
+      "sample_id": "isaac_surface_000176",
+      "split": "train"
+    },
+    {
+      "frame_index": 177,
+      "sample_id": "isaac_surface_000177",
+      "split": "test"
+    },
+    {
+      "frame_index": 178,
+      "sample_id": "isaac_surface_000178",
+      "split": "train"
+    },
+    {
+      "frame_index": 179,
+      "sample_id": "isaac_surface_000179",
+      "split": "train"
+    },
+    {
+      "frame_index": 180,
+      "sample_id": "isaac_surface_000180",
+      "split": "train"
+    },
+    {
+      "frame_index": 181,
+      "sample_id": "isaac_surface_000181",
+      "split": "train"
+    },
+    {
+      "frame_index": 182,
+      "sample_id": "isaac_surface_000182",
+      "split": "validation"
+    },
+    {
+      "frame_index": 183,
+      "sample_id": "isaac_surface_000183",
+      "split": "train"
+    },
+    {
+      "frame_index": 184,
+      "sample_id": "isaac_surface_000184",
+      "split": "train"
+    },
+    {
+      "frame_index": 185,
+      "sample_id": "isaac_surface_000185",
+      "split": "test"
+    },
+    {
+      "frame_index": 186,
+      "sample_id": "isaac_surface_000186",
+      "split": "test"
+    },
+    {
+      "frame_index": 187,
+      "sample_id": "isaac_surface_000187",
+      "split": "test"
+    },
+    {
+      "frame_index": 188,
+      "sample_id": "isaac_surface_000188",
+      "split": "train"
+    },
+    {
+      "frame_index": 189,
+      "sample_id": "isaac_surface_000189",
+      "split": "train"
+    },
+    {
+      "frame_index": 190,
+      "sample_id": "isaac_surface_000190",
+      "split": "train"
+    },
+    {
+      "frame_index": 191,
+      "sample_id": "isaac_surface_000191",
+      "split": "train"
+    },
+    {
+      "frame_index": 192,
+      "sample_id": "isaac_surface_000192",
+      "split": "train"
+    },
+    {
+      "frame_index": 193,
+      "sample_id": "isaac_surface_000193",
+      "split": "train"
+    },
+    {
+      "frame_index": 194,
+      "sample_id": "isaac_surface_000194",
+      "split": "train"
+    },
+    {
+      "frame_index": 195,
+      "sample_id": "isaac_surface_000195",
+      "split": "train"
+    },
+    {
+      "frame_index": 196,
+      "sample_id": "isaac_surface_000196",
+      "split": "validation"
+    },
+    {
+      "frame_index": 197,
+      "sample_id": "isaac_surface_000197",
+      "split": "validation"
+    },
+    {
+      "frame_index": 198,
+      "sample_id": "isaac_surface_000198",
+      "split": "validation"
+    },
+    {
+      "frame_index": 199,
+      "sample_id": "isaac_surface_000199",
+      "split": "train"
+    },
+    {
+      "frame_index": 200,
+      "sample_id": "isaac_surface_000200",
+      "split": "train"
+    },
+    {
+      "frame_index": 201,
+      "sample_id": "isaac_surface_000201",
+      "split": "train"
+    },
+    {
+      "frame_index": 202,
+      "sample_id": "isaac_surface_000202",
+      "split": "train"
+    },
+    {
+      "frame_index": 203,
+      "sample_id": "isaac_surface_000203",
+      "split": "test"
+    },
+    {
+      "frame_index": 204,
+      "sample_id": "isaac_surface_000204",
+      "split": "train"
+    },
+    {
+      "frame_index": 205,
+      "sample_id": "isaac_surface_000205",
+      "split": "train"
+    },
+    {
+      "frame_index": 206,
+      "sample_id": "isaac_surface_000206",
+      "split": "train"
+    },
+    {
+      "frame_index": 207,
+      "sample_id": "isaac_surface_000207",
+      "split": "train"
+    },
+    {
+      "frame_index": 208,
+      "sample_id": "isaac_surface_000208",
+      "split": "train"
+    },
+    {
+      "frame_index": 209,
+      "sample_id": "isaac_surface_000209",
+      "split": "train"
+    },
+    {
+      "frame_index": 210,
+      "sample_id": "isaac_surface_000210",
+      "split": "train"
+    },
+    {
+      "frame_index": 211,
+      "sample_id": "isaac_surface_000211",
+      "split": "train"
+    },
+    {
+      "frame_index": 212,
+      "sample_id": "isaac_surface_000212",
+      "split": "test"
+    },
+    {
+      "frame_index": 213,
+      "sample_id": "isaac_surface_000213",
+      "split": "train"
+    },
+    {
+      "frame_index": 214,
+      "sample_id": "isaac_surface_000214",
+      "split": "train"
+    },
+    {
+      "frame_index": 215,
+      "sample_id": "isaac_surface_000215",
+      "split": "train"
+    },
+    {
+      "frame_index": 216,
+      "sample_id": "isaac_surface_000216",
+      "split": "validation"
+    },
+    {
+      "frame_index": 217,
+      "sample_id": "isaac_surface_000217",
+      "split": "train"
+    },
+    {
+      "frame_index": 218,
+      "sample_id": "isaac_surface_000218",
+      "split": "train"
+    },
+    {
+      "frame_index": 219,
+      "sample_id": "isaac_surface_000219",
+      "split": "validation"
+    },
+    {
+      "frame_index": 220,
+      "sample_id": "isaac_surface_000220",
+      "split": "train"
+    },
+    {
+      "frame_index": 221,
+      "sample_id": "isaac_surface_000221",
+      "split": "train"
+    },
+    {
+      "frame_index": 222,
+      "sample_id": "isaac_surface_000222",
+      "split": "validation"
+    },
+    {
+      "frame_index": 223,
+      "sample_id": "isaac_surface_000223",
+      "split": "train"
+    },
+    {
+      "frame_index": 224,
+      "sample_id": "isaac_surface_000224",
+      "split": "train"
+    },
+    {
+      "frame_index": 225,
+      "sample_id": "isaac_surface_000225",
+      "split": "train"
+    },
+    {
+      "frame_index": 226,
+      "sample_id": "isaac_surface_000226",
+      "split": "validation"
+    },
+    {
+      "frame_index": 227,
+      "sample_id": "isaac_surface_000227",
+      "split": "train"
+    },
+    {
+      "frame_index": 228,
+      "sample_id": "isaac_surface_000228",
+      "split": "train"
+    },
+    {
+      "frame_index": 229,
+      "sample_id": "isaac_surface_000229",
+      "split": "train"
+    },
+    {
+      "frame_index": 230,
+      "sample_id": "isaac_surface_000230",
+      "split": "train"
+    },
+    {
+      "frame_index": 231,
+      "sample_id": "isaac_surface_000231",
+      "split": "test"
+    },
+    {
+      "frame_index": 232,
+      "sample_id": "isaac_surface_000232",
+      "split": "train"
+    },
+    {
+      "frame_index": 233,
+      "sample_id": "isaac_surface_000233",
+      "split": "train"
+    },
+    {
+      "frame_index": 234,
+      "sample_id": "isaac_surface_000234",
+      "split": "test"
+    },
+    {
+      "frame_index": 235,
+      "sample_id": "isaac_surface_000235",
+      "split": "train"
+    },
+    {
+      "frame_index": 236,
+      "sample_id": "isaac_surface_000236",
+      "split": "train"
+    },
+    {
+      "frame_index": 237,
+      "sample_id": "isaac_surface_000237",
+      "split": "train"
+    },
+    {
+      "frame_index": 238,
+      "sample_id": "isaac_surface_000238",
+      "split": "train"
+    },
+    {
+      "frame_index": 239,
+      "sample_id": "isaac_surface_000239",
+      "split": "train"
+    },
+    {
+      "frame_index": 240,
+      "sample_id": "isaac_surface_000240",
+      "split": "train"
+    },
+    {
+      "frame_index": 241,
+      "sample_id": "isaac_surface_000241",
+      "split": "train"
+    },
+    {
+      "frame_index": 242,
+      "sample_id": "isaac_surface_000242",
+      "split": "train"
+    },
+    {
+      "frame_index": 243,
+      "sample_id": "isaac_surface_000243",
+      "split": "train"
+    },
+    {
+      "frame_index": 244,
+      "sample_id": "isaac_surface_000244",
+      "split": "train"
+    },
+    {
+      "frame_index": 245,
+      "sample_id": "isaac_surface_000245",
+      "split": "test"
+    },
+    {
+      "frame_index": 246,
+      "sample_id": "isaac_surface_000246",
+      "split": "test"
+    },
+    {
+      "frame_index": 247,
+      "sample_id": "isaac_surface_000247",
+      "split": "test"
+    },
+    {
+      "frame_index": 248,
+      "sample_id": "isaac_surface_000248",
+      "split": "test"
+    },
+    {
+      "frame_index": 249,
+      "sample_id": "isaac_surface_000249",
+      "split": "train"
+    },
+    {
+      "frame_index": 250,
+      "sample_id": "isaac_surface_000250",
+      "split": "validation"
+    },
+    {
+      "frame_index": 251,
+      "sample_id": "isaac_surface_000251",
+      "split": "train"
+    },
+    {
+      "frame_index": 252,
+      "sample_id": "isaac_surface_000252",
+      "split": "train"
+    },
+    {
+      "frame_index": 253,
+      "sample_id": "isaac_surface_000253",
+      "split": "train"
+    },
+    {
+      "frame_index": 254,
+      "sample_id": "isaac_surface_000254",
+      "split": "train"
+    },
+    {
+      "frame_index": 255,
+      "sample_id": "isaac_surface_000255",
+      "split": "test"
+    },
+    {
+      "frame_index": 256,
+      "sample_id": "isaac_surface_000256",
+      "split": "train"
+    },
+    {
+      "frame_index": 257,
+      "sample_id": "isaac_surface_000257",
+      "split": "train"
+    },
+    {
+      "frame_index": 258,
+      "sample_id": "isaac_surface_000258",
+      "split": "train"
+    },
+    {
+      "frame_index": 259,
+      "sample_id": "isaac_surface_000259",
+      "split": "train"
+    },
+    {
+      "frame_index": 260,
+      "sample_id": "isaac_surface_000260",
+      "split": "validation"
+    },
+    {
+      "frame_index": 261,
+      "sample_id": "isaac_surface_000261",
+      "split": "validation"
+    },
+    {
+      "frame_index": 262,
+      "sample_id": "isaac_surface_000262",
+      "split": "train"
+    },
+    {
+      "frame_index": 263,
+      "sample_id": "isaac_surface_000263",
+      "split": "train"
+    },
+    {
+      "frame_index": 264,
+      "sample_id": "isaac_surface_000264",
+      "split": "validation"
+    },
+    {
+      "frame_index": 265,
+      "sample_id": "isaac_surface_000265",
+      "split": "train"
+    },
+    {
+      "frame_index": 266,
+      "sample_id": "isaac_surface_000266",
+      "split": "train"
+    },
+    {
+      "frame_index": 267,
+      "sample_id": "isaac_surface_000267",
+      "split": "train"
+    },
+    {
+      "frame_index": 268,
+      "sample_id": "isaac_surface_000268",
+      "split": "train"
+    },
+    {
+      "frame_index": 269,
+      "sample_id": "isaac_surface_000269",
+      "split": "train"
+    },
+    {
+      "frame_index": 270,
+      "sample_id": "isaac_surface_000270",
+      "split": "train"
+    },
+    {
+      "frame_index": 271,
+      "sample_id": "isaac_surface_000271",
+      "split": "train"
+    },
+    {
+      "frame_index": 272,
+      "sample_id": "isaac_surface_000272",
+      "split": "train"
+    },
+    {
+      "frame_index": 273,
+      "sample_id": "isaac_surface_000273",
+      "split": "train"
+    },
+    {
+      "frame_index": 274,
+      "sample_id": "isaac_surface_000274",
+      "split": "train"
+    },
+    {
+      "frame_index": 275,
+      "sample_id": "isaac_surface_000275",
+      "split": "train"
+    },
+    {
+      "frame_index": 276,
+      "sample_id": "isaac_surface_000276",
+      "split": "train"
+    },
+    {
+      "frame_index": 277,
+      "sample_id": "isaac_surface_000277",
+      "split": "train"
+    },
+    {
+      "frame_index": 278,
+      "sample_id": "isaac_surface_000278",
+      "split": "train"
+    },
+    {
+      "frame_index": 279,
+      "sample_id": "isaac_surface_000279",
+      "split": "train"
+    },
+    {
+      "frame_index": 280,
+      "sample_id": "isaac_surface_000280",
+      "split": "validation"
+    },
+    {
+      "frame_index": 281,
+      "sample_id": "isaac_surface_000281",
+      "split": "validation"
+    },
+    {
+      "frame_index": 282,
+      "sample_id": "isaac_surface_000282",
+      "split": "train"
+    },
+    {
+      "frame_index": 283,
+      "sample_id": "isaac_surface_000283",
+      "split": "train"
+    },
+    {
+      "frame_index": 284,
+      "sample_id": "isaac_surface_000284",
+      "split": "train"
+    },
+    {
+      "frame_index": 285,
+      "sample_id": "isaac_surface_000285",
+      "split": "test"
+    },
+    {
+      "frame_index": 286,
+      "sample_id": "isaac_surface_000286",
+      "split": "train"
+    },
+    {
+      "frame_index": 287,
+      "sample_id": "isaac_surface_000287",
+      "split": "train"
+    },
+    {
+      "frame_index": 288,
+      "sample_id": "isaac_surface_000288",
+      "split": "test"
+    },
+    {
+      "frame_index": 289,
+      "sample_id": "isaac_surface_000289",
+      "split": "validation"
+    },
+    {
+      "frame_index": 290,
+      "sample_id": "isaac_surface_000290",
+      "split": "validation"
+    },
+    {
+      "frame_index": 291,
+      "sample_id": "isaac_surface_000291",
+      "split": "train"
+    },
+    {
+      "frame_index": 292,
+      "sample_id": "isaac_surface_000292",
+      "split": "train"
+    },
+    {
+      "frame_index": 293,
+      "sample_id": "isaac_surface_000293",
+      "split": "train"
+    },
+    {
+      "frame_index": 294,
+      "sample_id": "isaac_surface_000294",
+      "split": "train"
+    },
+    {
+      "frame_index": 295,
+      "sample_id": "isaac_surface_000295",
+      "split": "train"
+    },
+    {
+      "frame_index": 296,
+      "sample_id": "isaac_surface_000296",
+      "split": "test"
+    },
+    {
+      "frame_index": 297,
+      "sample_id": "isaac_surface_000297",
+      "split": "train"
+    },
+    {
+      "frame_index": 298,
+      "sample_id": "isaac_surface_000298",
+      "split": "train"
+    },
+    {
+      "frame_index": 299,
+      "sample_id": "isaac_surface_000299",
+      "split": "test"
+    },
+    {
+      "frame_index": 300,
+      "sample_id": "isaac_surface_000300",
+      "split": "train"
+    },
+    {
+      "frame_index": 301,
+      "sample_id": "isaac_surface_000301",
+      "split": "test"
+    },
+    {
+      "frame_index": 302,
+      "sample_id": "isaac_surface_000302",
+      "split": "validation"
+    },
+    {
+      "frame_index": 303,
+      "sample_id": "isaac_surface_000303",
+      "split": "validation"
+    },
+    {
+      "frame_index": 304,
+      "sample_id": "isaac_surface_000304",
+      "split": "validation"
+    },
+    {
+      "frame_index": 305,
+      "sample_id": "isaac_surface_000305",
+      "split": "validation"
+    },
+    {
+      "frame_index": 306,
+      "sample_id": "isaac_surface_000306",
+      "split": "train"
+    },
+    {
+      "frame_index": 307,
+      "sample_id": "isaac_surface_000307",
+      "split": "train"
+    },
+    {
+      "frame_index": 308,
+      "sample_id": "isaac_surface_000308",
+      "split": "test"
+    },
+    {
+      "frame_index": 309,
+      "sample_id": "isaac_surface_000309",
+      "split": "train"
+    },
+    {
+      "frame_index": 310,
+      "sample_id": "isaac_surface_000310",
+      "split": "train"
+    },
+    {
+      "frame_index": 311,
+      "sample_id": "isaac_surface_000311",
+      "split": "train"
+    },
+    {
+      "frame_index": 312,
+      "sample_id": "isaac_surface_000312",
+      "split": "train"
+    },
+    {
+      "frame_index": 313,
+      "sample_id": "isaac_surface_000313",
+      "split": "train"
+    },
+    {
+      "frame_index": 314,
+      "sample_id": "isaac_surface_000314",
+      "split": "train"
+    },
+    {
+      "frame_index": 315,
+      "sample_id": "isaac_surface_000315",
+      "split": "train"
+    },
+    {
+      "frame_index": 316,
+      "sample_id": "isaac_surface_000316",
+      "split": "train"
+    },
+    {
+      "frame_index": 317,
+      "sample_id": "isaac_surface_000317",
+      "split": "train"
+    },
+    {
+      "frame_index": 318,
+      "sample_id": "isaac_surface_000318",
+      "split": "train"
+    },
+    {
+      "frame_index": 319,
+      "sample_id": "isaac_surface_000319",
+      "split": "train"
+    },
+    {
+      "frame_index": 320,
+      "sample_id": "isaac_surface_000320",
+      "split": "train"
+    },
+    {
+      "frame_index": 321,
+      "sample_id": "isaac_surface_000321",
+      "split": "train"
+    },
+    {
+      "frame_index": 322,
+      "sample_id": "isaac_surface_000322",
+      "split": "train"
+    },
+    {
+      "frame_index": 323,
+      "sample_id": "isaac_surface_000323",
+      "split": "train"
+    },
+    {
+      "frame_index": 324,
+      "sample_id": "isaac_surface_000324",
+      "split": "validation"
+    },
+    {
+      "frame_index": 325,
+      "sample_id": "isaac_surface_000325",
+      "split": "train"
+    },
+    {
+      "frame_index": 326,
+      "sample_id": "isaac_surface_000326",
+      "split": "train"
+    },
+    {
+      "frame_index": 327,
+      "sample_id": "isaac_surface_000327",
+      "split": "validation"
+    },
+    {
+      "frame_index": 328,
+      "sample_id": "isaac_surface_000328",
+      "split": "train"
+    },
+    {
+      "frame_index": 329,
+      "sample_id": "isaac_surface_000329",
+      "split": "train"
+    },
+    {
+      "frame_index": 330,
+      "sample_id": "isaac_surface_000330",
+      "split": "train"
+    },
+    {
+      "frame_index": 331,
+      "sample_id": "isaac_surface_000331",
+      "split": "test"
+    },
+    {
+      "frame_index": 332,
+      "sample_id": "isaac_surface_000332",
+      "split": "train"
+    },
+    {
+      "frame_index": 333,
+      "sample_id": "isaac_surface_000333",
+      "split": "validation"
+    },
+    {
+      "frame_index": 334,
+      "sample_id": "isaac_surface_000334",
+      "split": "train"
+    },
+    {
+      "frame_index": 335,
+      "sample_id": "isaac_surface_000335",
+      "split": "train"
+    },
+    {
+      "frame_index": 336,
+      "sample_id": "isaac_surface_000336",
+      "split": "train"
+    },
+    {
+      "frame_index": 337,
+      "sample_id": "isaac_surface_000337",
+      "split": "train"
+    },
+    {
+      "frame_index": 338,
+      "sample_id": "isaac_surface_000338",
+      "split": "train"
+    },
+    {
+      "frame_index": 339,
+      "sample_id": "isaac_surface_000339",
+      "split": "train"
+    },
+    {
+      "frame_index": 340,
+      "sample_id": "isaac_surface_000340",
+      "split": "validation"
+    },
+    {
+      "frame_index": 341,
+      "sample_id": "isaac_surface_000341",
+      "split": "train"
+    },
+    {
+      "frame_index": 342,
+      "sample_id": "isaac_surface_000342",
+      "split": "train"
+    },
+    {
+      "frame_index": 343,
+      "sample_id": "isaac_surface_000343",
+      "split": "train"
+    },
+    {
+      "frame_index": 344,
+      "sample_id": "isaac_surface_000344",
+      "split": "train"
+    },
+    {
+      "frame_index": 345,
+      "sample_id": "isaac_surface_000345",
+      "split": "train"
+    },
+    {
+      "frame_index": 346,
+      "sample_id": "isaac_surface_000346",
+      "split": "test"
+    },
+    {
+      "frame_index": 347,
+      "sample_id": "isaac_surface_000347",
+      "split": "train"
+    },
+    {
+      "frame_index": 348,
+      "sample_id": "isaac_surface_000348",
+      "split": "test"
+    },
+    {
+      "frame_index": 349,
+      "sample_id": "isaac_surface_000349",
+      "split": "train"
+    },
+    {
+      "frame_index": 350,
+      "sample_id": "isaac_surface_000350",
+      "split": "validation"
+    },
+    {
+      "frame_index": 351,
+      "sample_id": "isaac_surface_000351",
+      "split": "train"
+    },
+    {
+      "frame_index": 352,
+      "sample_id": "isaac_surface_000352",
+      "split": "train"
+    },
+    {
+      "frame_index": 353,
+      "sample_id": "isaac_surface_000353",
+      "split": "train"
+    },
+    {
+      "frame_index": 354,
+      "sample_id": "isaac_surface_000354",
+      "split": "validation"
+    },
+    {
+      "frame_index": 355,
+      "sample_id": "isaac_surface_000355",
+      "split": "train"
+    },
+    {
+      "frame_index": 356,
+      "sample_id": "isaac_surface_000356",
+      "split": "train"
+    },
+    {
+      "frame_index": 357,
+      "sample_id": "isaac_surface_000357",
+      "split": "train"
+    },
+    {
+      "frame_index": 358,
+      "sample_id": "isaac_surface_000358",
+      "split": "train"
+    },
+    {
+      "frame_index": 359,
+      "sample_id": "isaac_surface_000359",
+      "split": "train"
+    },
+    {
+      "frame_index": 360,
+      "sample_id": "isaac_surface_000360",
+      "split": "validation"
+    },
+    {
+      "frame_index": 361,
+      "sample_id": "isaac_surface_000361",
+      "split": "train"
+    },
+    {
+      "frame_index": 362,
+      "sample_id": "isaac_surface_000362",
+      "split": "train"
+    },
+    {
+      "frame_index": 363,
+      "sample_id": "isaac_surface_000363",
+      "split": "train"
+    },
+    {
+      "frame_index": 364,
+      "sample_id": "isaac_surface_000364",
+      "split": "train"
+    },
+    {
+      "frame_index": 365,
+      "sample_id": "isaac_surface_000365",
+      "split": "train"
+    },
+    {
+      "frame_index": 366,
+      "sample_id": "isaac_surface_000366",
+      "split": "test"
+    },
+    {
+      "frame_index": 367,
+      "sample_id": "isaac_surface_000367",
+      "split": "train"
+    },
+    {
+      "frame_index": 368,
+      "sample_id": "isaac_surface_000368",
+      "split": "validation"
+    },
+    {
+      "frame_index": 369,
+      "sample_id": "isaac_surface_000369",
+      "split": "train"
+    },
+    {
+      "frame_index": 370,
+      "sample_id": "isaac_surface_000370",
+      "split": "train"
+    },
+    {
+      "frame_index": 371,
+      "sample_id": "isaac_surface_000371",
+      "split": "train"
+    },
+    {
+      "frame_index": 372,
+      "sample_id": "isaac_surface_000372",
+      "split": "train"
+    },
+    {
+      "frame_index": 373,
+      "sample_id": "isaac_surface_000373",
+      "split": "train"
+    },
+    {
+      "frame_index": 374,
+      "sample_id": "isaac_surface_000374",
+      "split": "train"
+    },
+    {
+      "frame_index": 375,
+      "sample_id": "isaac_surface_000375",
+      "split": "train"
+    },
+    {
+      "frame_index": 376,
+      "sample_id": "isaac_surface_000376",
+      "split": "train"
+    },
+    {
+      "frame_index": 377,
+      "sample_id": "isaac_surface_000377",
+      "split": "train"
+    },
+    {
+      "frame_index": 378,
+      "sample_id": "isaac_surface_000378",
+      "split": "train"
+    },
+    {
+      "frame_index": 379,
+      "sample_id": "isaac_surface_000379",
+      "split": "train"
+    },
+    {
+      "frame_index": 380,
+      "sample_id": "isaac_surface_000380",
+      "split": "train"
+    },
+    {
+      "frame_index": 381,
+      "sample_id": "isaac_surface_000381",
+      "split": "validation"
+    },
+    {
+      "frame_index": 382,
+      "sample_id": "isaac_surface_000382",
+      "split": "train"
+    },
+    {
+      "frame_index": 383,
+      "sample_id": "isaac_surface_000383",
+      "split": "train"
+    },
+    {
+      "frame_index": 384,
+      "sample_id": "isaac_surface_000384",
+      "split": "test"
+    },
+    {
+      "frame_index": 385,
+      "sample_id": "isaac_surface_000385",
+      "split": "test"
+    },
+    {
+      "frame_index": 386,
+      "sample_id": "isaac_surface_000386",
+      "split": "train"
+    },
+    {
+      "frame_index": 387,
+      "sample_id": "isaac_surface_000387",
+      "split": "train"
+    },
+    {
+      "frame_index": 388,
+      "sample_id": "isaac_surface_000388",
+      "split": "train"
+    },
+    {
+      "frame_index": 389,
+      "sample_id": "isaac_surface_000389",
+      "split": "train"
+    },
+    {
+      "frame_index": 390,
+      "sample_id": "isaac_surface_000390",
+      "split": "train"
+    },
+    {
+      "frame_index": 391,
+      "sample_id": "isaac_surface_000391",
+      "split": "train"
+    },
+    {
+      "frame_index": 392,
+      "sample_id": "isaac_surface_000392",
+      "split": "train"
+    },
+    {
+      "frame_index": 393,
+      "sample_id": "isaac_surface_000393",
+      "split": "train"
+    },
+    {
+      "frame_index": 394,
+      "sample_id": "isaac_surface_000394",
+      "split": "train"
+    },
+    {
+      "frame_index": 395,
+      "sample_id": "isaac_surface_000395",
+      "split": "train"
+    },
+    {
+      "frame_index": 396,
+      "sample_id": "isaac_surface_000396",
+      "split": "test"
+    },
+    {
+      "frame_index": 397,
+      "sample_id": "isaac_surface_000397",
+      "split": "test"
+    },
+    {
+      "frame_index": 398,
+      "sample_id": "isaac_surface_000398",
+      "split": "validation"
+    },
+    {
+      "frame_index": 399,
+      "sample_id": "isaac_surface_000399",
+      "split": "train"
+    },
+    {
+      "frame_index": 400,
+      "sample_id": "isaac_surface_000400",
+      "split": "train"
+    },
+    {
+      "frame_index": 401,
+      "sample_id": "isaac_surface_000401",
+      "split": "validation"
+    },
+    {
+      "frame_index": 402,
+      "sample_id": "isaac_surface_000402",
+      "split": "validation"
+    },
+    {
+      "frame_index": 403,
+      "sample_id": "isaac_surface_000403",
+      "split": "train"
+    },
+    {
+      "frame_index": 404,
+      "sample_id": "isaac_surface_000404",
+      "split": "train"
+    },
+    {
+      "frame_index": 405,
+      "sample_id": "isaac_surface_000405",
+      "split": "train"
+    },
+    {
+      "frame_index": 406,
+      "sample_id": "isaac_surface_000406",
+      "split": "test"
+    },
+    {
+      "frame_index": 407,
+      "sample_id": "isaac_surface_000407",
+      "split": "train"
+    },
+    {
+      "frame_index": 408,
+      "sample_id": "isaac_surface_000408",
+      "split": "train"
+    },
+    {
+      "frame_index": 409,
+      "sample_id": "isaac_surface_000409",
+      "split": "train"
+    },
+    {
+      "frame_index": 410,
+      "sample_id": "isaac_surface_000410",
+      "split": "test"
+    },
+    {
+      "frame_index": 411,
+      "sample_id": "isaac_surface_000411",
+      "split": "train"
+    },
+    {
+      "frame_index": 412,
+      "sample_id": "isaac_surface_000412",
+      "split": "test"
+    },
+    {
+      "frame_index": 413,
+      "sample_id": "isaac_surface_000413",
+      "split": "train"
+    },
+    {
+      "frame_index": 414,
+      "sample_id": "isaac_surface_000414",
+      "split": "train"
+    },
+    {
+      "frame_index": 415,
+      "sample_id": "isaac_surface_000415",
+      "split": "train"
+    },
+    {
+      "frame_index": 416,
+      "sample_id": "isaac_surface_000416",
+      "split": "train"
+    },
+    {
+      "frame_index": 417,
+      "sample_id": "isaac_surface_000417",
+      "split": "train"
+    },
+    {
+      "frame_index": 418,
+      "sample_id": "isaac_surface_000418",
+      "split": "train"
+    },
+    {
+      "frame_index": 419,
+      "sample_id": "isaac_surface_000419",
+      "split": "test"
+    },
+    {
+      "frame_index": 420,
+      "sample_id": "isaac_surface_000420",
+      "split": "train"
+    },
+    {
+      "frame_index": 421,
+      "sample_id": "isaac_surface_000421",
+      "split": "train"
+    },
+    {
+      "frame_index": 422,
+      "sample_id": "isaac_surface_000422",
+      "split": "train"
+    },
+    {
+      "frame_index": 423,
+      "sample_id": "isaac_surface_000423",
+      "split": "test"
+    },
+    {
+      "frame_index": 424,
+      "sample_id": "isaac_surface_000424",
+      "split": "train"
+    },
+    {
+      "frame_index": 425,
+      "sample_id": "isaac_surface_000425",
+      "split": "validation"
+    },
+    {
+      "frame_index": 426,
+      "sample_id": "isaac_surface_000426",
+      "split": "train"
+    },
+    {
+      "frame_index": 427,
+      "sample_id": "isaac_surface_000427",
+      "split": "train"
+    },
+    {
+      "frame_index": 428,
+      "sample_id": "isaac_surface_000428",
+      "split": "validation"
+    },
+    {
+      "frame_index": 429,
+      "sample_id": "isaac_surface_000429",
+      "split": "validation"
+    },
+    {
+      "frame_index": 430,
+      "sample_id": "isaac_surface_000430",
+      "split": "validation"
+    },
+    {
+      "frame_index": 431,
+      "sample_id": "isaac_surface_000431",
+      "split": "train"
+    },
+    {
+      "frame_index": 432,
+      "sample_id": "isaac_surface_000432",
+      "split": "train"
+    },
+    {
+      "frame_index": 433,
+      "sample_id": "isaac_surface_000433",
+      "split": "test"
+    },
+    {
+      "frame_index": 434,
+      "sample_id": "isaac_surface_000434",
+      "split": "test"
+    },
+    {
+      "frame_index": 435,
+      "sample_id": "isaac_surface_000435",
+      "split": "train"
+    },
+    {
+      "frame_index": 436,
+      "sample_id": "isaac_surface_000436",
+      "split": "train"
+    },
+    {
+      "frame_index": 437,
+      "sample_id": "isaac_surface_000437",
+      "split": "validation"
+    },
+    {
+      "frame_index": 438,
+      "sample_id": "isaac_surface_000438",
+      "split": "validation"
+    },
+    {
+      "frame_index": 439,
+      "sample_id": "isaac_surface_000439",
+      "split": "validation"
+    },
+    {
+      "frame_index": 440,
+      "sample_id": "isaac_surface_000440",
+      "split": "test"
+    },
+    {
+      "frame_index": 441,
+      "sample_id": "isaac_surface_000441",
+      "split": "test"
+    },
+    {
+      "frame_index": 442,
+      "sample_id": "isaac_surface_000442",
+      "split": "train"
+    },
+    {
+      "frame_index": 443,
+      "sample_id": "isaac_surface_000443",
+      "split": "train"
+    },
+    {
+      "frame_index": 444,
+      "sample_id": "isaac_surface_000444",
+      "split": "train"
+    },
+    {
+      "frame_index": 445,
+      "sample_id": "isaac_surface_000445",
+      "split": "train"
+    },
+    {
+      "frame_index": 446,
+      "sample_id": "isaac_surface_000446",
+      "split": "validation"
+    },
+    {
+      "frame_index": 447,
+      "sample_id": "isaac_surface_000447",
+      "split": "train"
+    },
+    {
+      "frame_index": 448,
+      "sample_id": "isaac_surface_000448",
+      "split": "validation"
+    },
+    {
+      "frame_index": 449,
+      "sample_id": "isaac_surface_000449",
+      "split": "train"
+    },
+    {
+      "frame_index": 450,
+      "sample_id": "isaac_surface_000450",
+      "split": "train"
+    },
+    {
+      "frame_index": 451,
+      "sample_id": "isaac_surface_000451",
+      "split": "train"
+    },
+    {
+      "frame_index": 452,
+      "sample_id": "isaac_surface_000452",
+      "split": "train"
+    },
+    {
+      "frame_index": 453,
+      "sample_id": "isaac_surface_000453",
+      "split": "train"
+    },
+    {
+      "frame_index": 454,
+      "sample_id": "isaac_surface_000454",
+      "split": "test"
+    },
+    {
+      "frame_index": 455,
+      "sample_id": "isaac_surface_000455",
+      "split": "train"
+    },
+    {
+      "frame_index": 456,
+      "sample_id": "isaac_surface_000456",
+      "split": "test"
+    },
+    {
+      "frame_index": 457,
+      "sample_id": "isaac_surface_000457",
+      "split": "train"
+    },
+    {
+      "frame_index": 458,
+      "sample_id": "isaac_surface_000458",
+      "split": "validation"
+    },
+    {
+      "frame_index": 459,
+      "sample_id": "isaac_surface_000459",
+      "split": "train"
+    },
+    {
+      "frame_index": 460,
+      "sample_id": "isaac_surface_000460",
+      "split": "train"
+    },
+    {
+      "frame_index": 461,
+      "sample_id": "isaac_surface_000461",
+      "split": "validation"
+    },
+    {
+      "frame_index": 462,
+      "sample_id": "isaac_surface_000462",
+      "split": "test"
+    },
+    {
+      "frame_index": 463,
+      "sample_id": "isaac_surface_000463",
+      "split": "train"
+    },
+    {
+      "frame_index": 464,
+      "sample_id": "isaac_surface_000464",
+      "split": "train"
+    },
+    {
+      "frame_index": 465,
+      "sample_id": "isaac_surface_000465",
+      "split": "train"
+    },
+    {
+      "frame_index": 466,
+      "sample_id": "isaac_surface_000466",
+      "split": "train"
+    },
+    {
+      "frame_index": 467,
+      "sample_id": "isaac_surface_000467",
+      "split": "train"
+    },
+    {
+      "frame_index": 468,
+      "sample_id": "isaac_surface_000468",
+      "split": "test"
+    },
+    {
+      "frame_index": 469,
+      "sample_id": "isaac_surface_000469",
+      "split": "train"
+    },
+    {
+      "frame_index": 470,
+      "sample_id": "isaac_surface_000470",
+      "split": "validation"
+    },
+    {
+      "frame_index": 471,
+      "sample_id": "isaac_surface_000471",
+      "split": "train"
+    },
+    {
+      "frame_index": 472,
+      "sample_id": "isaac_surface_000472",
+      "split": "train"
+    },
+    {
+      "frame_index": 473,
+      "sample_id": "isaac_surface_000473",
+      "split": "test"
+    },
+    {
+      "frame_index": 474,
+      "sample_id": "isaac_surface_000474",
+      "split": "train"
+    },
+    {
+      "frame_index": 475,
+      "sample_id": "isaac_surface_000475",
+      "split": "train"
+    },
+    {
+      "frame_index": 476,
+      "sample_id": "isaac_surface_000476",
+      "split": "train"
+    },
+    {
+      "frame_index": 477,
+      "sample_id": "isaac_surface_000477",
+      "split": "train"
+    },
+    {
+      "frame_index": 478,
+      "sample_id": "isaac_surface_000478",
+      "split": "train"
+    },
+    {
+      "frame_index": 479,
+      "sample_id": "isaac_surface_000479",
+      "split": "train"
+    },
+    {
+      "frame_index": 480,
+      "sample_id": "isaac_surface_000480",
+      "split": "test"
+    },
+    {
+      "frame_index": 481,
+      "sample_id": "isaac_surface_000481",
+      "split": "test"
+    },
+    {
+      "frame_index": 482,
+      "sample_id": "isaac_surface_000482",
+      "split": "train"
+    },
+    {
+      "frame_index": 483,
+      "sample_id": "isaac_surface_000483",
+      "split": "train"
+    },
+    {
+      "frame_index": 484,
+      "sample_id": "isaac_surface_000484",
+      "split": "train"
+    },
+    {
+      "frame_index": 485,
+      "sample_id": "isaac_surface_000485",
+      "split": "train"
+    },
+    {
+      "frame_index": 486,
+      "sample_id": "isaac_surface_000486",
+      "split": "train"
+    },
+    {
+      "frame_index": 487,
+      "sample_id": "isaac_surface_000487",
+      "split": "train"
+    },
+    {
+      "frame_index": 488,
+      "sample_id": "isaac_surface_000488",
+      "split": "train"
+    },
+    {
+      "frame_index": 489,
+      "sample_id": "isaac_surface_000489",
+      "split": "train"
+    },
+    {
+      "frame_index": 490,
+      "sample_id": "isaac_surface_000490",
+      "split": "train"
+    },
+    {
+      "frame_index": 491,
+      "sample_id": "isaac_surface_000491",
+      "split": "test"
+    },
+    {
+      "frame_index": 492,
+      "sample_id": "isaac_surface_000492",
+      "split": "train"
+    },
+    {
+      "frame_index": 493,
+      "sample_id": "isaac_surface_000493",
+      "split": "validation"
+    },
+    {
+      "frame_index": 494,
+      "sample_id": "isaac_surface_000494",
+      "split": "test"
+    },
+    {
+      "frame_index": 495,
+      "sample_id": "isaac_surface_000495",
+      "split": "test"
+    },
+    {
+      "frame_index": 496,
+      "sample_id": "isaac_surface_000496",
+      "split": "test"
+    },
+    {
+      "frame_index": 497,
+      "sample_id": "isaac_surface_000497",
+      "split": "train"
+    },
+    {
+      "frame_index": 498,
+      "sample_id": "isaac_surface_000498",
+      "split": "validation"
+    },
+    {
+      "frame_index": 499,
+      "sample_id": "isaac_surface_000499",
+      "split": "train"
+    },
+    {
+      "frame_index": 500,
+      "sample_id": "isaac_surface_000500",
+      "split": "train"
+    },
+    {
+      "frame_index": 501,
+      "sample_id": "isaac_surface_000501",
+      "split": "train"
+    },
+    {
+      "frame_index": 502,
+      "sample_id": "isaac_surface_000502",
+      "split": "validation"
+    },
+    {
+      "frame_index": 503,
+      "sample_id": "isaac_surface_000503",
+      "split": "train"
+    },
+    {
+      "frame_index": 504,
+      "sample_id": "isaac_surface_000504",
+      "split": "train"
+    },
+    {
+      "frame_index": 505,
+      "sample_id": "isaac_surface_000505",
+      "split": "validation"
+    },
+    {
+      "frame_index": 506,
+      "sample_id": "isaac_surface_000506",
+      "split": "test"
+    },
+    {
+      "frame_index": 507,
+      "sample_id": "isaac_surface_000507",
+      "split": "train"
+    },
+    {
+      "frame_index": 508,
+      "sample_id": "isaac_surface_000508",
+      "split": "train"
+    },
+    {
+      "frame_index": 509,
+      "sample_id": "isaac_surface_000509",
+      "split": "train"
+    },
+    {
+      "frame_index": 510,
+      "sample_id": "isaac_surface_000510",
+      "split": "train"
+    },
+    {
+      "frame_index": 511,
+      "sample_id": "isaac_surface_000511",
+      "split": "train"
+    },
+    {
+      "frame_index": 512,
+      "sample_id": "isaac_surface_000512",
+      "split": "train"
+    },
+    {
+      "frame_index": 513,
+      "sample_id": "isaac_surface_000513",
+      "split": "train"
+    },
+    {
+      "frame_index": 514,
+      "sample_id": "isaac_surface_000514",
+      "split": "train"
+    },
+    {
+      "frame_index": 515,
+      "sample_id": "isaac_surface_000515",
+      "split": "train"
+    },
+    {
+      "frame_index": 516,
+      "sample_id": "isaac_surface_000516",
+      "split": "test"
+    },
+    {
+      "frame_index": 517,
+      "sample_id": "isaac_surface_000517",
+      "split": "train"
+    },
+    {
+      "frame_index": 518,
+      "sample_id": "isaac_surface_000518",
+      "split": "train"
+    },
+    {
+      "frame_index": 519,
+      "sample_id": "isaac_surface_000519",
+      "split": "train"
+    },
+    {
+      "frame_index": 520,
+      "sample_id": "isaac_surface_000520",
+      "split": "train"
+    },
+    {
+      "frame_index": 521,
+      "sample_id": "isaac_surface_000521",
+      "split": "train"
+    },
+    {
+      "frame_index": 522,
+      "sample_id": "isaac_surface_000522",
+      "split": "train"
+    },
+    {
+      "frame_index": 523,
+      "sample_id": "isaac_surface_000523",
+      "split": "train"
+    },
+    {
+      "frame_index": 524,
+      "sample_id": "isaac_surface_000524",
+      "split": "train"
+    },
+    {
+      "frame_index": 525,
+      "sample_id": "isaac_surface_000525",
+      "split": "train"
+    },
+    {
+      "frame_index": 526,
+      "sample_id": "isaac_surface_000526",
+      "split": "train"
+    },
+    {
+      "frame_index": 527,
+      "sample_id": "isaac_surface_000527",
+      "split": "train"
+    },
+    {
+      "frame_index": 528,
+      "sample_id": "isaac_surface_000528",
+      "split": "train"
+    },
+    {
+      "frame_index": 529,
+      "sample_id": "isaac_surface_000529",
+      "split": "train"
+    },
+    {
+      "frame_index": 530,
+      "sample_id": "isaac_surface_000530",
+      "split": "train"
+    },
+    {
+      "frame_index": 531,
+      "sample_id": "isaac_surface_000531",
+      "split": "train"
+    },
+    {
+      "frame_index": 532,
+      "sample_id": "isaac_surface_000532",
+      "split": "validation"
+    },
+    {
+      "frame_index": 533,
+      "sample_id": "isaac_surface_000533",
+      "split": "train"
+    },
+    {
+      "frame_index": 534,
+      "sample_id": "isaac_surface_000534",
+      "split": "train"
+    },
+    {
+      "frame_index": 535,
+      "sample_id": "isaac_surface_000535",
+      "split": "train"
+    },
+    {
+      "frame_index": 536,
+      "sample_id": "isaac_surface_000536",
+      "split": "train"
+    },
+    {
+      "frame_index": 537,
+      "sample_id": "isaac_surface_000537",
+      "split": "train"
+    },
+    {
+      "frame_index": 538,
+      "sample_id": "isaac_surface_000538",
+      "split": "train"
+    },
+    {
+      "frame_index": 539,
+      "sample_id": "isaac_surface_000539",
+      "split": "train"
+    },
+    {
+      "frame_index": 540,
+      "sample_id": "isaac_surface_000540",
+      "split": "train"
+    },
+    {
+      "frame_index": 541,
+      "sample_id": "isaac_surface_000541",
+      "split": "train"
+    },
+    {
+      "frame_index": 542,
+      "sample_id": "isaac_surface_000542",
+      "split": "validation"
+    },
+    {
+      "frame_index": 543,
+      "sample_id": "isaac_surface_000543",
+      "split": "validation"
+    },
+    {
+      "frame_index": 544,
+      "sample_id": "isaac_surface_000544",
+      "split": "train"
+    },
+    {
+      "frame_index": 545,
+      "sample_id": "isaac_surface_000545",
+      "split": "train"
+    },
+    {
+      "frame_index": 546,
+      "sample_id": "isaac_surface_000546",
+      "split": "train"
+    },
+    {
+      "frame_index": 547,
+      "sample_id": "isaac_surface_000547",
+      "split": "test"
+    },
+    {
+      "frame_index": 548,
+      "sample_id": "isaac_surface_000548",
+      "split": "test"
+    },
+    {
+      "frame_index": 549,
+      "sample_id": "isaac_surface_000549",
+      "split": "train"
+    },
+    {
+      "frame_index": 550,
+      "sample_id": "isaac_surface_000550",
+      "split": "train"
+    },
+    {
+      "frame_index": 551,
+      "sample_id": "isaac_surface_000551",
+      "split": "train"
+    },
+    {
+      "frame_index": 552,
+      "sample_id": "isaac_surface_000552",
+      "split": "train"
+    },
+    {
+      "frame_index": 553,
+      "sample_id": "isaac_surface_000553",
+      "split": "train"
+    },
+    {
+      "frame_index": 554,
+      "sample_id": "isaac_surface_000554",
+      "split": "test"
+    },
+    {
+      "frame_index": 555,
+      "sample_id": "isaac_surface_000555",
+      "split": "train"
+    },
+    {
+      "frame_index": 556,
+      "sample_id": "isaac_surface_000556",
+      "split": "train"
+    },
+    {
+      "frame_index": 557,
+      "sample_id": "isaac_surface_000557",
+      "split": "train"
+    },
+    {
+      "frame_index": 558,
+      "sample_id": "isaac_surface_000558",
+      "split": "train"
+    },
+    {
+      "frame_index": 559,
+      "sample_id": "isaac_surface_000559",
+      "split": "train"
+    },
+    {
+      "frame_index": 560,
+      "sample_id": "isaac_surface_000560",
+      "split": "train"
+    },
+    {
+      "frame_index": 561,
+      "sample_id": "isaac_surface_000561",
+      "split": "train"
+    },
+    {
+      "frame_index": 562,
+      "sample_id": "isaac_surface_000562",
+      "split": "train"
+    },
+    {
+      "frame_index": 563,
+      "sample_id": "isaac_surface_000563",
+      "split": "train"
+    },
+    {
+      "frame_index": 564,
+      "sample_id": "isaac_surface_000564",
+      "split": "validation"
+    },
+    {
+      "frame_index": 565,
+      "sample_id": "isaac_surface_000565",
+      "split": "validation"
+    },
+    {
+      "frame_index": 566,
+      "sample_id": "isaac_surface_000566",
+      "split": "train"
+    },
+    {
+      "frame_index": 567,
+      "sample_id": "isaac_surface_000567",
+      "split": "test"
+    },
+    {
+      "frame_index": 568,
+      "sample_id": "isaac_surface_000568",
+      "split": "validation"
+    },
+    {
+      "frame_index": 569,
+      "sample_id": "isaac_surface_000569",
+      "split": "train"
+    },
+    {
+      "frame_index": 570,
+      "sample_id": "isaac_surface_000570",
+      "split": "test"
+    },
+    {
+      "frame_index": 571,
+      "sample_id": "isaac_surface_000571",
+      "split": "train"
+    },
+    {
+      "frame_index": 572,
+      "sample_id": "isaac_surface_000572",
+      "split": "test"
+    },
+    {
+      "frame_index": 573,
+      "sample_id": "isaac_surface_000573",
+      "split": "validation"
+    },
+    {
+      "frame_index": 574,
+      "sample_id": "isaac_surface_000574",
+      "split": "train"
+    },
+    {
+      "frame_index": 575,
+      "sample_id": "isaac_surface_000575",
+      "split": "train"
+    },
+    {
+      "frame_index": 576,
+      "sample_id": "isaac_surface_000576",
+      "split": "train"
+    },
+    {
+      "frame_index": 577,
+      "sample_id": "isaac_surface_000577",
+      "split": "train"
+    },
+    {
+      "frame_index": 578,
+      "sample_id": "isaac_surface_000578",
+      "split": "train"
+    },
+    {
+      "frame_index": 579,
+      "sample_id": "isaac_surface_000579",
+      "split": "train"
+    },
+    {
+      "frame_index": 580,
+      "sample_id": "isaac_surface_000580",
+      "split": "validation"
+    },
+    {
+      "frame_index": 581,
+      "sample_id": "isaac_surface_000581",
+      "split": "train"
+    },
+    {
+      "frame_index": 582,
+      "sample_id": "isaac_surface_000582",
+      "split": "train"
+    },
+    {
+      "frame_index": 583,
+      "sample_id": "isaac_surface_000583",
+      "split": "train"
+    },
+    {
+      "frame_index": 584,
+      "sample_id": "isaac_surface_000584",
+      "split": "train"
+    },
+    {
+      "frame_index": 585,
+      "sample_id": "isaac_surface_000585",
+      "split": "train"
+    },
+    {
+      "frame_index": 586,
+      "sample_id": "isaac_surface_000586",
+      "split": "train"
+    },
+    {
+      "frame_index": 587,
+      "sample_id": "isaac_surface_000587",
+      "split": "train"
+    },
+    {
+      "frame_index": 588,
+      "sample_id": "isaac_surface_000588",
+      "split": "validation"
+    },
+    {
+      "frame_index": 589,
+      "sample_id": "isaac_surface_000589",
+      "split": "train"
+    },
+    {
+      "frame_index": 590,
+      "sample_id": "isaac_surface_000590",
+      "split": "validation"
+    },
+    {
+      "frame_index": 591,
+      "sample_id": "isaac_surface_000591",
+      "split": "train"
+    },
+    {
+      "frame_index": 592,
+      "sample_id": "isaac_surface_000592",
+      "split": "train"
+    },
+    {
+      "frame_index": 593,
+      "sample_id": "isaac_surface_000593",
+      "split": "validation"
+    },
+    {
+      "frame_index": 594,
+      "sample_id": "isaac_surface_000594",
+      "split": "train"
+    },
+    {
+      "frame_index": 595,
+      "sample_id": "isaac_surface_000595",
+      "split": "train"
+    },
+    {
+      "frame_index": 596,
+      "sample_id": "isaac_surface_000596",
+      "split": "train"
+    },
+    {
+      "frame_index": 597,
+      "sample_id": "isaac_surface_000597",
+      "split": "train"
+    },
+    {
+      "frame_index": 598,
+      "sample_id": "isaac_surface_000598",
+      "split": "test"
+    },
+    {
+      "frame_index": 599,
+      "sample_id": "isaac_surface_000599",
+      "split": "train"
+    },
+    {
+      "frame_index": 600,
+      "sample_id": "isaac_surface_000600",
+      "split": "train"
+    },
+    {
+      "frame_index": 601,
+      "sample_id": "isaac_surface_000601",
+      "split": "train"
+    },
+    {
+      "frame_index": 602,
+      "sample_id": "isaac_surface_000602",
+      "split": "train"
+    },
+    {
+      "frame_index": 603,
+      "sample_id": "isaac_surface_000603",
+      "split": "train"
+    },
+    {
+      "frame_index": 604,
+      "sample_id": "isaac_surface_000604",
+      "split": "train"
+    },
+    {
+      "frame_index": 605,
+      "sample_id": "isaac_surface_000605",
+      "split": "validation"
+    },
+    {
+      "frame_index": 606,
+      "sample_id": "isaac_surface_000606",
+      "split": "validation"
+    },
+    {
+      "frame_index": 607,
+      "sample_id": "isaac_surface_000607",
+      "split": "train"
+    },
+    {
+      "frame_index": 608,
+      "sample_id": "isaac_surface_000608",
+      "split": "train"
+    },
+    {
+      "frame_index": 609,
+      "sample_id": "isaac_surface_000609",
+      "split": "train"
+    },
+    {
+      "frame_index": 610,
+      "sample_id": "isaac_surface_000610",
+      "split": "train"
+    },
+    {
+      "frame_index": 611,
+      "sample_id": "isaac_surface_000611",
+      "split": "train"
+    },
+    {
+      "frame_index": 612,
+      "sample_id": "isaac_surface_000612",
+      "split": "train"
+    },
+    {
+      "frame_index": 613,
+      "sample_id": "isaac_surface_000613",
+      "split": "train"
+    },
+    {
+      "frame_index": 614,
+      "sample_id": "isaac_surface_000614",
+      "split": "train"
+    },
+    {
+      "frame_index": 615,
+      "sample_id": "isaac_surface_000615",
+      "split": "validation"
+    },
+    {
+      "frame_index": 616,
+      "sample_id": "isaac_surface_000616",
+      "split": "test"
+    },
+    {
+      "frame_index": 617,
+      "sample_id": "isaac_surface_000617",
+      "split": "test"
+    },
+    {
+      "frame_index": 618,
+      "sample_id": "isaac_surface_000618",
+      "split": "validation"
+    },
+    {
+      "frame_index": 619,
+      "sample_id": "isaac_surface_000619",
+      "split": "test"
+    },
+    {
+      "frame_index": 620,
+      "sample_id": "isaac_surface_000620",
+      "split": "validation"
+    },
+    {
+      "frame_index": 621,
+      "sample_id": "isaac_surface_000621",
+      "split": "validation"
+    },
+    {
+      "frame_index": 622,
+      "sample_id": "isaac_surface_000622",
+      "split": "train"
+    },
+    {
+      "frame_index": 623,
+      "sample_id": "isaac_surface_000623",
+      "split": "test"
+    },
+    {
+      "frame_index": 624,
+      "sample_id": "isaac_surface_000624",
+      "split": "train"
+    },
+    {
+      "frame_index": 625,
+      "sample_id": "isaac_surface_000625",
+      "split": "validation"
+    },
+    {
+      "frame_index": 626,
+      "sample_id": "isaac_surface_000626",
+      "split": "train"
+    },
+    {
+      "frame_index": 627,
+      "sample_id": "isaac_surface_000627",
+      "split": "train"
+    },
+    {
+      "frame_index": 628,
+      "sample_id": "isaac_surface_000628",
+      "split": "train"
+    },
+    {
+      "frame_index": 629,
+      "sample_id": "isaac_surface_000629",
+      "split": "train"
+    },
+    {
+      "frame_index": 630,
+      "sample_id": "isaac_surface_000630",
+      "split": "train"
+    },
+    {
+      "frame_index": 631,
+      "sample_id": "isaac_surface_000631",
+      "split": "train"
+    },
+    {
+      "frame_index": 632,
+      "sample_id": "isaac_surface_000632",
+      "split": "train"
+    },
+    {
+      "frame_index": 633,
+      "sample_id": "isaac_surface_000633",
+      "split": "test"
+    },
+    {
+      "frame_index": 634,
+      "sample_id": "isaac_surface_000634",
+      "split": "train"
+    },
+    {
+      "frame_index": 635,
+      "sample_id": "isaac_surface_000635",
+      "split": "test"
+    },
+    {
+      "frame_index": 636,
+      "sample_id": "isaac_surface_000636",
+      "split": "train"
+    },
+    {
+      "frame_index": 637,
+      "sample_id": "isaac_surface_000637",
+      "split": "train"
+    },
+    {
+      "frame_index": 638,
+      "sample_id": "isaac_surface_000638",
+      "split": "test"
+    },
+    {
+      "frame_index": 639,
+      "sample_id": "isaac_surface_000639",
+      "split": "test"
+    },
+    {
+      "frame_index": 640,
+      "sample_id": "isaac_surface_000640",
+      "split": "train"
+    },
+    {
+      "frame_index": 641,
+      "sample_id": "isaac_surface_000641",
+      "split": "train"
+    },
+    {
+      "frame_index": 642,
+      "sample_id": "isaac_surface_000642",
+      "split": "validation"
+    },
+    {
+      "frame_index": 643,
+      "sample_id": "isaac_surface_000643",
+      "split": "test"
+    },
+    {
+      "frame_index": 644,
+      "sample_id": "isaac_surface_000644",
+      "split": "train"
+    },
+    {
+      "frame_index": 645,
+      "sample_id": "isaac_surface_000645",
+      "split": "train"
+    },
+    {
+      "frame_index": 646,
+      "sample_id": "isaac_surface_000646",
+      "split": "train"
+    },
+    {
+      "frame_index": 647,
+      "sample_id": "isaac_surface_000647",
+      "split": "train"
+    },
+    {
+      "frame_index": 648,
+      "sample_id": "isaac_surface_000648",
+      "split": "train"
+    },
+    {
+      "frame_index": 649,
+      "sample_id": "isaac_surface_000649",
+      "split": "train"
+    },
+    {
+      "frame_index": 650,
+      "sample_id": "isaac_surface_000650",
+      "split": "train"
+    },
+    {
+      "frame_index": 651,
+      "sample_id": "isaac_surface_000651",
+      "split": "test"
+    },
+    {
+      "frame_index": 652,
+      "sample_id": "isaac_surface_000652",
+      "split": "train"
+    },
+    {
+      "frame_index": 653,
+      "sample_id": "isaac_surface_000653",
+      "split": "train"
+    },
+    {
+      "frame_index": 654,
+      "sample_id": "isaac_surface_000654",
+      "split": "validation"
+    },
+    {
+      "frame_index": 655,
+      "sample_id": "isaac_surface_000655",
+      "split": "test"
+    },
+    {
+      "frame_index": 656,
+      "sample_id": "isaac_surface_000656",
+      "split": "test"
+    },
+    {
+      "frame_index": 657,
+      "sample_id": "isaac_surface_000657",
+      "split": "train"
+    },
+    {
+      "frame_index": 658,
+      "sample_id": "isaac_surface_000658",
+      "split": "train"
+    },
+    {
+      "frame_index": 659,
+      "sample_id": "isaac_surface_000659",
+      "split": "train"
+    },
+    {
+      "frame_index": 660,
+      "sample_id": "isaac_surface_000660",
+      "split": "train"
+    },
+    {
+      "frame_index": 661,
+      "sample_id": "isaac_surface_000661",
+      "split": "train"
+    },
+    {
+      "frame_index": 662,
+      "sample_id": "isaac_surface_000662",
+      "split": "train"
+    },
+    {
+      "frame_index": 663,
+      "sample_id": "isaac_surface_000663",
+      "split": "train"
+    },
+    {
+      "frame_index": 664,
+      "sample_id": "isaac_surface_000664",
+      "split": "validation"
+    },
+    {
+      "frame_index": 665,
+      "sample_id": "isaac_surface_000665",
+      "split": "train"
+    },
+    {
+      "frame_index": 666,
+      "sample_id": "isaac_surface_000666",
+      "split": "train"
+    },
+    {
+      "frame_index": 667,
+      "sample_id": "isaac_surface_000667",
+      "split": "validation"
+    },
+    {
+      "frame_index": 668,
+      "sample_id": "isaac_surface_000668",
+      "split": "train"
+    },
+    {
+      "frame_index": 669,
+      "sample_id": "isaac_surface_000669",
+      "split": "validation"
+    },
+    {
+      "frame_index": 670,
+      "sample_id": "isaac_surface_000670",
+      "split": "test"
+    },
+    {
+      "frame_index": 671,
+      "sample_id": "isaac_surface_000671",
+      "split": "train"
+    },
+    {
+      "frame_index": 672,
+      "sample_id": "isaac_surface_000672",
+      "split": "train"
+    },
+    {
+      "frame_index": 673,
+      "sample_id": "isaac_surface_000673",
+      "split": "train"
+    },
+    {
+      "frame_index": 674,
+      "sample_id": "isaac_surface_000674",
+      "split": "train"
+    },
+    {
+      "frame_index": 675,
+      "sample_id": "isaac_surface_000675",
+      "split": "train"
+    },
+    {
+      "frame_index": 676,
+      "sample_id": "isaac_surface_000676",
+      "split": "test"
+    },
+    {
+      "frame_index": 677,
+      "sample_id": "isaac_surface_000677",
+      "split": "train"
+    },
+    {
+      "frame_index": 678,
+      "sample_id": "isaac_surface_000678",
+      "split": "train"
+    },
+    {
+      "frame_index": 679,
+      "sample_id": "isaac_surface_000679",
+      "split": "train"
+    },
+    {
+      "frame_index": 680,
+      "sample_id": "isaac_surface_000680",
+      "split": "train"
+    },
+    {
+      "frame_index": 681,
+      "sample_id": "isaac_surface_000681",
+      "split": "train"
+    },
+    {
+      "frame_index": 682,
+      "sample_id": "isaac_surface_000682",
+      "split": "train"
+    },
+    {
+      "frame_index": 683,
+      "sample_id": "isaac_surface_000683",
+      "split": "train"
+    },
+    {
+      "frame_index": 684,
+      "sample_id": "isaac_surface_000684",
+      "split": "train"
+    },
+    {
+      "frame_index": 685,
+      "sample_id": "isaac_surface_000685",
+      "split": "train"
+    },
+    {
+      "frame_index": 686,
+      "sample_id": "isaac_surface_000686",
+      "split": "validation"
+    },
+    {
+      "frame_index": 687,
+      "sample_id": "isaac_surface_000687",
+      "split": "validation"
+    },
+    {
+      "frame_index": 688,
+      "sample_id": "isaac_surface_000688",
+      "split": "test"
+    },
+    {
+      "frame_index": 689,
+      "sample_id": "isaac_surface_000689",
+      "split": "train"
+    },
+    {
+      "frame_index": 690,
+      "sample_id": "isaac_surface_000690",
+      "split": "train"
+    },
+    {
+      "frame_index": 691,
+      "sample_id": "isaac_surface_000691",
+      "split": "train"
+    },
+    {
+      "frame_index": 692,
+      "sample_id": "isaac_surface_000692",
+      "split": "test"
+    },
+    {
+      "frame_index": 693,
+      "sample_id": "isaac_surface_000693",
+      "split": "test"
+    },
+    {
+      "frame_index": 694,
+      "sample_id": "isaac_surface_000694",
+      "split": "train"
+    },
+    {
+      "frame_index": 695,
+      "sample_id": "isaac_surface_000695",
+      "split": "train"
+    },
+    {
+      "frame_index": 696,
+      "sample_id": "isaac_surface_000696",
+      "split": "test"
+    },
+    {
+      "frame_index": 697,
+      "sample_id": "isaac_surface_000697",
+      "split": "validation"
+    },
+    {
+      "frame_index": 698,
+      "sample_id": "isaac_surface_000698",
+      "split": "train"
+    },
+    {
+      "frame_index": 699,
+      "sample_id": "isaac_surface_000699",
+      "split": "train"
+    },
+    {
+      "frame_index": 700,
+      "sample_id": "isaac_surface_000700",
+      "split": "train"
+    },
+    {
+      "frame_index": 701,
+      "sample_id": "isaac_surface_000701",
+      "split": "train"
+    },
+    {
+      "frame_index": 702,
+      "sample_id": "isaac_surface_000702",
+      "split": "validation"
+    },
+    {
+      "frame_index": 703,
+      "sample_id": "isaac_surface_000703",
+      "split": "test"
+    },
+    {
+      "frame_index": 704,
+      "sample_id": "isaac_surface_000704",
+      "split": "validation"
+    },
+    {
+      "frame_index": 705,
+      "sample_id": "isaac_surface_000705",
+      "split": "train"
+    },
+    {
+      "frame_index": 706,
+      "sample_id": "isaac_surface_000706",
+      "split": "train"
+    },
+    {
+      "frame_index": 707,
+      "sample_id": "isaac_surface_000707",
+      "split": "train"
+    },
+    {
+      "frame_index": 708,
+      "sample_id": "isaac_surface_000708",
+      "split": "train"
+    },
+    {
+      "frame_index": 709,
+      "sample_id": "isaac_surface_000709",
+      "split": "train"
+    },
+    {
+      "frame_index": 710,
+      "sample_id": "isaac_surface_000710",
+      "split": "train"
+    },
+    {
+      "frame_index": 711,
+      "sample_id": "isaac_surface_000711",
+      "split": "train"
+    },
+    {
+      "frame_index": 712,
+      "sample_id": "isaac_surface_000712",
+      "split": "test"
+    },
+    {
+      "frame_index": 713,
+      "sample_id": "isaac_surface_000713",
+      "split": "train"
+    },
+    {
+      "frame_index": 714,
+      "sample_id": "isaac_surface_000714",
+      "split": "train"
+    },
+    {
+      "frame_index": 715,
+      "sample_id": "isaac_surface_000715",
+      "split": "validation"
+    },
+    {
+      "frame_index": 716,
+      "sample_id": "isaac_surface_000716",
+      "split": "test"
+    },
+    {
+      "frame_index": 717,
+      "sample_id": "isaac_surface_000717",
+      "split": "train"
+    },
+    {
+      "frame_index": 718,
+      "sample_id": "isaac_surface_000718",
+      "split": "train"
+    },
+    {
+      "frame_index": 719,
+      "sample_id": "isaac_surface_000719",
+      "split": "test"
+    },
+    {
+      "frame_index": 720,
+      "sample_id": "isaac_surface_000720",
+      "split": "train"
+    },
+    {
+      "frame_index": 721,
+      "sample_id": "isaac_surface_000721",
+      "split": "validation"
+    },
+    {
+      "frame_index": 722,
+      "sample_id": "isaac_surface_000722",
+      "split": "validation"
+    },
+    {
+      "frame_index": 723,
+      "sample_id": "isaac_surface_000723",
+      "split": "train"
+    },
+    {
+      "frame_index": 724,
+      "sample_id": "isaac_surface_000724",
+      "split": "validation"
+    },
+    {
+      "frame_index": 725,
+      "sample_id": "isaac_surface_000725",
+      "split": "validation"
+    },
+    {
+      "frame_index": 726,
+      "sample_id": "isaac_surface_000726",
+      "split": "train"
+    },
+    {
+      "frame_index": 727,
+      "sample_id": "isaac_surface_000727",
+      "split": "train"
+    },
+    {
+      "frame_index": 728,
+      "sample_id": "isaac_surface_000728",
+      "split": "train"
+    },
+    {
+      "frame_index": 729,
+      "sample_id": "isaac_surface_000729",
+      "split": "train"
+    },
+    {
+      "frame_index": 730,
+      "sample_id": "isaac_surface_000730",
+      "split": "validation"
+    },
+    {
+      "frame_index": 731,
+      "sample_id": "isaac_surface_000731",
+      "split": "train"
+    },
+    {
+      "frame_index": 732,
+      "sample_id": "isaac_surface_000732",
+      "split": "test"
+    },
+    {
+      "frame_index": 733,
+      "sample_id": "isaac_surface_000733",
+      "split": "test"
+    },
+    {
+      "frame_index": 734,
+      "sample_id": "isaac_surface_000734",
+      "split": "validation"
+    },
+    {
+      "frame_index": 735,
+      "sample_id": "isaac_surface_000735",
+      "split": "train"
+    },
+    {
+      "frame_index": 736,
+      "sample_id": "isaac_surface_000736",
+      "split": "train"
+    },
+    {
+      "frame_index": 737,
+      "sample_id": "isaac_surface_000737",
+      "split": "train"
+    },
+    {
+      "frame_index": 738,
+      "sample_id": "isaac_surface_000738",
+      "split": "train"
+    },
+    {
+      "frame_index": 739,
+      "sample_id": "isaac_surface_000739",
+      "split": "validation"
+    },
+    {
+      "frame_index": 740,
+      "sample_id": "isaac_surface_000740",
+      "split": "train"
+    },
+    {
+      "frame_index": 741,
+      "sample_id": "isaac_surface_000741",
+      "split": "validation"
+    },
+    {
+      "frame_index": 742,
+      "sample_id": "isaac_surface_000742",
+      "split": "train"
+    },
+    {
+      "frame_index": 743,
+      "sample_id": "isaac_surface_000743",
+      "split": "train"
+    },
+    {
+      "frame_index": 744,
+      "sample_id": "isaac_surface_000744",
+      "split": "validation"
+    },
+    {
+      "frame_index": 745,
+      "sample_id": "isaac_surface_000745",
+      "split": "train"
+    },
+    {
+      "frame_index": 746,
+      "sample_id": "isaac_surface_000746",
+      "split": "train"
+    },
+    {
+      "frame_index": 747,
+      "sample_id": "isaac_surface_000747",
+      "split": "train"
+    },
+    {
+      "frame_index": 748,
+      "sample_id": "isaac_surface_000748",
+      "split": "test"
+    },
+    {
+      "frame_index": 749,
+      "sample_id": "isaac_surface_000749",
+      "split": "train"
+    },
+    {
+      "frame_index": 750,
+      "sample_id": "isaac_surface_000750",
+      "split": "train"
+    },
+    {
+      "frame_index": 751,
+      "sample_id": "isaac_surface_000751",
+      "split": "train"
+    },
+    {
+      "frame_index": 752,
+      "sample_id": "isaac_surface_000752",
+      "split": "train"
+    },
+    {
+      "frame_index": 753,
+      "sample_id": "isaac_surface_000753",
+      "split": "train"
+    },
+    {
+      "frame_index": 754,
+      "sample_id": "isaac_surface_000754",
+      "split": "validation"
+    },
+    {
+      "frame_index": 755,
+      "sample_id": "isaac_surface_000755",
+      "split": "train"
+    },
+    {
+      "frame_index": 756,
+      "sample_id": "isaac_surface_000756",
+      "split": "validation"
+    },
+    {
+      "frame_index": 757,
+      "sample_id": "isaac_surface_000757",
+      "split": "train"
+    },
+    {
+      "frame_index": 758,
+      "sample_id": "isaac_surface_000758",
+      "split": "validation"
+    },
+    {
+      "frame_index": 759,
+      "sample_id": "isaac_surface_000759",
+      "split": "train"
+    },
+    {
+      "frame_index": 760,
+      "sample_id": "isaac_surface_000760",
+      "split": "validation"
+    },
+    {
+      "frame_index": 761,
+      "sample_id": "isaac_surface_000761",
+      "split": "train"
+    },
+    {
+      "frame_index": 762,
+      "sample_id": "isaac_surface_000762",
+      "split": "train"
+    },
+    {
+      "frame_index": 763,
+      "sample_id": "isaac_surface_000763",
+      "split": "train"
+    },
+    {
+      "frame_index": 764,
+      "sample_id": "isaac_surface_000764",
+      "split": "test"
+    },
+    {
+      "frame_index": 765,
+      "sample_id": "isaac_surface_000765",
+      "split": "train"
+    },
+    {
+      "frame_index": 766,
+      "sample_id": "isaac_surface_000766",
+      "split": "train"
+    },
+    {
+      "frame_index": 767,
+      "sample_id": "isaac_surface_000767",
+      "split": "validation"
+    },
+    {
+      "frame_index": 768,
+      "sample_id": "isaac_surface_000768",
+      "split": "train"
+    },
+    {
+      "frame_index": 769,
+      "sample_id": "isaac_surface_000769",
+      "split": "test"
+    },
+    {
+      "frame_index": 770,
+      "sample_id": "isaac_surface_000770",
+      "split": "train"
+    },
+    {
+      "frame_index": 771,
+      "sample_id": "isaac_surface_000771",
+      "split": "train"
+    },
+    {
+      "frame_index": 772,
+      "sample_id": "isaac_surface_000772",
+      "split": "train"
+    },
+    {
+      "frame_index": 773,
+      "sample_id": "isaac_surface_000773",
+      "split": "train"
+    },
+    {
+      "frame_index": 774,
+      "sample_id": "isaac_surface_000774",
+      "split": "train"
+    },
+    {
+      "frame_index": 775,
+      "sample_id": "isaac_surface_000775",
+      "split": "train"
+    },
+    {
+      "frame_index": 776,
+      "sample_id": "isaac_surface_000776",
+      "split": "train"
+    },
+    {
+      "frame_index": 777,
+      "sample_id": "isaac_surface_000777",
+      "split": "train"
+    },
+    {
+      "frame_index": 778,
+      "sample_id": "isaac_surface_000778",
+      "split": "test"
+    },
+    {
+      "frame_index": 779,
+      "sample_id": "isaac_surface_000779",
+      "split": "train"
+    },
+    {
+      "frame_index": 780,
+      "sample_id": "isaac_surface_000780",
+      "split": "train"
+    },
+    {
+      "frame_index": 781,
+      "sample_id": "isaac_surface_000781",
+      "split": "train"
+    },
+    {
+      "frame_index": 782,
+      "sample_id": "isaac_surface_000782",
+      "split": "validation"
+    },
+    {
+      "frame_index": 783,
+      "sample_id": "isaac_surface_000783",
+      "split": "train"
+    },
+    {
+      "frame_index": 784,
+      "sample_id": "isaac_surface_000784",
+      "split": "test"
+    },
+    {
+      "frame_index": 785,
+      "sample_id": "isaac_surface_000785",
+      "split": "validation"
+    },
+    {
+      "frame_index": 786,
+      "sample_id": "isaac_surface_000786",
+      "split": "validation"
+    },
+    {
+      "frame_index": 787,
+      "sample_id": "isaac_surface_000787",
+      "split": "train"
+    },
+    {
+      "frame_index": 788,
+      "sample_id": "isaac_surface_000788",
+      "split": "train"
+    },
+    {
+      "frame_index": 789,
+      "sample_id": "isaac_surface_000789",
+      "split": "validation"
+    },
+    {
+      "frame_index": 790,
+      "sample_id": "isaac_surface_000790",
+      "split": "train"
+    },
+    {
+      "frame_index": 791,
+      "sample_id": "isaac_surface_000791",
+      "split": "train"
+    },
+    {
+      "frame_index": 792,
+      "sample_id": "isaac_surface_000792",
+      "split": "train"
+    },
+    {
+      "frame_index": 793,
+      "sample_id": "isaac_surface_000793",
+      "split": "train"
+    },
+    {
+      "frame_index": 794,
+      "sample_id": "isaac_surface_000794",
+      "split": "train"
+    },
+    {
+      "frame_index": 795,
+      "sample_id": "isaac_surface_000795",
+      "split": "train"
+    },
+    {
+      "frame_index": 796,
+      "sample_id": "isaac_surface_000796",
+      "split": "test"
+    },
+    {
+      "frame_index": 797,
+      "sample_id": "isaac_surface_000797",
+      "split": "train"
+    },
+    {
+      "frame_index": 798,
+      "sample_id": "isaac_surface_000798",
+      "split": "train"
+    },
+    {
+      "frame_index": 799,
+      "sample_id": "isaac_surface_000799",
+      "split": "test"
+    },
+    {
+      "frame_index": 800,
+      "sample_id": "isaac_surface_000800",
+      "split": "test"
+    },
+    {
+      "frame_index": 801,
+      "sample_id": "isaac_surface_000801",
+      "split": "validation"
+    },
+    {
+      "frame_index": 802,
+      "sample_id": "isaac_surface_000802",
+      "split": "train"
+    },
+    {
+      "frame_index": 803,
+      "sample_id": "isaac_surface_000803",
+      "split": "train"
+    },
+    {
+      "frame_index": 804,
+      "sample_id": "isaac_surface_000804",
+      "split": "validation"
+    },
+    {
+      "frame_index": 805,
+      "sample_id": "isaac_surface_000805",
+      "split": "train"
+    },
+    {
+      "frame_index": 806,
+      "sample_id": "isaac_surface_000806",
+      "split": "validation"
+    },
+    {
+      "frame_index": 807,
+      "sample_id": "isaac_surface_000807",
+      "split": "train"
+    },
+    {
+      "frame_index": 808,
+      "sample_id": "isaac_surface_000808",
+      "split": "train"
+    },
+    {
+      "frame_index": 809,
+      "sample_id": "isaac_surface_000809",
+      "split": "train"
+    },
+    {
+      "frame_index": 810,
+      "sample_id": "isaac_surface_000810",
+      "split": "train"
+    },
+    {
+      "frame_index": 811,
+      "sample_id": "isaac_surface_000811",
+      "split": "train"
+    },
+    {
+      "frame_index": 812,
+      "sample_id": "isaac_surface_000812",
+      "split": "train"
+    },
+    {
+      "frame_index": 813,
+      "sample_id": "isaac_surface_000813",
+      "split": "train"
+    },
+    {
+      "frame_index": 814,
+      "sample_id": "isaac_surface_000814",
+      "split": "train"
+    },
+    {
+      "frame_index": 815,
+      "sample_id": "isaac_surface_000815",
+      "split": "train"
+    },
+    {
+      "frame_index": 816,
+      "sample_id": "isaac_surface_000816",
+      "split": "train"
+    },
+    {
+      "frame_index": 817,
+      "sample_id": "isaac_surface_000817",
+      "split": "train"
+    },
+    {
+      "frame_index": 818,
+      "sample_id": "isaac_surface_000818",
+      "split": "test"
+    },
+    {
+      "frame_index": 819,
+      "sample_id": "isaac_surface_000819",
+      "split": "train"
+    },
+    {
+      "frame_index": 820,
+      "sample_id": "isaac_surface_000820",
+      "split": "train"
+    },
+    {
+      "frame_index": 821,
+      "sample_id": "isaac_surface_000821",
+      "split": "train"
+    },
+    {
+      "frame_index": 822,
+      "sample_id": "isaac_surface_000822",
+      "split": "validation"
+    },
+    {
+      "frame_index": 823,
+      "sample_id": "isaac_surface_000823",
+      "split": "train"
+    },
+    {
+      "frame_index": 824,
+      "sample_id": "isaac_surface_000824",
+      "split": "train"
+    },
+    {
+      "frame_index": 825,
+      "sample_id": "isaac_surface_000825",
+      "split": "train"
+    },
+    {
+      "frame_index": 826,
+      "sample_id": "isaac_surface_000826",
+      "split": "train"
+    },
+    {
+      "frame_index": 827,
+      "sample_id": "isaac_surface_000827",
+      "split": "test"
+    },
+    {
+      "frame_index": 828,
+      "sample_id": "isaac_surface_000828",
+      "split": "test"
+    },
+    {
+      "frame_index": 829,
+      "sample_id": "isaac_surface_000829",
+      "split": "train"
+    },
+    {
+      "frame_index": 830,
+      "sample_id": "isaac_surface_000830",
+      "split": "train"
+    },
+    {
+      "frame_index": 831,
+      "sample_id": "isaac_surface_000831",
+      "split": "train"
+    },
+    {
+      "frame_index": 832,
+      "sample_id": "isaac_surface_000832",
+      "split": "test"
+    },
+    {
+      "frame_index": 833,
+      "sample_id": "isaac_surface_000833",
+      "split": "train"
+    },
+    {
+      "frame_index": 834,
+      "sample_id": "isaac_surface_000834",
+      "split": "train"
+    },
+    {
+      "frame_index": 835,
+      "sample_id": "isaac_surface_000835",
+      "split": "train"
+    },
+    {
+      "frame_index": 836,
+      "sample_id": "isaac_surface_000836",
+      "split": "test"
+    },
+    {
+      "frame_index": 837,
+      "sample_id": "isaac_surface_000837",
+      "split": "train"
+    },
+    {
+      "frame_index": 838,
+      "sample_id": "isaac_surface_000838",
+      "split": "train"
+    },
+    {
+      "frame_index": 839,
+      "sample_id": "isaac_surface_000839",
+      "split": "test"
+    },
+    {
+      "frame_index": 840,
+      "sample_id": "isaac_surface_000840",
+      "split": "train"
+    },
+    {
+      "frame_index": 841,
+      "sample_id": "isaac_surface_000841",
+      "split": "validation"
+    },
+    {
+      "frame_index": 842,
+      "sample_id": "isaac_surface_000842",
+      "split": "train"
+    },
+    {
+      "frame_index": 843,
+      "sample_id": "isaac_surface_000843",
+      "split": "train"
+    },
+    {
+      "frame_index": 844,
+      "sample_id": "isaac_surface_000844",
+      "split": "train"
+    },
+    {
+      "frame_index": 845,
+      "sample_id": "isaac_surface_000845",
+      "split": "train"
+    },
+    {
+      "frame_index": 846,
+      "sample_id": "isaac_surface_000846",
+      "split": "test"
+    },
+    {
+      "frame_index": 847,
+      "sample_id": "isaac_surface_000847",
+      "split": "train"
+    },
+    {
+      "frame_index": 848,
+      "sample_id": "isaac_surface_000848",
+      "split": "train"
+    },
+    {
+      "frame_index": 849,
+      "sample_id": "isaac_surface_000849",
+      "split": "train"
+    },
+    {
+      "frame_index": 850,
+      "sample_id": "isaac_surface_000850",
+      "split": "validation"
+    },
+    {
+      "frame_index": 851,
+      "sample_id": "isaac_surface_000851",
+      "split": "train"
+    },
+    {
+      "frame_index": 852,
+      "sample_id": "isaac_surface_000852",
+      "split": "train"
+    },
+    {
+      "frame_index": 853,
+      "sample_id": "isaac_surface_000853",
+      "split": "train"
+    },
+    {
+      "frame_index": 854,
+      "sample_id": "isaac_surface_000854",
+      "split": "validation"
+    },
+    {
+      "frame_index": 855,
+      "sample_id": "isaac_surface_000855",
+      "split": "validation"
+    },
+    {
+      "frame_index": 856,
+      "sample_id": "isaac_surface_000856",
+      "split": "validation"
+    },
+    {
+      "frame_index": 857,
+      "sample_id": "isaac_surface_000857",
+      "split": "train"
+    },
+    {
+      "frame_index": 858,
+      "sample_id": "isaac_surface_000858",
+      "split": "train"
+    },
+    {
+      "frame_index": 859,
+      "sample_id": "isaac_surface_000859",
+      "split": "train"
+    },
+    {
+      "frame_index": 860,
+      "sample_id": "isaac_surface_000860",
+      "split": "train"
+    },
+    {
+      "frame_index": 861,
+      "sample_id": "isaac_surface_000861",
+      "split": "train"
+    },
+    {
+      "frame_index": 862,
+      "sample_id": "isaac_surface_000862",
+      "split": "train"
+    },
+    {
+      "frame_index": 863,
+      "sample_id": "isaac_surface_000863",
+      "split": "train"
+    },
+    {
+      "frame_index": 864,
+      "sample_id": "isaac_surface_000864",
+      "split": "train"
+    },
+    {
+      "frame_index": 865,
+      "sample_id": "isaac_surface_000865",
+      "split": "train"
+    },
+    {
+      "frame_index": 866,
+      "sample_id": "isaac_surface_000866",
+      "split": "validation"
+    },
+    {
+      "frame_index": 867,
+      "sample_id": "isaac_surface_000867",
+      "split": "validation"
+    },
+    {
+      "frame_index": 868,
+      "sample_id": "isaac_surface_000868",
+      "split": "test"
+    },
+    {
+      "frame_index": 869,
+      "sample_id": "isaac_surface_000869",
+      "split": "train"
+    },
+    {
+      "frame_index": 870,
+      "sample_id": "isaac_surface_000870",
+      "split": "train"
+    },
+    {
+      "frame_index": 871,
+      "sample_id": "isaac_surface_000871",
+      "split": "test"
+    },
+    {
+      "frame_index": 872,
+      "sample_id": "isaac_surface_000872",
+      "split": "train"
+    },
+    {
+      "frame_index": 873,
+      "sample_id": "isaac_surface_000873",
+      "split": "train"
+    },
+    {
+      "frame_index": 874,
+      "sample_id": "isaac_surface_000874",
+      "split": "train"
+    },
+    {
+      "frame_index": 875,
+      "sample_id": "isaac_surface_000875",
+      "split": "train"
+    },
+    {
+      "frame_index": 876,
+      "sample_id": "isaac_surface_000876",
+      "split": "train"
+    },
+    {
+      "frame_index": 877,
+      "sample_id": "isaac_surface_000877",
+      "split": "train"
+    },
+    {
+      "frame_index": 878,
+      "sample_id": "isaac_surface_000878",
+      "split": "validation"
+    },
+    {
+      "frame_index": 879,
+      "sample_id": "isaac_surface_000879",
+      "split": "train"
+    },
+    {
+      "frame_index": 880,
+      "sample_id": "isaac_surface_000880",
+      "split": "train"
+    },
+    {
+      "frame_index": 881,
+      "sample_id": "isaac_surface_000881",
+      "split": "train"
+    },
+    {
+      "frame_index": 882,
+      "sample_id": "isaac_surface_000882",
+      "split": "train"
+    },
+    {
+      "frame_index": 883,
+      "sample_id": "isaac_surface_000883",
+      "split": "test"
+    },
+    {
+      "frame_index": 884,
+      "sample_id": "isaac_surface_000884",
+      "split": "train"
+    },
+    {
+      "frame_index": 885,
+      "sample_id": "isaac_surface_000885",
+      "split": "train"
+    },
+    {
+      "frame_index": 886,
+      "sample_id": "isaac_surface_000886",
+      "split": "train"
+    },
+    {
+      "frame_index": 887,
+      "sample_id": "isaac_surface_000887",
+      "split": "train"
+    },
+    {
+      "frame_index": 888,
+      "sample_id": "isaac_surface_000888",
+      "split": "validation"
+    },
+    {
+      "frame_index": 889,
+      "sample_id": "isaac_surface_000889",
+      "split": "train"
+    },
+    {
+      "frame_index": 890,
+      "sample_id": "isaac_surface_000890",
+      "split": "train"
+    },
+    {
+      "frame_index": 891,
+      "sample_id": "isaac_surface_000891",
+      "split": "test"
+    },
+    {
+      "frame_index": 892,
+      "sample_id": "isaac_surface_000892",
+      "split": "train"
+    },
+    {
+      "frame_index": 893,
+      "sample_id": "isaac_surface_000893",
+      "split": "train"
+    },
+    {
+      "frame_index": 894,
+      "sample_id": "isaac_surface_000894",
+      "split": "validation"
+    },
+    {
+      "frame_index": 895,
+      "sample_id": "isaac_surface_000895",
+      "split": "train"
+    },
+    {
+      "frame_index": 896,
+      "sample_id": "isaac_surface_000896",
+      "split": "test"
+    },
+    {
+      "frame_index": 897,
+      "sample_id": "isaac_surface_000897",
+      "split": "train"
+    },
+    {
+      "frame_index": 898,
+      "sample_id": "isaac_surface_000898",
+      "split": "test"
+    },
+    {
+      "frame_index": 899,
+      "sample_id": "isaac_surface_000899",
+      "split": "train"
+    },
+    {
+      "frame_index": 900,
+      "sample_id": "isaac_surface_000900",
+      "split": "train"
+    },
+    {
+      "frame_index": 901,
+      "sample_id": "isaac_surface_000901",
+      "split": "train"
+    },
+    {
+      "frame_index": 902,
+      "sample_id": "isaac_surface_000902",
+      "split": "train"
+    },
+    {
+      "frame_index": 903,
+      "sample_id": "isaac_surface_000903",
+      "split": "train"
+    },
+    {
+      "frame_index": 904,
+      "sample_id": "isaac_surface_000904",
+      "split": "train"
+    },
+    {
+      "frame_index": 905,
+      "sample_id": "isaac_surface_000905",
+      "split": "test"
+    },
+    {
+      "frame_index": 906,
+      "sample_id": "isaac_surface_000906",
+      "split": "train"
+    },
+    {
+      "frame_index": 907,
+      "sample_id": "isaac_surface_000907",
+      "split": "test"
+    },
+    {
+      "frame_index": 908,
+      "sample_id": "isaac_surface_000908",
+      "split": "train"
+    },
+    {
+      "frame_index": 909,
+      "sample_id": "isaac_surface_000909",
+      "split": "test"
+    },
+    {
+      "frame_index": 910,
+      "sample_id": "isaac_surface_000910",
+      "split": "train"
+    },
+    {
+      "frame_index": 911,
+      "sample_id": "isaac_surface_000911",
+      "split": "validation"
+    },
+    {
+      "frame_index": 912,
+      "sample_id": "isaac_surface_000912",
+      "split": "train"
+    },
+    {
+      "frame_index": 913,
+      "sample_id": "isaac_surface_000913",
+      "split": "train"
+    },
+    {
+      "frame_index": 914,
+      "sample_id": "isaac_surface_000914",
+      "split": "train"
+    },
+    {
+      "frame_index": 915,
+      "sample_id": "isaac_surface_000915",
+      "split": "validation"
+    },
+    {
+      "frame_index": 916,
+      "sample_id": "isaac_surface_000916",
+      "split": "train"
+    },
+    {
+      "frame_index": 917,
+      "sample_id": "isaac_surface_000917",
+      "split": "test"
+    },
+    {
+      "frame_index": 918,
+      "sample_id": "isaac_surface_000918",
+      "split": "train"
+    },
+    {
+      "frame_index": 919,
+      "sample_id": "isaac_surface_000919",
+      "split": "train"
+    },
+    {
+      "frame_index": 920,
+      "sample_id": "isaac_surface_000920",
+      "split": "test"
+    },
+    {
+      "frame_index": 921,
+      "sample_id": "isaac_surface_000921",
+      "split": "train"
+    },
+    {
+      "frame_index": 922,
+      "sample_id": "isaac_surface_000922",
+      "split": "train"
+    },
+    {
+      "frame_index": 923,
+      "sample_id": "isaac_surface_000923",
+      "split": "validation"
+    },
+    {
+      "frame_index": 924,
+      "sample_id": "isaac_surface_000924",
+      "split": "train"
+    },
+    {
+      "frame_index": 925,
+      "sample_id": "isaac_surface_000925",
+      "split": "train"
+    },
+    {
+      "frame_index": 926,
+      "sample_id": "isaac_surface_000926",
+      "split": "train"
+    },
+    {
+      "frame_index": 927,
+      "sample_id": "isaac_surface_000927",
+      "split": "train"
+    },
+    {
+      "frame_index": 928,
+      "sample_id": "isaac_surface_000928",
+      "split": "train"
+    },
+    {
+      "frame_index": 929,
+      "sample_id": "isaac_surface_000929",
+      "split": "test"
+    },
+    {
+      "frame_index": 930,
+      "sample_id": "isaac_surface_000930",
+      "split": "train"
+    },
+    {
+      "frame_index": 931,
+      "sample_id": "isaac_surface_000931",
+      "split": "train"
+    },
+    {
+      "frame_index": 932,
+      "sample_id": "isaac_surface_000932",
+      "split": "train"
+    },
+    {
+      "frame_index": 933,
+      "sample_id": "isaac_surface_000933",
+      "split": "train"
+    },
+    {
+      "frame_index": 934,
+      "sample_id": "isaac_surface_000934",
+      "split": "validation"
+    },
+    {
+      "frame_index": 935,
+      "sample_id": "isaac_surface_000935",
+      "split": "train"
+    },
+    {
+      "frame_index": 936,
+      "sample_id": "isaac_surface_000936",
+      "split": "train"
+    },
+    {
+      "frame_index": 937,
+      "sample_id": "isaac_surface_000937",
+      "split": "train"
+    },
+    {
+      "frame_index": 938,
+      "sample_id": "isaac_surface_000938",
+      "split": "train"
+    },
+    {
+      "frame_index": 939,
+      "sample_id": "isaac_surface_000939",
+      "split": "validation"
+    },
+    {
+      "frame_index": 940,
+      "sample_id": "isaac_surface_000940",
+      "split": "validation"
+    },
+    {
+      "frame_index": 941,
+      "sample_id": "isaac_surface_000941",
+      "split": "train"
+    },
+    {
+      "frame_index": 942,
+      "sample_id": "isaac_surface_000942",
+      "split": "train"
+    },
+    {
+      "frame_index": 943,
+      "sample_id": "isaac_surface_000943",
+      "split": "train"
+    },
+    {
+      "frame_index": 944,
+      "sample_id": "isaac_surface_000944",
+      "split": "train"
+    },
+    {
+      "frame_index": 945,
+      "sample_id": "isaac_surface_000945",
+      "split": "train"
+    },
+    {
+      "frame_index": 946,
+      "sample_id": "isaac_surface_000946",
+      "split": "train"
+    },
+    {
+      "frame_index": 947,
+      "sample_id": "isaac_surface_000947",
+      "split": "train"
+    },
+    {
+      "frame_index": 948,
+      "sample_id": "isaac_surface_000948",
+      "split": "train"
+    },
+    {
+      "frame_index": 949,
+      "sample_id": "isaac_surface_000949",
+      "split": "validation"
+    },
+    {
+      "frame_index": 950,
+      "sample_id": "isaac_surface_000950",
+      "split": "train"
+    },
+    {
+      "frame_index": 951,
+      "sample_id": "isaac_surface_000951",
+      "split": "train"
+    },
+    {
+      "frame_index": 952,
+      "sample_id": "isaac_surface_000952",
+      "split": "train"
+    },
+    {
+      "frame_index": 953,
+      "sample_id": "isaac_surface_000953",
+      "split": "train"
+    },
+    {
+      "frame_index": 954,
+      "sample_id": "isaac_surface_000954",
+      "split": "train"
+    },
+    {
+      "frame_index": 955,
+      "sample_id": "isaac_surface_000955",
+      "split": "test"
+    },
+    {
+      "frame_index": 956,
+      "sample_id": "isaac_surface_000956",
+      "split": "test"
+    },
+    {
+      "frame_index": 957,
+      "sample_id": "isaac_surface_000957",
+      "split": "train"
+    },
+    {
+      "frame_index": 958,
+      "sample_id": "isaac_surface_000958",
+      "split": "validation"
+    },
+    {
+      "frame_index": 959,
+      "sample_id": "isaac_surface_000959",
+      "split": "train"
+    },
+    {
+      "frame_index": 960,
+      "sample_id": "isaac_surface_000960",
+      "split": "train"
+    },
+    {
+      "frame_index": 961,
+      "sample_id": "isaac_surface_000961",
+      "split": "train"
+    },
+    {
+      "frame_index": 962,
+      "sample_id": "isaac_surface_000962",
+      "split": "train"
+    },
+    {
+      "frame_index": 963,
+      "sample_id": "isaac_surface_000963",
+      "split": "validation"
+    },
+    {
+      "frame_index": 964,
+      "sample_id": "isaac_surface_000964",
+      "split": "train"
+    },
+    {
+      "frame_index": 965,
+      "sample_id": "isaac_surface_000965",
+      "split": "train"
+    },
+    {
+      "frame_index": 966,
+      "sample_id": "isaac_surface_000966",
+      "split": "train"
+    },
+    {
+      "frame_index": 967,
+      "sample_id": "isaac_surface_000967",
+      "split": "train"
+    },
+    {
+      "frame_index": 968,
+      "sample_id": "isaac_surface_000968",
+      "split": "test"
+    },
+    {
+      "frame_index": 969,
+      "sample_id": "isaac_surface_000969",
+      "split": "train"
+    },
+    {
+      "frame_index": 970,
+      "sample_id": "isaac_surface_000970",
+      "split": "train"
+    },
+    {
+      "frame_index": 971,
+      "sample_id": "isaac_surface_000971",
+      "split": "train"
+    },
+    {
+      "frame_index": 972,
+      "sample_id": "isaac_surface_000972",
+      "split": "test"
+    },
+    {
+      "frame_index": 973,
+      "sample_id": "isaac_surface_000973",
+      "split": "train"
+    },
+    {
+      "frame_index": 974,
+      "sample_id": "isaac_surface_000974",
+      "split": "test"
+    },
+    {
+      "frame_index": 975,
+      "sample_id": "isaac_surface_000975",
+      "split": "train"
+    },
+    {
+      "frame_index": 976,
+      "sample_id": "isaac_surface_000976",
+      "split": "train"
+    },
+    {
+      "frame_index": 977,
+      "sample_id": "isaac_surface_000977",
+      "split": "validation"
+    },
+    {
+      "frame_index": 978,
+      "sample_id": "isaac_surface_000978",
+      "split": "train"
+    },
+    {
+      "frame_index": 979,
+      "sample_id": "isaac_surface_000979",
+      "split": "test"
+    },
+    {
+      "frame_index": 980,
+      "sample_id": "isaac_surface_000980",
+      "split": "train"
+    },
+    {
+      "frame_index": 981,
+      "sample_id": "isaac_surface_000981",
+      "split": "train"
+    },
+    {
+      "frame_index": 982,
+      "sample_id": "isaac_surface_000982",
+      "split": "train"
+    },
+    {
+      "frame_index": 983,
+      "sample_id": "isaac_surface_000983",
+      "split": "validation"
+    },
+    {
+      "frame_index": 984,
+      "sample_id": "isaac_surface_000984",
+      "split": "train"
+    },
+    {
+      "frame_index": 985,
+      "sample_id": "isaac_surface_000985",
+      "split": "train"
+    },
+    {
+      "frame_index": 986,
+      "sample_id": "isaac_surface_000986",
+      "split": "train"
+    },
+    {
+      "frame_index": 987,
+      "sample_id": "isaac_surface_000987",
+      "split": "train"
+    },
+    {
+      "frame_index": 988,
+      "sample_id": "isaac_surface_000988",
+      "split": "train"
+    },
+    {
+      "frame_index": 989,
+      "sample_id": "isaac_surface_000989",
+      "split": "validation"
+    },
+    {
+      "frame_index": 990,
+      "sample_id": "isaac_surface_000990",
+      "split": "train"
+    },
+    {
+      "frame_index": 991,
+      "sample_id": "isaac_surface_000991",
+      "split": "validation"
+    },
+    {
+      "frame_index": 992,
+      "sample_id": "isaac_surface_000992",
+      "split": "train"
+    },
+    {
+      "frame_index": 993,
+      "sample_id": "isaac_surface_000993",
+      "split": "validation"
+    },
+    {
+      "frame_index": 994,
+      "sample_id": "isaac_surface_000994",
+      "split": "validation"
+    },
+    {
+      "frame_index": 995,
+      "sample_id": "isaac_surface_000995",
+      "split": "train"
+    },
+    {
+      "frame_index": 996,
+      "sample_id": "isaac_surface_000996",
+      "split": "train"
+    },
+    {
+      "frame_index": 997,
+      "sample_id": "isaac_surface_000997",
+      "split": "test"
+    },
+    {
+      "frame_index": 998,
+      "sample_id": "isaac_surface_000998",
+      "split": "train"
+    },
+    {
+      "frame_index": 999,
+      "sample_id": "isaac_surface_000999",
+      "split": "train"
+    },
+    {
+      "frame_index": 1000,
+      "sample_id": "isaac_surface_001000",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1001,
+      "sample_id": "isaac_surface_001001",
+      "split": "train"
+    },
+    {
+      "frame_index": 1002,
+      "sample_id": "isaac_surface_001002",
+      "split": "train"
+    },
+    {
+      "frame_index": 1003,
+      "sample_id": "isaac_surface_001003",
+      "split": "test"
+    },
+    {
+      "frame_index": 1004,
+      "sample_id": "isaac_surface_001004",
+      "split": "train"
+    },
+    {
+      "frame_index": 1005,
+      "sample_id": "isaac_surface_001005",
+      "split": "train"
+    },
+    {
+      "frame_index": 1006,
+      "sample_id": "isaac_surface_001006",
+      "split": "test"
+    },
+    {
+      "frame_index": 1007,
+      "sample_id": "isaac_surface_001007",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1008,
+      "sample_id": "isaac_surface_001008",
+      "split": "test"
+    },
+    {
+      "frame_index": 1009,
+      "sample_id": "isaac_surface_001009",
+      "split": "train"
+    },
+    {
+      "frame_index": 1010,
+      "sample_id": "isaac_surface_001010",
+      "split": "train"
+    },
+    {
+      "frame_index": 1011,
+      "sample_id": "isaac_surface_001011",
+      "split": "train"
+    },
+    {
+      "frame_index": 1012,
+      "sample_id": "isaac_surface_001012",
+      "split": "test"
+    },
+    {
+      "frame_index": 1013,
+      "sample_id": "isaac_surface_001013",
+      "split": "train"
+    },
+    {
+      "frame_index": 1014,
+      "sample_id": "isaac_surface_001014",
+      "split": "train"
+    },
+    {
+      "frame_index": 1015,
+      "sample_id": "isaac_surface_001015",
+      "split": "train"
+    },
+    {
+      "frame_index": 1016,
+      "sample_id": "isaac_surface_001016",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1017,
+      "sample_id": "isaac_surface_001017",
+      "split": "test"
+    },
+    {
+      "frame_index": 1018,
+      "sample_id": "isaac_surface_001018",
+      "split": "test"
+    },
+    {
+      "frame_index": 1019,
+      "sample_id": "isaac_surface_001019",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1020,
+      "sample_id": "isaac_surface_001020",
+      "split": "train"
+    },
+    {
+      "frame_index": 1021,
+      "sample_id": "isaac_surface_001021",
+      "split": "train"
+    },
+    {
+      "frame_index": 1022,
+      "sample_id": "isaac_surface_001022",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1023,
+      "sample_id": "isaac_surface_001023",
+      "split": "train"
+    },
+    {
+      "frame_index": 1024,
+      "sample_id": "isaac_surface_001024",
+      "split": "test"
+    },
+    {
+      "frame_index": 1025,
+      "sample_id": "isaac_surface_001025",
+      "split": "train"
+    },
+    {
+      "frame_index": 1026,
+      "sample_id": "isaac_surface_001026",
+      "split": "test"
+    },
+    {
+      "frame_index": 1027,
+      "sample_id": "isaac_surface_001027",
+      "split": "train"
+    },
+    {
+      "frame_index": 1028,
+      "sample_id": "isaac_surface_001028",
+      "split": "train"
+    },
+    {
+      "frame_index": 1029,
+      "sample_id": "isaac_surface_001029",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1030,
+      "sample_id": "isaac_surface_001030",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1031,
+      "sample_id": "isaac_surface_001031",
+      "split": "train"
+    },
+    {
+      "frame_index": 1032,
+      "sample_id": "isaac_surface_001032",
+      "split": "train"
+    },
+    {
+      "frame_index": 1033,
+      "sample_id": "isaac_surface_001033",
+      "split": "train"
+    },
+    {
+      "frame_index": 1034,
+      "sample_id": "isaac_surface_001034",
+      "split": "train"
+    },
+    {
+      "frame_index": 1035,
+      "sample_id": "isaac_surface_001035",
+      "split": "test"
+    },
+    {
+      "frame_index": 1036,
+      "sample_id": "isaac_surface_001036",
+      "split": "test"
+    },
+    {
+      "frame_index": 1037,
+      "sample_id": "isaac_surface_001037",
+      "split": "train"
+    },
+    {
+      "frame_index": 1038,
+      "sample_id": "isaac_surface_001038",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1039,
+      "sample_id": "isaac_surface_001039",
+      "split": "train"
+    },
+    {
+      "frame_index": 1040,
+      "sample_id": "isaac_surface_001040",
+      "split": "train"
+    },
+    {
+      "frame_index": 1041,
+      "sample_id": "isaac_surface_001041",
+      "split": "test"
+    },
+    {
+      "frame_index": 1042,
+      "sample_id": "isaac_surface_001042",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1043,
+      "sample_id": "isaac_surface_001043",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1044,
+      "sample_id": "isaac_surface_001044",
+      "split": "train"
+    },
+    {
+      "frame_index": 1045,
+      "sample_id": "isaac_surface_001045",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1046,
+      "sample_id": "isaac_surface_001046",
+      "split": "test"
+    },
+    {
+      "frame_index": 1047,
+      "sample_id": "isaac_surface_001047",
+      "split": "train"
+    },
+    {
+      "frame_index": 1048,
+      "sample_id": "isaac_surface_001048",
+      "split": "train"
+    },
+    {
+      "frame_index": 1049,
+      "sample_id": "isaac_surface_001049",
+      "split": "test"
+    },
+    {
+      "frame_index": 1050,
+      "sample_id": "isaac_surface_001050",
+      "split": "train"
+    },
+    {
+      "frame_index": 1051,
+      "sample_id": "isaac_surface_001051",
+      "split": "test"
+    },
+    {
+      "frame_index": 1052,
+      "sample_id": "isaac_surface_001052",
+      "split": "train"
+    },
+    {
+      "frame_index": 1053,
+      "sample_id": "isaac_surface_001053",
+      "split": "test"
+    },
+    {
+      "frame_index": 1054,
+      "sample_id": "isaac_surface_001054",
+      "split": "train"
+    },
+    {
+      "frame_index": 1055,
+      "sample_id": "isaac_surface_001055",
+      "split": "train"
+    },
+    {
+      "frame_index": 1056,
+      "sample_id": "isaac_surface_001056",
+      "split": "train"
+    },
+    {
+      "frame_index": 1057,
+      "sample_id": "isaac_surface_001057",
+      "split": "test"
+    },
+    {
+      "frame_index": 1058,
+      "sample_id": "isaac_surface_001058",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1059,
+      "sample_id": "isaac_surface_001059",
+      "split": "train"
+    },
+    {
+      "frame_index": 1060,
+      "sample_id": "isaac_surface_001060",
+      "split": "train"
+    },
+    {
+      "frame_index": 1061,
+      "sample_id": "isaac_surface_001061",
+      "split": "train"
+    },
+    {
+      "frame_index": 1062,
+      "sample_id": "isaac_surface_001062",
+      "split": "train"
+    },
+    {
+      "frame_index": 1063,
+      "sample_id": "isaac_surface_001063",
+      "split": "train"
+    },
+    {
+      "frame_index": 1064,
+      "sample_id": "isaac_surface_001064",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1065,
+      "sample_id": "isaac_surface_001065",
+      "split": "train"
+    },
+    {
+      "frame_index": 1066,
+      "sample_id": "isaac_surface_001066",
+      "split": "train"
+    },
+    {
+      "frame_index": 1067,
+      "sample_id": "isaac_surface_001067",
+      "split": "test"
+    },
+    {
+      "frame_index": 1068,
+      "sample_id": "isaac_surface_001068",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1069,
+      "sample_id": "isaac_surface_001069",
+      "split": "train"
+    },
+    {
+      "frame_index": 1070,
+      "sample_id": "isaac_surface_001070",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1071,
+      "sample_id": "isaac_surface_001071",
+      "split": "train"
+    },
+    {
+      "frame_index": 1072,
+      "sample_id": "isaac_surface_001072",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1073,
+      "sample_id": "isaac_surface_001073",
+      "split": "test"
+    },
+    {
+      "frame_index": 1074,
+      "sample_id": "isaac_surface_001074",
+      "split": "train"
+    },
+    {
+      "frame_index": 1075,
+      "sample_id": "isaac_surface_001075",
+      "split": "train"
+    },
+    {
+      "frame_index": 1076,
+      "sample_id": "isaac_surface_001076",
+      "split": "train"
+    },
+    {
+      "frame_index": 1077,
+      "sample_id": "isaac_surface_001077",
+      "split": "train"
+    },
+    {
+      "frame_index": 1078,
+      "sample_id": "isaac_surface_001078",
+      "split": "train"
+    },
+    {
+      "frame_index": 1079,
+      "sample_id": "isaac_surface_001079",
+      "split": "test"
+    },
+    {
+      "frame_index": 1080,
+      "sample_id": "isaac_surface_001080",
+      "split": "train"
+    },
+    {
+      "frame_index": 1081,
+      "sample_id": "isaac_surface_001081",
+      "split": "train"
+    },
+    {
+      "frame_index": 1082,
+      "sample_id": "isaac_surface_001082",
+      "split": "train"
+    },
+    {
+      "frame_index": 1083,
+      "sample_id": "isaac_surface_001083",
+      "split": "test"
+    },
+    {
+      "frame_index": 1084,
+      "sample_id": "isaac_surface_001084",
+      "split": "train"
+    },
+    {
+      "frame_index": 1085,
+      "sample_id": "isaac_surface_001085",
+      "split": "train"
+    },
+    {
+      "frame_index": 1086,
+      "sample_id": "isaac_surface_001086",
+      "split": "train"
+    },
+    {
+      "frame_index": 1087,
+      "sample_id": "isaac_surface_001087",
+      "split": "train"
+    },
+    {
+      "frame_index": 1088,
+      "sample_id": "isaac_surface_001088",
+      "split": "train"
+    },
+    {
+      "frame_index": 1089,
+      "sample_id": "isaac_surface_001089",
+      "split": "test"
+    },
+    {
+      "frame_index": 1090,
+      "sample_id": "isaac_surface_001090",
+      "split": "train"
+    },
+    {
+      "frame_index": 1091,
+      "sample_id": "isaac_surface_001091",
+      "split": "train"
+    },
+    {
+      "frame_index": 1092,
+      "sample_id": "isaac_surface_001092",
+      "split": "train"
+    },
+    {
+      "frame_index": 1093,
+      "sample_id": "isaac_surface_001093",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1094,
+      "sample_id": "isaac_surface_001094",
+      "split": "train"
+    },
+    {
+      "frame_index": 1095,
+      "sample_id": "isaac_surface_001095",
+      "split": "train"
+    },
+    {
+      "frame_index": 1096,
+      "sample_id": "isaac_surface_001096",
+      "split": "train"
+    },
+    {
+      "frame_index": 1097,
+      "sample_id": "isaac_surface_001097",
+      "split": "train"
+    },
+    {
+      "frame_index": 1098,
+      "sample_id": "isaac_surface_001098",
+      "split": "test"
+    },
+    {
+      "frame_index": 1099,
+      "sample_id": "isaac_surface_001099",
+      "split": "train"
+    },
+    {
+      "frame_index": 1100,
+      "sample_id": "isaac_surface_001100",
+      "split": "train"
+    },
+    {
+      "frame_index": 1101,
+      "sample_id": "isaac_surface_001101",
+      "split": "train"
+    },
+    {
+      "frame_index": 1102,
+      "sample_id": "isaac_surface_001102",
+      "split": "train"
+    },
+    {
+      "frame_index": 1103,
+      "sample_id": "isaac_surface_001103",
+      "split": "train"
+    },
+    {
+      "frame_index": 1104,
+      "sample_id": "isaac_surface_001104",
+      "split": "train"
+    },
+    {
+      "frame_index": 1105,
+      "sample_id": "isaac_surface_001105",
+      "split": "train"
+    },
+    {
+      "frame_index": 1106,
+      "sample_id": "isaac_surface_001106",
+      "split": "train"
+    },
+    {
+      "frame_index": 1107,
+      "sample_id": "isaac_surface_001107",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1108,
+      "sample_id": "isaac_surface_001108",
+      "split": "train"
+    },
+    {
+      "frame_index": 1109,
+      "sample_id": "isaac_surface_001109",
+      "split": "train"
+    },
+    {
+      "frame_index": 1110,
+      "sample_id": "isaac_surface_001110",
+      "split": "test"
+    },
+    {
+      "frame_index": 1111,
+      "sample_id": "isaac_surface_001111",
+      "split": "train"
+    },
+    {
+      "frame_index": 1112,
+      "sample_id": "isaac_surface_001112",
+      "split": "test"
+    },
+    {
+      "frame_index": 1113,
+      "sample_id": "isaac_surface_001113",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1114,
+      "sample_id": "isaac_surface_001114",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1115,
+      "sample_id": "isaac_surface_001115",
+      "split": "train"
+    },
+    {
+      "frame_index": 1116,
+      "sample_id": "isaac_surface_001116",
+      "split": "train"
+    },
+    {
+      "frame_index": 1117,
+      "sample_id": "isaac_surface_001117",
+      "split": "train"
+    },
+    {
+      "frame_index": 1118,
+      "sample_id": "isaac_surface_001118",
+      "split": "train"
+    },
+    {
+      "frame_index": 1119,
+      "sample_id": "isaac_surface_001119",
+      "split": "train"
+    },
+    {
+      "frame_index": 1120,
+      "sample_id": "isaac_surface_001120",
+      "split": "train"
+    },
+    {
+      "frame_index": 1121,
+      "sample_id": "isaac_surface_001121",
+      "split": "train"
+    },
+    {
+      "frame_index": 1122,
+      "sample_id": "isaac_surface_001122",
+      "split": "train"
+    },
+    {
+      "frame_index": 1123,
+      "sample_id": "isaac_surface_001123",
+      "split": "train"
+    },
+    {
+      "frame_index": 1124,
+      "sample_id": "isaac_surface_001124",
+      "split": "train"
+    },
+    {
+      "frame_index": 1125,
+      "sample_id": "isaac_surface_001125",
+      "split": "train"
+    },
+    {
+      "frame_index": 1126,
+      "sample_id": "isaac_surface_001126",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1127,
+      "sample_id": "isaac_surface_001127",
+      "split": "train"
+    },
+    {
+      "frame_index": 1128,
+      "sample_id": "isaac_surface_001128",
+      "split": "train"
+    },
+    {
+      "frame_index": 1129,
+      "sample_id": "isaac_surface_001129",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1130,
+      "sample_id": "isaac_surface_001130",
+      "split": "train"
+    },
+    {
+      "frame_index": 1131,
+      "sample_id": "isaac_surface_001131",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1132,
+      "sample_id": "isaac_surface_001132",
+      "split": "train"
+    },
+    {
+      "frame_index": 1133,
+      "sample_id": "isaac_surface_001133",
+      "split": "train"
+    },
+    {
+      "frame_index": 1134,
+      "sample_id": "isaac_surface_001134",
+      "split": "train"
+    },
+    {
+      "frame_index": 1135,
+      "sample_id": "isaac_surface_001135",
+      "split": "train"
+    },
+    {
+      "frame_index": 1136,
+      "sample_id": "isaac_surface_001136",
+      "split": "train"
+    },
+    {
+      "frame_index": 1137,
+      "sample_id": "isaac_surface_001137",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1138,
+      "sample_id": "isaac_surface_001138",
+      "split": "train"
+    },
+    {
+      "frame_index": 1139,
+      "sample_id": "isaac_surface_001139",
+      "split": "train"
+    },
+    {
+      "frame_index": 1140,
+      "sample_id": "isaac_surface_001140",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1141,
+      "sample_id": "isaac_surface_001141",
+      "split": "train"
+    },
+    {
+      "frame_index": 1142,
+      "sample_id": "isaac_surface_001142",
+      "split": "train"
+    },
+    {
+      "frame_index": 1143,
+      "sample_id": "isaac_surface_001143",
+      "split": "train"
+    },
+    {
+      "frame_index": 1144,
+      "sample_id": "isaac_surface_001144",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1145,
+      "sample_id": "isaac_surface_001145",
+      "split": "train"
+    },
+    {
+      "frame_index": 1146,
+      "sample_id": "isaac_surface_001146",
+      "split": "train"
+    },
+    {
+      "frame_index": 1147,
+      "sample_id": "isaac_surface_001147",
+      "split": "train"
+    },
+    {
+      "frame_index": 1148,
+      "sample_id": "isaac_surface_001148",
+      "split": "test"
+    },
+    {
+      "frame_index": 1149,
+      "sample_id": "isaac_surface_001149",
+      "split": "train"
+    },
+    {
+      "frame_index": 1150,
+      "sample_id": "isaac_surface_001150",
+      "split": "train"
+    },
+    {
+      "frame_index": 1151,
+      "sample_id": "isaac_surface_001151",
+      "split": "train"
+    },
+    {
+      "frame_index": 1152,
+      "sample_id": "isaac_surface_001152",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1153,
+      "sample_id": "isaac_surface_001153",
+      "split": "train"
+    },
+    {
+      "frame_index": 1154,
+      "sample_id": "isaac_surface_001154",
+      "split": "train"
+    },
+    {
+      "frame_index": 1155,
+      "sample_id": "isaac_surface_001155",
+      "split": "train"
+    },
+    {
+      "frame_index": 1156,
+      "sample_id": "isaac_surface_001156",
+      "split": "train"
+    },
+    {
+      "frame_index": 1157,
+      "sample_id": "isaac_surface_001157",
+      "split": "train"
+    },
+    {
+      "frame_index": 1158,
+      "sample_id": "isaac_surface_001158",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1159,
+      "sample_id": "isaac_surface_001159",
+      "split": "test"
+    },
+    {
+      "frame_index": 1160,
+      "sample_id": "isaac_surface_001160",
+      "split": "train"
+    },
+    {
+      "frame_index": 1161,
+      "sample_id": "isaac_surface_001161",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1162,
+      "sample_id": "isaac_surface_001162",
+      "split": "train"
+    },
+    {
+      "frame_index": 1163,
+      "sample_id": "isaac_surface_001163",
+      "split": "train"
+    },
+    {
+      "frame_index": 1164,
+      "sample_id": "isaac_surface_001164",
+      "split": "train"
+    },
+    {
+      "frame_index": 1165,
+      "sample_id": "isaac_surface_001165",
+      "split": "train"
+    },
+    {
+      "frame_index": 1166,
+      "sample_id": "isaac_surface_001166",
+      "split": "train"
+    },
+    {
+      "frame_index": 1167,
+      "sample_id": "isaac_surface_001167",
+      "split": "test"
+    },
+    {
+      "frame_index": 1168,
+      "sample_id": "isaac_surface_001168",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1169,
+      "sample_id": "isaac_surface_001169",
+      "split": "test"
+    },
+    {
+      "frame_index": 1170,
+      "sample_id": "isaac_surface_001170",
+      "split": "train"
+    },
+    {
+      "frame_index": 1171,
+      "sample_id": "isaac_surface_001171",
+      "split": "test"
+    },
+    {
+      "frame_index": 1172,
+      "sample_id": "isaac_surface_001172",
+      "split": "train"
+    },
+    {
+      "frame_index": 1173,
+      "sample_id": "isaac_surface_001173",
+      "split": "train"
+    },
+    {
+      "frame_index": 1174,
+      "sample_id": "isaac_surface_001174",
+      "split": "train"
+    },
+    {
+      "frame_index": 1175,
+      "sample_id": "isaac_surface_001175",
+      "split": "train"
+    },
+    {
+      "frame_index": 1176,
+      "sample_id": "isaac_surface_001176",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1177,
+      "sample_id": "isaac_surface_001177",
+      "split": "train"
+    },
+    {
+      "frame_index": 1178,
+      "sample_id": "isaac_surface_001178",
+      "split": "test"
+    },
+    {
+      "frame_index": 1179,
+      "sample_id": "isaac_surface_001179",
+      "split": "train"
+    },
+    {
+      "frame_index": 1180,
+      "sample_id": "isaac_surface_001180",
+      "split": "train"
+    },
+    {
+      "frame_index": 1181,
+      "sample_id": "isaac_surface_001181",
+      "split": "test"
+    },
+    {
+      "frame_index": 1182,
+      "sample_id": "isaac_surface_001182",
+      "split": "test"
+    },
+    {
+      "frame_index": 1183,
+      "sample_id": "isaac_surface_001183",
+      "split": "train"
+    },
+    {
+      "frame_index": 1184,
+      "sample_id": "isaac_surface_001184",
+      "split": "train"
+    },
+    {
+      "frame_index": 1185,
+      "sample_id": "isaac_surface_001185",
+      "split": "train"
+    },
+    {
+      "frame_index": 1186,
+      "sample_id": "isaac_surface_001186",
+      "split": "train"
+    },
+    {
+      "frame_index": 1187,
+      "sample_id": "isaac_surface_001187",
+      "split": "train"
+    },
+    {
+      "frame_index": 1188,
+      "sample_id": "isaac_surface_001188",
+      "split": "train"
+    },
+    {
+      "frame_index": 1189,
+      "sample_id": "isaac_surface_001189",
+      "split": "train"
+    },
+    {
+      "frame_index": 1190,
+      "sample_id": "isaac_surface_001190",
+      "split": "train"
+    },
+    {
+      "frame_index": 1191,
+      "sample_id": "isaac_surface_001191",
+      "split": "test"
+    },
+    {
+      "frame_index": 1192,
+      "sample_id": "isaac_surface_001192",
+      "split": "validation"
+    },
+    {
+      "frame_index": 1193,
+      "sample_id": "isaac_surface_001193",
+      "split": "test"
+    },
+    {
+      "frame_index": 1194,
+      "sample_id": "isaac_surface_001194",
+      "split": "train"
+    },
+    {
+      "frame_index": 1195,
+      "sample_id": "isaac_surface_001195",
+      "split": "train"
+    },
+    {
+      "frame_index": 1196,
+      "sample_id": "isaac_surface_001196",
+      "split": "test"
+    },
+    {
+      "frame_index": 1197,
+      "sample_id": "isaac_surface_001197",
+      "split": "train"
+    },
+    {
+      "frame_index": 1198,
+      "sample_id": "isaac_surface_001198",
+      "split": "train"
+    },
+    {
+      "frame_index": 1199,
+      "sample_id": "isaac_surface_001199",
+      "split": "validation"
+    }
+  ],
+  "generator": "isaac_sim_replicator",
+  "modalities": [
+    "rgb",
+    "semantic_segmentation",
+    "distance_to_image_plane",
+    "normals",
+    "camera_params"
+  ],
+  "protected_classes": [
+    "protected_fastener",
+    "protected_seam"
+  ],
+  "resolution": [
+    640,
+    480
+  ],
+  "schema_version": "isaac-surface-1.0",
+  "seed": 42,
+  "semantic_classes": {
+    "defect_corrosion": 11,
+    "defect_pit": 12,
+    "defect_scratch": 10,
+    "panel": 1,
+    "protected_fastener": 20,
+    "protected_seam": 21
+  },
+  "split_counts": {
+    "test": 180,
+    "train": 840,
+    "validation": 180
+  },
+  "status": "planned"
+}

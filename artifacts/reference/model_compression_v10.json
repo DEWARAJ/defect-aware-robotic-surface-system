@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "project_version": "0.10.0",
+  "study": "architecture reduction, structured pruning, and knowledge distillation",
+  "data": {
+    "name": "MVTec AD",
+    "protocol": "supervised-development",
+    "official_unsupervised_benchmark": false,
+    "manifest_sha256": "187e15330b7e9f8c9bee1d340bcd78710aa2932abd46cd6fa742adb0638644d4",
+    "test_images": 137
+  },
+  "training": {
+    "image_size": 128,
+    "seed": 42,
+    "student_epochs": 20,
+    "student_base_channels": 8,
+    "distillation_alpha": 0.35,
+    "distillation_temperature": 2.0,
+    "pruning_fraction": 0.25
+  },
+  "selection": {
+    "selected_candidate": "student_distilled",
+    "provisional_candidate_from_validation": "student_distilled",
+    "maximum_absolute_validation_iou_drop": 0.03,
+    "minimum_accepted_validation_iou": 0.24059765245910927,
+    "maximum_absolute_test_iou_drop": 0.03,
+    "minimum_accepted_test_iou": 0.25603691370270654,
+    "held_out_guardrail_pass": true
+  },
+  "benchmark": {
+    "runtime": "ONNX Runtime 1.28.0 CPUExecutionProvider",
+    "torch": "2.13.0+cpu",
+    "onnx": "1.22.0",
+    "image_size": 128,
+    "batch_size": 1,
+    "warmup_per_model": 10,
+    "trials": 3,
+    "iterations_per_trial": 100,
+    "method": "seeded randomized trial order with a shared input tensor"
+  },
+  "candidates": {
+    "teacher": {
+      "architecture": "tiny_unet",
+      "parameters": 29921,
+      "spatial_convolution_layers": 10,
+      "validation_iou": 0.2705976524591093,
+      "test": {
+        "iou": 0.2860369137027065,
+        "dice": 0.44483468655524105,
+        "precision": 0.31404484549114176,
+        "recall": 0.7623150093232941
+      },
+      "onnx": {
+        "bytes": 127709,
+        "mean_latency_ms": 6.495751997960421,
+        "p50_latency_ms": 1.9135000184178352,
+        "p95_latency_ms": 35.03641000424978,
+        "maximum_absolute_logit_error": 0.000011682510375976563,
+        "minimum_binary_mask_agreement": 1.0
+      }
+    },
+    "student_supervised": {
+      "architecture": "compact_unet",
+      "parameters": 6689,
+      "spatial_convolution_layers": 6,
+      "validation_iou": 0.19719398434900223,
+      "test": {
+        "iou": 0.14207001780113587,
+        "dice": 0.24879388406442515,
+        "precision": 0.22585861697212384,
+        "recall": 0.27691363561262305
+      },
+      "onnx": {
+        "bytes": 31334,
+        "mean_latency_ms": 5.762739666970447,
+        "p50_latency_ms": 0.9434500243514776,
+        "p95_latency_ms": 44.32994001253974,
+        "maximum_absolute_logit_error": 0.000002384185791015625,
+        "minimum_binary_mask_agreement": 1.0
+      }
+    },
+    "student_distilled": {
+      "architecture": "compact_unet",
+      "parameters": 6689,
+      "spatial_convolution_layers": 6,
+      "validation_iou": 0.3435783679908898,
+      "test": {
+        "iou": 0.32760387351892745,
+        "dice": 0.4935265406398452,
+        "precision": 0.4574399484120587,
+        "recall": 0.5357943682583143
+      },
+      "relative_to_teacher": {
+        "test_iou_delta": 0.04156695981622094,
+        "parameter_reduction_fraction": 0.7764446375455366,
+        "onnx_size_reduction_fraction": 0.7546453264844295,
+        "mean_latency_speedup": 1.2123001654701246
+      },
+      "onnx": {
+        "bytes": 31334,
+        "mean_latency_ms": 5.35820433171466,
+        "p50_latency_ms": 1.5054999967105687,
+        "p95_latency_ms": 29.351604965631854,
+        "maximum_absolute_logit_error": 0.000003337860107421875,
+        "minimum_binary_mask_agreement": 1.0
+      }
+    },
+    "teacher_pruned": {
+      "architecture": "tiny_unet",
+      "parameters": 29921,
+      "spatial_convolution_layers": 10,
+      "inactive_filters": 40,
+      "inactive_filter_fraction": 0.2484472049689441,
+      "shape_compacted": false,
+      "validation_iou": 0.2619455549209975,
+      "test": {
+        "iou": 0.24605660483523079,
+        "dice": 0.39493648022156663,
+        "precision": 0.5450579583696872,
+        "recall": 0.3096513796114901
+      },
+      "onnx": {
+        "bytes": 127709,
+        "mean_latency_ms": 6.400000000333724,
+        "p50_latency_ms": 1.9190500024706125,
+        "p95_latency_ms": 35.96346495614853,
+        "maximum_absolute_logit_error": 0.00000476837158203125,
+        "minimum_binary_mask_agreement": 1.0
+      }
+    }
+  },
+  "ablation": {
+    "distilled_minus_supervised_test_iou": 0.18553385571779157,
+    "pruned_minus_teacher_test_iou": -0.03998030886747572
+  },
+  "limitations": [
+    "This is not the official unsupervised MVTec AD benchmark.",
+    "Structured pruning retained dense tensor shapes and did not reduce ONNX size.",
+    "Latency is environment-specific and shows wide p95 variance on this shared CPU host.",
+    "Latency excludes camera, preprocessing, postprocessing, ROS, planning, and control.",
+    "No aircraft-surface, production-inspection, GPU, or safety-critical claim is made."
+  ]
+}
