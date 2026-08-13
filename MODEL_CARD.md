@@ -106,6 +106,22 @@ reduction alone was not sufficient. The selected model's mean ONNX Runtime laten
 6.496 ms to 5.358 ms, but the shared-host p95 distribution was wide; no control-loop deadline claim
 is made. The portable evidence is `artifacts/reference/model_compression_v10.json`.
 
+## Human-review acquisition status
+
+Version 0.11 fits temperature scaling on validation pixels and preserves the original logit
+decision boundary, yielding 100% mask agreement after probability calibration. A sample-level
+inverse-distance estimator learns failure risk from validation labels and label-free image/model
+summaries. Leave-one-out validation selects the acquisition policy; the resulting pool queue does
+not contain or use pool masks, anomaly flags, defect types, or failure scores.
+
+At a 20/137 review budget, the selected policy found 8/35 worst failures in the retrospective
+development pool, versus 5.11 expected hits under random selection. This is development evidence,
+not an untouched-test result: pool-level results were inspected while v0.11 was being designed.
+Aggregate calibration metrics improved while class-balanced NLL worsened. The handcrafted shift
+detector was sensitive to controlled noise, darkening, and blur, but its 36.5% clean-pool flag rate
+is too high for an automatic safety response. Details and limitations are in
+`docs/ACTIVE_LEARNING_V11.md`.
+
 ## Next validation gates
 
 1. Add aircraft-like surface coupons with documented permissions and untouched external tests.
@@ -116,3 +132,5 @@ is made. The portable evidence is `artifacts/reference/model_compression_v10.jso
    collision checking, and force-control integration.
 6. Benchmark the selected compact candidate on the target Jetson/RTX device and, separately,
    compact pruned channels into a physically smaller graph before making sparse-speedup claims.
+7. Freeze the v0.11 review policy and confirm its queue lift on a new untouched external dataset.
+8. Compare deep-ensemble or MC-dropout uncertainty against the validation-learned failure risk.

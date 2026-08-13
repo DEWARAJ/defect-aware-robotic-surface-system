@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "manifest": "../runs/mvtec_v04/manifest.json",
+  "checkpoint": "../runs/model_compression_v10/student_distilled/best.pt",
+  "output": "../runs/active_learning_v11",
+  "portable_evidence": "../artifacts/reference/active_learning_v11.json",
+  "image_size": 128,
+  "batch_size": 16,
+  "seed": 42,
+  "calibration_pixels": 250000,
+  "ece_bins": 15,
+  "queue_budget": 20,
+  "uncertainty_top_fraction": 0.05,
+  "neighbor_candidates": [3, 5, 8, 12, 20, 30],
+  "acquisition_weight_candidates": [
+    {"failure_risk": 1.0, "uncertainty": 0.0, "shift": 0.0, "diversity": 0.0},
+    {"failure_risk": 1.0, "uncertainty": 0.0, "shift": 0.0, "diversity": 0.1},
+    {"failure_risk": 0.9, "uncertainty": 0.1, "shift": 0.0, "diversity": 0.1},
+    {"failure_risk": 0.8, "uncertainty": 0.2, "shift": 0.0, "diversity": 0.15},
+    {"failure_risk": 0.7, "uncertainty": 0.3, "shift": 0.0, "diversity": 0.25},
+    {"failure_risk": 0.7, "uncertainty": 0.2, "shift": 0.1, "diversity": 0.15},
+    {"failure_risk": 0.6, "uncertainty": 0.3, "shift": 0.1, "diversity": 0.15},
+    {"failure_risk": 0.5, "uncertainty": 0.4, "shift": 0.1, "diversity": 0.25}
+  ],
+  "shift_percentile": 95.0,
+  "worst_fraction": 0.25,
+  "gallery_count": 12,
+  "corruptions": [
+    {"name": "gaussian_noise", "severity": 0.18},
+    {"name": "brightness", "severity": 0.45},
+    {"name": "blur", "severity": 2.0}
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "calibration": {
+    "decision_boundary": {
+      "calibrated_probability_threshold": 0.7970933824591376,
+      "mask_semantics": "same original logit boundary after temperature scaling",
+      "original_logit_threshold": 0.8472978603872044,
+      "original_probability_threshold": 0.7000000000000002,
+      "test_mask_agreement": 1.0
+    },
+    "fit": {
+      "bound_hit": false,
+      "fit_split": "validation",
+      "nll_after": 0.09756512606180975,
+      "nll_before": 0.11329141458223324,
+      "objective": "unweighted binary pixel NLL",
+      "positive_fraction": 0.018096,
+      "sampled_pixels": 250000,
+      "search_bounds": [
+        0.05,
+        20.0
+      ],
+      "temperature": 0.6192674849274059
+    },
+    "held_out_test": {
+      "after": {
+        "brier": 0.030732892783289754,
+        "class_balanced_brier": 0.10932973031404916,
+        "class_balanced_nll": 0.4140709533260645,
+        "ece": 0.04777922328662038,
+        "maximum_calibration_gap": 0.5597532966052318,
+        "nll": 0.0985450375341791,
+        "pixels": 250000,
+        "positive_fraction": 0.01854,
+        "temperature": 0.6192674849274059
+      },
+      "before": {
+        "brier": 0.03164833238081965,
+        "class_balanced_brier": 0.11169228132083994,
+        "class_balanced_nll": 0.3703424882409809,
+        "ece": 0.07059069974453169,
+        "maximum_calibration_gap": 0.4792473641312057,
+        "nll": 0.11402344408818768,
+        "pixels": 250000,
+        "positive_fraction": 0.01854,
+        "temperature": 1.0
+      }
+    },
+    "validation": {
+      "after": {
+        "brier": 0.03073557524638128,
+        "class_balanced_brier": 0.09813285642608625,
+        "class_balanced_nll": 0.37382881638142745,
+        "ece": 0.049132628547801364,
+        "maximum_calibration_gap": 0.5728227390367147,
+        "nll": 0.09756512606180975,
+        "pixels": 250000,
+        "positive_fraction": 0.018096,
+        "temperature": 0.6192674849274059
+      },
+      "before": {
+        "brier": 0.031582764250388876,
+        "class_balanced_brier": 0.10232317538028479,
+        "class_balanced_nll": 0.3454737754601911,
+        "ece": 0.07136504008671896,
+        "maximum_calibration_gap": 0.4949039215309934,
+        "nll": 0.11329141458223324,
+        "pixels": 250000,
+        "positive_fraction": 0.018096,
+        "temperature": 1.0
+      }
+    }
+  },
+  "checkpoint_sha256": "b0a8144e92cc0caaf96ac1f1a43333b516be00bec9c6632a06e7a0bcc57c618e",
+  "device": "cpu",
+  "evidence_scope": "portable aggregate development evidence; raw data, weights, sample IDs, and labels omitted",
+  "gallery_note": "panels are RGB, calibrated probability, entropy, and prediction overlay",
+  "image_size": 128,
+  "input_shift": {
+    "boundary": "controlled corruptions test sensitivity to known shifts; they are not proof of open-world OOD performance",
+    "clean_test_detection_rate": 0.36496350364963503,
+    "controlled_corruptions": {
+      "blur": {
+        "clean_test_detection_rate_at_validation_threshold": 0.36496350364963503,
+        "detection_rate_at_validation_threshold": 0.6861313868613139,
+        "mean_shift_score_clean": 4.332514632576083,
+        "mean_shift_score_corrupted": 6.5337652634344225,
+        "mean_uncertainty_clean": 0.5518556310233006,
+        "mean_uncertainty_corrupted": 0.5292903584124907,
+        "samples": 137,
+        "severity": 2.0,
+        "shift_score_auroc": 0.732431136448399
+      },
+      "brightness": {
+        "clean_test_detection_rate_at_validation_threshold": 0.36496350364963503,
+        "detection_rate_at_validation_threshold": 1.0,
+        "mean_shift_score_clean": 4.332514632576083,
+        "mean_shift_score_corrupted": 15.299842947819359,
+        "mean_uncertainty_clean": 0.5518556310233006,
+        "mean_uncertainty_corrupted": 0.9953451854528544,
+        "samples": 137,
+        "severity": 0.45,
+        "shift_score_auroc": 0.9991475305024242
+      },
+      "gaussian_noise": {
+        "clean_test_detection_rate_at_validation_threshold": 0.36496350364963503,
+        "detection_rate_at_validation_threshold": 1.0,
+        "mean_shift_score_clean": 4.332514632576083,
+        "mean_shift_score_corrupted": 8.000919263037785,
+        "mean_uncertainty_clean": 0.5518556310233006,
+        "mean_uncertainty_corrupted": 0.959451125235668,
+        "samples": 137,
+        "severity": 0.18,
+        "shift_score_auroc": 0.8248707975917736
+      }
+    },
+    "feature_contract": "label-free RGB mean/std/quantiles, grayscale histogram, and gradient statistics",
+    "score": "ridge-regularized Mahalanobis distance from validation features",
+    "validation_threshold": 4.524270388070133,
+    "validation_threshold_percentile": 95.0
+  },
+  "limitations": [
+    "The test split is label-free during each acquisition run, but pool-level results were inspected while developing v0.11; this is not a pristine final holdout.",
+    "This is a retrospective acquisition study and does not retrain after annotation.",
+    "An untouched external dataset is required to confirm review-queue lift.",
+    "Temperature calibration is fitted only on validation pixels.",
+    "Controlled corruptions are not a substitute for an external OOD dataset.",
+    "The MVTec protocol remains supervised-development, not the official benchmark.",
+    "No aircraft-surface, production, or safety-critical performance claim is made."
+  ],
+  "manifest_sha256": "187e15330b7e9f8c9bee1d340bcd78710aa2932abd46cd6fa742adb0638644d4",
+  "model_config": {
+    "architecture": "compact_unet",
+    "base_channels": 8
+  },
+  "project_version": "0.11.0",
+  "retrospective_queue_evaluation": {
+    "active_queue": {
+      "budget": 20,
+      "hit_lift_vs_random_expectation": 1.5657142857142856,
+      "mean_failure_score": 0.7030288148936328,
+      "worst_quartile_hits": 8,
+      "worst_quartile_precision": 0.4,
+      "worst_quartile_recall": 0.22857142857142856
+    },
+    "failure_risk_only": {
+      "budget": 20,
+      "hit_lift_vs_random_expectation": 2.3485714285714283,
+      "mean_failure_score": 0.8345161983366879,
+      "worst_quartile_hits": 12,
+      "worst_quartile_precision": 0.6,
+      "worst_quartile_recall": 0.34285714285714286
+    },
+    "label_use": "labels revealed only after the queue was frozen within this run",
+    "oracle_upper_bound": {
+      "worst_quartile_hits": 20,
+      "worst_quartile_recall": 0.5714285714285714
+    },
+    "pool_mean_failure_score": 0.36065154552020773,
+    "pool_size": 137,
+    "random_expectation": {
+      "expected_worst_quartile_hits": 5.109489051094891,
+      "expected_worst_quartile_precision": 0.25547445255474455
+    },
+    "selected_mean_failure_lift_vs_pool": 1.9493298271592774,
+    "shift_only": {
+      "budget": 20,
+      "hit_lift_vs_random_expectation": 0.0,
+      "mean_failure_score": 0.002325439453125,
+      "worst_quartile_hits": 0,
+      "worst_quartile_precision": 0.0,
+      "worst_quartile_recall": 0.0
+    },
+    "uncertainty_only": {
+      "budget": 20,
+      "hit_lift_vs_random_expectation": 0.5871428571428571,
+      "mean_failure_score": 0.37790213293904074,
+      "worst_quartile_hits": 3,
+      "worst_quartile_precision": 0.15,
+      "worst_quartile_recall": 0.08571428571428572
+    },
+    "worst_fraction": 0.25,
+    "worst_sample_count": 35
+  },
+  "review_queue": {
+    "budget": 20,
+    "budget_fraction": 0.145985401459854,
+    "label_free_artifact": "review_queue.json",
+    "policy_selection": {
+      "candidate_count": 48,
+      "method": "leave-one-out inverse-distance kNN failure-risk policy search",
+      "selected": {
+        "neighbors": 8,
+        "validation_mean_failure_score": 0.6494660912722277,
+        "validation_worst_quartile_hits": 15,
+        "validation_worst_quartile_recall": 0.3409090909090909,
+        "weights": {
+          "diversity": 0.15,
+          "failure_risk": 0.8,
+          "shift": 0.0,
+          "uncertainty": 0.2
+        }
+      },
+      "selection_split": "validation",
+      "validation_budget": 26
+    },
+    "pool_size": 137,
+    "selected_neighbors": 8,
+    "selected_weights": {
+      "diversity": 0.15,
+      "failure_risk": 0.8,
+      "shift": 0.0,
+      "uncertainty": 0.2
+    }
+  },
+  "schema_version": "1.0",
+  "splits": {
+    "calibration": {
+      "name": "validation",
+      "samples": 175
+    },
+    "simulated_unlabeled_pool": {
+      "name": "test split used as retrospective development pool",
+      "samples": 137
+    }
+  },
+  "study": "validation-calibrated risk-aware human review acquisition",
+  "uncertainty": {
+    "aggregation": "mean of top 5.0% normalized binary pixel entropy",
+    "pool_mean": 0.5518556310233006,
+    "pool_p95": 0.9967334661488835
+  }
+}

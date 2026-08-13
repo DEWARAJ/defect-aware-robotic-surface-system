@@ -133,6 +133,25 @@ improved by 1.21x. The same compact architecture trained without distillation re
 held-out IoU, isolating the value of teacher guidance. Portable evidence is in
 [`artifacts/reference/model_compression_v10.json`](artifacts/reference/model_compression_v10.json).
 
+## Risk-aware human review (v0.11 development)
+
+The selected compact model now has a human-review acquisition layer. Validation pixels fit a
+single temperature, while the original logit decision boundary is preserved so calibration does
+not change any deployed segmentation mask. Label-free image/model summaries feed an
+inverse-distance failure-risk estimator trained on validation examples; leave-one-out validation
+selects the review policy before it is applied to the retrospective development pool.
+
+At a 20-of-137 review budget (14.6%), the validation-selected policy found 8 of the 35 worst pool
+failures: 22.9% recall and 1.57x the random expected hit count. Aggregate pixel ECE improved from
+0.0706 to 0.0478, but class-balanced NLL worsened, and the input-shift threshold produced a 36.5%
+clean-pool flag rate. These mixed outcomes are documented rather than hidden. Because pool results
+were inspected during v0.11 development, the result requires confirmation on a new untouched
+external dataset.
+
+See [`docs/ACTIVE_LEARNING_V11.md`](docs/ACTIVE_LEARNING_V11.md) for the leakage boundary,
+ablation results, controlled-shift probes, and reproduction steps. Portable aggregate evidence is
+in [`artifacts/reference/active_learning_v11.json`](artifacts/reference/active_learning_v11.json).
+
 ## Reference MVP result
 
 The deterministic reference run completed on 120 synthetic 96 x 96 images:
