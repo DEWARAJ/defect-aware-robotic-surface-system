@@ -83,6 +83,29 @@ No real S3 upload, cloud GPU training, container runtime result, Isaac Sim captu
 benchmark is represented by the local v0.7 implementation. GitHub-hosted container jobs and an
 authorized private-bucket test are separate evidence gates. See `docs/PRODUCTION_PIPELINE_V07.md`.
 
+## Model compression status
+
+Version 0.10 compares the v0.4 Tiny U-Net teacher against a one-level Compact U-Net trained with
+and without soft-target knowledge distillation, plus a 25% structured-filter-pruned teacher. The
+student changes the physical graph from ten to six spatial convolutions and, at eight base
+channels, reduces parameters from 29,921 to 6,689. Each candidate uses the same manifest, receives
+validation-only threshold selection, and is evaluated on the same held-out test split before ONNX
+export and parity verification.
+
+The deployment policy selects compact candidates using a 0.03 absolute validation-IoU budget,
+then applies the same budget once as a held-out guardrail. It falls back to the teacher when either
+gate fails. The pruning experiment preserves
+dense tensor shapes. Its inactive-filter count is an accuracy/sparsity ablation and must not be
+described as a size or latency improvement without structural compaction and target-runtime
+measurement. Full methodology and limitations are in `docs/MODEL_COMPRESSION_V10.md`.
+
+In the measured CPU run, the distilled student reached 0.328 held-out IoU and 0.494 Dice versus
+0.286/0.445 for the teacher. It used 6,689 rather than 29,921 parameters and a 31,334-byte rather
+than 127,709-byte ONNX file. The normally trained student reached only 0.142 IoU, so architecture
+reduction alone was not sufficient. The selected model's mean ONNX Runtime latency improved from
+6.496 ms to 5.358 ms, but the shared-host p95 distribution was wide; no control-loop deadline claim
+is made. The portable evidence is `artifacts/reference/model_compression_v10.json`.
+
 ## Next validation gates
 
 1. Add aircraft-like surface coupons with documented permissions and untouched external tests.
@@ -91,3 +114,5 @@ authorized private-bucket test are separate evidence gates. See `docs/PRODUCTION
 4. Evaluate domain shift from Isaac Sim synthetic data to held-out real images.
 5. Validate the coverage planner after camera calibration, 3D surface projection, MoveIt 2
    collision checking, and force-control integration.
+6. Benchmark the selected compact candidate on the target Jetson/RTX device and, separately,
+   compact pruned channels into a physically smaller graph before making sparse-speedup claims.

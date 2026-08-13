@@ -43,6 +43,13 @@
   accuracy, latency, FPS, GPU utilization, memory, power, and temperature contracts (v0.9).
 - Execute the harness on the intended RTX/Jetson target; no GPU result is claimed yet.
 - Profile preprocessing, inference, and postprocessing independently.
+- Implemented a four-candidate model-compression study with a fixed teacher, physically smaller
+  six-convolution student, supervised-versus-distilled ablation, and 25% structured filter
+  pruning (v0.10).
+- Added held-out quality budgeting, architecture/parameter evidence, ONNX parity, randomized-order
+  latency trials, and fail-safe deployment selection for compression candidates.
+- Pending compact-model measurement on TensorRT/Jetson and structural graph compaction for the
+  pruned candidate; dense filter zeros are not claimed as a hardware speedup.
 
 ## Milestone 2.5 - Isaac Sim surface digital twin (v0.5 development)
 

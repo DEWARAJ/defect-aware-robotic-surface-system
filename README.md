@@ -112,6 +112,27 @@ normalized paths, defect-aware feed reduction, and zero protected-region contact
 [`docs/NVIDIA_DEPLOYMENT_V09.md`](docs/NVIDIA_DEPLOYMENT_V09.md) for target-machine commands,
 measurement boundaries, acceptance gates, and remaining robot-space work.
 
+## Measured model compression study (v0.10)
+
+The deployment track now compares a fixed 29,921-parameter Tiny U-Net teacher against a physically
+smaller Compact U-Net trained both normally and with knowledge distillation, plus a 25% structured
+filter-pruning ablation. The student removes one encoder/decoder level, reducing spatial
+convolutions from ten to six; at the configured width it has 6,689 parameters, a 77.6% reduction.
+
+All four candidates are evaluated on the same held-out split, exported independently to ONNX,
+checked for numerical parity, and benchmarked with randomized candidate order. Deployment
+selection is fail-safe: compact candidates are selected on validation IoU, then the provisional
+winner must pass a one-time held-out 0.03 absolute IoU guardrail. Structured pruning retains dense tensor
+shapes and is not presented as a speedup. See
+[`docs/MODEL_COMPRESSION_V10.md`](docs/MODEL_COMPRESSION_V10.md) for the experiment design,
+commands, evidence contract, and limitations.
+
+The measured distilled student passed both gates: held-out IoU improved from 0.2860 to 0.3276,
+parameters decreased by 77.6%, ONNX size decreased by 75.5%, and randomized-trial mean CPU latency
+improved by 1.21x. The same compact architecture trained without distillation reached only 0.1421
+held-out IoU, isolating the value of teacher guidance. Portable evidence is in
+[`artifacts/reference/model_compression_v10.json`](artifacts/reference/model_compression_v10.json).
+
 ## Reference MVP result
 
 The deterministic reference run completed on 120 synthetic 96 x 96 images:

@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "manifest": "../runs/mvtec_v04/manifest.json",
+  "teacher_checkpoint": "../runs/mvtec_v04/model_128/best.pt",
+  "output": "../runs/model_compression_v10",
+  "image_size": 128,
+  "student_base_channels": 8,
+  "student_epochs": 20,
+  "batch_size": 8,
+  "learning_rate": 0.001,
+  "patience": 6,
+  "seed": 42,
+  "distillation_alpha": 0.35,
+  "distillation_temperature": 2.0,
+  "pruning_fraction": 0.25,
+  "max_absolute_validation_iou_drop": 0.03,
+  "max_absolute_test_iou_drop": 0.03,
+  "onnx_iterations": 100,
+  "onnx_warmup": 10,
+  "onnx_trials": 3,
+  "parity_samples": 10
+}

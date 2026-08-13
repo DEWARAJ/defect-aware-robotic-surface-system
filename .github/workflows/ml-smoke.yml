@@ -34,3 +34,15 @@ jobs:
           --checkpoint runs/real_smoke/model/best.pt
           --onnx runs/real_smoke/model/model.onnx
           --manifest runs/real_smoke/manifest.json --samples 5 --image-size 64
+      - run: >-
+          python -m surface_perception.model_compression
+          --config configs/model_compression_v10.json
+          --manifest runs/real_smoke/manifest.json
+          --teacher-checkpoint runs/real_smoke/model/best.pt
+          --output runs/compression_smoke
+          --image-size 64 --student-base-channels 2 --student-epochs 1
+          --batch-size 4 --onnx-iterations 3 --onnx-trials 1 --parity-samples 3
+      - uses: actions/upload-artifact@v4
+        with:
+          name: model-compression-smoke-evidence
+          path: runs/compression_smoke/compression_study.json
